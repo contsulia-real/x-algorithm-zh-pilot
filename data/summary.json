@@ -272,5 +272,192 @@
       "blob_sha": "c9ceaa79ca29b3bf5677a1f990155f897810c54d",
       "url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/xai-value-model/scoring.rs"
     }
+  },
+  "presentation": {
+    "full": {
+      "rules": {
+        "title": "推荐机制",
+        "conclusion": "「为你推荐」不是按互动总数简单排序：它先召回关注内外的候选内容，预测你可能采取的行为，再过滤、调整和重排。",
+        "sections": [
+          {
+            "title": "候选内容来自哪里",
+            "conclusion": "关注账号与陌生账号的帖子一起进入候选池。",
+            "detail": "Thunder 提供关注账号的近期帖子；Phoenix、SimClusters 和热门帖子源补充关注外的内容。候选结果不等于最终一定被推荐。"
+          },
+          {
+            "title": "排序依据是什么",
+            "conclusion": "模型预测你点赞、回复、分享、停留或给出负反馈的可能性。",
+            "detail": "RankingScorer 将这些预测概率或连续预测值乘以各自的权重，再合成为分数。权重不是原始点赞数或举报数的倍率。"
+          },
+          {
+            "title": "为什么不是分数最高就排最前",
+            "conclusion": "作者多样性、关注外折扣和低曝光作者提升会调整排序。",
+            "detail": "同一作者的后续帖子可能衰减；关注外内容等可能受到折扣；低曝光作者可能得到提升。VMRanker 之后还会依据相似性进行重排。"
+          },
+          {
+            "title": "哪些帖子可能被排除",
+            "conclusion": "去重、看过的内容、屏蔽或静音等过滤规则会先后生效。",
+            "detail": "还包括时效、订阅资格、关键词、可见性标签与关联帖子被拦截等条件。能被看到与排名高低是两套不同判断。"
+          },
+          {
+            "title": "公开信息的边界",
+            "conclusion": "这里只总结已公开的源码和 README，不能还原每个人的实际线上排序。",
+            "detail": "部分 Grox 提示文件和 botmaker 规则未公开，公开默认权重也可能被实验配置覆盖。"
+          }
+        ]
+      },
+      "weights": {
+        "title": "预测行为与默认权重",
+        "conclusion": "权重乘的是模型预测的概率或连续值，而不是已经发生的行为次数。它们用于合成分数，不能推断“举报一次抵多少次点赞”。",
+        "sections": [
+          {
+            "title": "互动与关注",
+            "conclusion": "这些是预测用户可能采取的正向互动，不是已经获得的互动数量。",
+            "detail": "回复、分享方式与关注动作分别具有不同的公开默认权重；互关回复的加成也是独立参数，不能理解为每条回复都直接获得固定加分。",
+            "weight_names": [
+              "FavoriteWeight",
+              "ReplyWeight",
+              "RetweetWeight",
+              "QuoteWeight",
+              "ShareWeight",
+              "ShareViaDmWeight",
+              "ShareViaCopyLinkWeight",
+              "FollowAuthorWeight",
+              "BidirectionalFollowReplyWeightBoost"
+            ]
+          },
+          {
+            "title": "点击与观看行为",
+            "conclusion": "系统也预测用户是否打开、观看及停留；不只看点赞和转发。",
+            "detail": "这组包含图片展开、视频观看、点击链接与不同停留时间的模型输出，部分默认权重为 0。",
+            "weight_names": [
+              "PhotoExpandWeight",
+              "VideoOpenWeight",
+              "ClickWeight",
+              "OpenLinkWeight",
+              "ProfileClickWeight",
+              "VqvWeight",
+              "DwellWeight",
+              "QuotedClickWeight",
+              "QuotedVqvWeight",
+              "PostUnexploredWeight",
+              "ContDwellTimeWeight",
+              "ContClickDwellTimeWeight",
+              "VideoCarouselVideoOpenWeight"
+            ]
+          },
+          {
+            "title": "负反馈与不感兴趣",
+            "conclusion": "不感兴趣、屏蔽、静音与举报有独立的负向权重。",
+            "detail": "负值代表它们的预测概率对合成评分的方向，而不是发生一次后直接扣去相应分数；也不能仅凭数值大小比较真实发生频率。",
+            "weight_names": [
+              "NotInterestedWeight",
+              "BlockAuthorWeight",
+              "MuteAuthorWeight",
+              "ReportWeight",
+              "NotDwelledWeight"
+            ]
+          },
+          {
+            "title": "当前默认值为零的参数",
+            "conclusion": "默认值为 0 的项在这个公开配置下不直接贡献对应加权项。",
+            "detail": "它们不代表系统永远不会使用相关行为，线上实验或特性开关可能覆盖默认配置。",
+            "weight_names": [
+              "BidirectionalFollowDwellWeightBoost",
+              "ReactWithVideoWeight",
+              "VideoCarouselImmersiveVqvWeight"
+            ]
+          }
+        ]
+      },
+      "updates": {
+        "title": "官方变化与跟踪范围",
+        "conclusion": "当前历史记录为首次基线；之后只有所监控源码有实际变化，才产生新的中文增量记录。",
+        "sections": [
+          {
+            "title": "当前基线",
+            "conclusion": "摘要对应官方 Commit 6258a154，覆盖 README、参数文件和评分源码。",
+            "detail": "这是第一次整理形成的对照起点，并非 2026 年 10 月新发生的推荐机制变更。"
+          },
+          {
+            "title": "官方已记录的重要说明",
+            "conclusion": "官方澄清权重乘预测值而非互动次数；也公开了更多内容过滤和可见性说明。",
+            "detail": "此前公告包括 2026 年 8 月的算法参数与过滤机制说明，以及 9 月 Under the Hood 增加法律限制标签信息。"
+          },
+          {
+            "title": "如何看后续更新",
+            "conclusion": "后续记录按官方 Commit 追踪哪些文件变化，以及哪些权重旧值、新值和差值发生改变。",
+            "detail": "无变化时不会产生无意义的更新记录；某项未出现于变更表，不代表已发生修改。"
+          }
+        ]
+      }
+    },
+    "compact": {
+      "rules": {
+        "title": "一眼看懂推荐流程",
+        "conclusion": "「为你推荐」先找候选帖，再预测你会如何互动，最后过滤和重排，不是按点赞数排序。",
+        "sections": [
+          {
+            "title": "从哪找帖",
+            "conclusion": "同时考虑关注内、关注外与热门帖子。"
+          },
+          {
+            "title": "怎样排序",
+            "conclusion": "按预测的互动、停留和负反馈加权，并调整作者多样性。"
+          },
+          {
+            "title": "哪些不显示",
+            "conclusion": "看过、屏蔽、静音或不符合可见性规则的内容可能被过滤。"
+          }
+        ]
+      },
+      "weights": {
+        "title": "权重该怎么看",
+        "conclusion": "数字表示预测信号的权重，不是一次真实互动直接增加或减少的分数。",
+        "sections": [
+          {
+            "title": "互动信号",
+            "conclusion": "回复、复制链接分享与关注作者各有单独的预测权重。",
+            "weight_names": [
+              "ReplyWeight",
+              "ShareViaCopyLinkWeight",
+              "FollowAuthorWeight"
+            ]
+          },
+          {
+            "title": "常见互动比较",
+            "conclusion": "点赞、普通转发与引用各自对应不同的权重；不能当作实际互动次数。",
+            "weight_names": [
+              "FavoriteWeight",
+              "RetweetWeight",
+              "QuoteWeight"
+            ]
+          },
+          {
+            "title": "负反馈信号",
+            "conclusion": "静音、屏蔽和举报是负向预测信号，不能直接换算成点赞次数。",
+            "weight_names": [
+              "MuteAuthorWeight",
+              "BlockAuthorWeight",
+              "ReportWeight"
+            ]
+          }
+        ]
+      },
+      "updates": {
+        "title": "最新算法信息",
+        "conclusion": "目前记录的是官方算法代码的初始中文基线，不要把它误认作近期新改动。",
+        "sections": [
+          {
+            "title": "基线与变化",
+            "conclusion": "有新官方 Commit 且相关规则或权重发生变化时，才生成增量记录。"
+          },
+          {
+            "title": "重要官方说明",
+            "conclusion": "权重作用于预测值；公开的默认配置不等于完整线上配置。"
+          }
+        ]
+      }
+    }
   }
 }
