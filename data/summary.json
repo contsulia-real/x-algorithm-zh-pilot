@@ -1,1 +1,276 @@
-{"last_processed_sha":"6258a1549ef808be88fba83d3b2d58364b587ee0","last_processed_url":"https://github.com/xai-org/x-algorithm/commit/6258a1549ef808be88fba83d3b2d58364b587ee0","schema_version":1,"summary":{"filtering":"排序前过滤包括去重、48 小时以上旧帖、本人帖子、已看过或已展示帖子、屏蔽或静音作者、静音关键词、订阅受限帖子、Brazil2026ElectionFilter 等。排序后还有可见性过滤：visibility-filtering 对每条帖子和浏览者给出 ALLOW、NOTICE、INTERSTITIAL 或 DROP 之一，DROP 的帖子会被移除，其父帖、引用帖或转发帖被 DROP 时相关帖子也会被连带处理。","limitations":"本试点基线只覆盖 README、home-mixer/params/param.rs 和 xai-value-model/scoring.rs，未全量覆盖上游所有目录；官方说明部分规则和 Grox 提示词未公开，因此总结不等于完整生产配置。","notable_updates":["2026-09-18：Under the Hood 报告新增法律合规导致的可见性限制信息，例如帖子是否因法律要求在某国被 withheld，以及是哪个国家。","2026-08-14：官方澄清权重含义，权重乘的是预测概率而非原始互动次数；同时 For You 运行 Brazil2026ElectionFilter，移除被上报给巴西选举法院的账号的帖子，浏览者明确关注的账号除外。","2026-08-13：新增关键配置参数和可见性过滤相关代码，Phoenix 演示模型被替换为实际训练和运行模型的代码，并新增 SimClusters 作为出网来源之一。"],"overview":"For You 信息流按每次请求组装：先从入网和出网来源召回候选帖子，再经过过滤和打分排序，最后由混合管线加入广告、Who to Follow、提示等非帖子内容。排序决定顺序，可见性过滤单独决定帖子能否展示。","ranking":"Phoenix 预测浏览者对每条帖子采取各类行为的概率，RankingScorer 再以权重加权求和得到分数。之后还有作者多样性衰减、出网折扣、新作者提升等调整，VMRanker 会再做一次重排。权重乘的是预测概率或预测连续值（例如停留时长），不是原始互动次数，因此不能把权重比直接读成“1 次举报抵消多少次点赞”。","retrieval":"入网来源为 Thunder，保存关注账号的近期帖子；出网来源为 Phoenix 检索和 SimClusters，另有热门帖子来源。试点基线中 home-mixer 默认值：Phoenix 最多 1000 条，Thunder 最多 1200 条，热门帖子最多 500 条，SimClusters 候选最长 48 小时。","weights":[{"name":"FavoriteWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":0.66},{"name":"ReplyWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":5.0},{"name":"BidirectionalFollowReplyWeightBoost","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":15.0},{"name":"RetweetWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":1.0},{"name":"ShareWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":2.0},{"name":"ShareViaCopyLinkWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":20.0},{"name":"QuoteWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":5.0},{"name":"FollowAuthorWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":4.0},{"name":"DwellWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":0.05},{"name":"NotInterestedWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":-52.272},{"name":"BlockAuthorWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":-31.2},{"name":"MuteAuthorWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":-58.8},{"name":"ReportWeight","source_file":"home-mixer/params/param.rs","source_url":"https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs","value":-234.0}]},"updated_at":"2026-10-25T14:27:00+08:00","upstream_repo":"xai-org/x-algorithm"}
+{
+  "last_processed_sha": "6258a1549ef808be88fba83d3b2d58364b587ee0",
+  "last_processed_url": "https://github.com/xai-org/x-algorithm/commit/6258a1549ef808be88fba83d3b2d58364b587ee0",
+  "schema_version": 1,
+  "summary": {
+    "filtering": "排序前过滤包括去重、48 小时以上旧帖、本人帖子、已看过或已展示帖子、屏蔽或静音作者、静音关键词、订阅受限帖子、Brazil2026ElectionFilter 等。排序后还有可见性过滤：visibility-filtering 对每条帖子和浏览者给出 ALLOW、NOTICE、INTERSTITIAL 或 DROP 之一，DROP 的帖子会被移除，其父帖、引用帖或转发帖被 DROP 时相关帖子也会被连带处理。",
+    "limitations": "本总结覆盖 README.md、home-mixer/params/param.rs 和 xai-value-model/scoring.rs，不等于对上游所有目录的完整审计。官方 README 明确说明，部分 Grox 提示文件和部分 botmaker 规则未公开；公开默认参数也可能被实验或 feature switch 覆盖，因此不能据此断言所有用户的实际线上配置完全相同。",
+    "notable_updates": [
+      "2026-09-18：Under the Hood 报告新增法律合规导致的可见性限制信息，例如帖子是否因法律要求在某国被 withheld，以及是哪个国家。",
+      "2026-08-14：官方澄清权重含义，权重乘的是预测概率而非原始互动次数；同时 For You 运行 Brazil2026ElectionFilter，移除被上报给巴西选举法院的账号的帖子，浏览者明确关注的账号除外。",
+      "2026-08-13：新增关键配置参数和可见性过滤相关代码，Phoenix 演示模型被替换为实际训练和运行模型的代码，并新增 SimClusters 作为出网来源之一。"
+    ],
+    "overview": "For You 信息流按每次请求组装：先从入网和出网来源召回候选帖子，再经过过滤和打分排序，最后由混合管线加入广告、Who to Follow、提示等非帖子内容。排序决定顺序，可见性过滤单独决定帖子能否展示。",
+    "ranking": "Phoenix 预测浏览者对每条帖子采取各类行为的概率，RankingScorer 再以权重加权求和得到分数。之后还有作者多样性衰减、出网折扣、新作者提升等调整，VMRanker 会再做一次重排。权重乘的是预测概率或预测连续值（例如停留时长），不是原始互动次数，因此不能把权重比直接读成“1 次举报抵消多少次点赞”。",
+    "retrieval": "入网来源 Thunder 提供用户关注账号的近期帖子；出网来源包括 Phoenix 检索与 SimClusters，另有热门帖子来源。当前公开默认参数包括：Phoenix 最多 1000 条、Thunder 最多 1200 条、TweetMixer 最多 800 条、热门帖子最多 500 条、SimClusters 候选最长 48 小时。这些是仓库中的默认值，不代表所有线上实验配置。",
+    "weights": [
+      {
+        "name": "FavoriteWeight",
+        "label_zh": "点赞",
+        "key": "rust_home_mixer_favorite_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0.66
+      },
+      {
+        "name": "ReplyWeight",
+        "label_zh": "回复",
+        "key": "rust_home_mixer_reply_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 5
+      },
+      {
+        "name": "BidirectionalFollowReplyWeightBoost",
+        "label_zh": "互相关注回复加成",
+        "key": "rust_home_mixer_bidirectional_follow_reply_weight_boost",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 15
+      },
+      {
+        "name": "BidirectionalFollowDwellWeightBoost",
+        "label_zh": "互相关注停留加成",
+        "key": "rust_home_mixer_bidirectional_follow_dwell_weight_boost",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0
+      },
+      {
+        "name": "RetweetWeight",
+        "label_zh": "转发",
+        "key": "rust_home_mixer_retweet_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 1
+      },
+      {
+        "name": "PhotoExpandWeight",
+        "label_zh": "展开图片",
+        "key": "rust_home_mixer_photo_expand_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0.05
+      },
+      {
+        "name": "VideoOpenWeight",
+        "label_zh": "打开视频",
+        "key": "rust_home_mixer_video_open_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0.02
+      },
+      {
+        "name": "ClickWeight",
+        "label_zh": "打开帖子",
+        "key": "rust_home_mixer_click_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0.3
+      },
+      {
+        "name": "OpenLinkWeight",
+        "label_zh": "打开链接",
+        "key": "rust_home_mixer_open_link_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0.2
+      },
+      {
+        "name": "ProfileClickWeight",
+        "label_zh": "点击个人资料",
+        "key": "rust_home_mixer_profile_click_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0
+      },
+      {
+        "name": "VqvWeight",
+        "label_zh": "合格视频观看",
+        "key": "rust_home_mixer_vqv_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0
+      },
+      {
+        "name": "ShareWeight",
+        "label_zh": "分享",
+        "key": "rust_home_mixer_share_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 2
+      },
+      {
+        "name": "ShareViaDmWeight",
+        "label_zh": "私信分享",
+        "key": "rust_home_mixer_share_via_dm_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 5
+      },
+      {
+        "name": "ShareViaCopyLinkWeight",
+        "label_zh": "复制链接分享",
+        "key": "rust_home_mixer_share_via_copy_link_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 20
+      },
+      {
+        "name": "DwellWeight",
+        "label_zh": "停留时长",
+        "key": "rust_home_mixer_dwell_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0.05
+      },
+      {
+        "name": "QuoteWeight",
+        "label_zh": "引用",
+        "key": "rust_home_mixer_quote_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 5
+      },
+      {
+        "name": "QuotedClickWeight",
+        "label_zh": "点击被引用帖子",
+        "key": "rust_home_mixer_quoted_click_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0.05
+      },
+      {
+        "name": "QuotedVqvWeight",
+        "label_zh": "被引用帖子的合格视频观看",
+        "key": "rust_home_mixer_quoted_vqv_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0
+      },
+      {
+        "name": "FollowAuthorWeight",
+        "label_zh": "关注作者",
+        "key": "rust_home_mixer_follow_author_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 4
+      },
+      {
+        "name": "PostUnexploredWeight",
+        "label_zh": "未探索帖子加权",
+        "key": "rust_home_mixer_post_unexplored_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0.015
+      },
+      {
+        "name": "ReactWithVideoWeight",
+        "label_zh": "视频互动",
+        "key": "rust_home_mixer_react_with_video_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0
+      },
+      {
+        "name": "ContDwellTimeWeight",
+        "label_zh": "连续停留时长",
+        "key": "rust_home_mixer_cont_dwell_time_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0.006
+      },
+      {
+        "name": "ContClickDwellTimeWeight",
+        "label_zh": "点击后连续停留时长",
+        "key": "rust_home_mixer_cont_click_dwell_time_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0.4
+      },
+      {
+        "name": "NotInterestedWeight",
+        "label_zh": "不感兴趣",
+        "key": "rust_home_mixer_not_interested_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": -52.272
+      },
+      {
+        "name": "BlockAuthorWeight",
+        "label_zh": "屏蔽作者",
+        "key": "rust_home_mixer_block_author_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": -31.2
+      },
+      {
+        "name": "MuteAuthorWeight",
+        "label_zh": "静音作者",
+        "key": "rust_home_mixer_mute_author_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": -58.8
+      },
+      {
+        "name": "ReportWeight",
+        "label_zh": "举报",
+        "key": "rust_home_mixer_report_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": -234
+      },
+      {
+        "name": "NotDwelledWeight",
+        "label_zh": "未停留",
+        "key": "rust_home_mixer_not_dwelled_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": -0.02
+      },
+      {
+        "name": "VideoCarouselVideoOpenWeight",
+        "label_zh": "视频轮播打开视频",
+        "key": "rust_home_mixer_video_carousel_video_open_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 1
+      },
+      {
+        "name": "VideoCarouselImmersiveVqvWeight",
+        "label_zh": "沉浸式视频合格观看",
+        "key": "rust_home_mixer_video_carousel_immersive_vqv_weight",
+        "source_file": "home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "value": 0
+      }
+    ],
+    "weight_explanation": "权重乘以模型预测的行为概率或连续预测值（例如停留时长），不是原始互动次数。不能据权重比推算一次举报抵消多少次点赞；个体预测概率、候选召回、过滤规则、实验配置和后续重排都会影响最终结果。"
+  },
+  "updated_at": "2026-10-25T08:08:27.136Z",
+  "upstream_repo": "xai-org/x-algorithm",
+  "source_files": {
+    "README.md": {
+      "blob_sha": "e65e5430e1c48d4d160bdb58ddecd51e15f5df40",
+      "url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/README.md"
+    },
+    "home-mixer/params/param.rs": {
+      "blob_sha": "227ac1cbfb651fd0ee384c4195975e215fee1100",
+      "url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs"
+    },
+    "xai-value-model/scoring.rs": {
+      "blob_sha": "c9ceaa79ca29b3bf5677a1f990155f897810c54d",
+      "url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/xai-value-model/scoring.rs"
+    }
+  }
+}
