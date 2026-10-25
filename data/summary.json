@@ -296,13 +296,13 @@
         ]
       },
       "weights": {
-        "title": "预测行为与默认权重",
-        "conclusion": "权重乘的是模型预测的概率或连续值，而不是已经发生的行为次数。它们用于合成分数，不能推断“举报一次抵多少次点赞”。",
+        "title": "X 给哪些行为算权重",
+        "conclusion": "这些数字不是「点一次赞加 0.66 分」。X 先估算用户做某个动作的可能性，再拿预测结果乘权重。光看数字，算不出实际推荐量。",
         "sections": [
           {
-            "title": "互动与关注",
-            "conclusion": "这些是预测用户可能采取的正向互动，不是已经获得的互动数量。",
-            "detail": "回复、分享方式与关注动作分别具有不同的公开默认权重；互关回复的加成也是独立参数，不能理解为每条回复都直接获得固定加分。",
+            "title": "点赞、回复、转发、分享",
+            "conclusion": "回复默认是 5，普通转发是 1，复制链接分享是 20。但这不表示复制一次链接就抵 20 次转发。",
+            "detail": "每个数字都要乘上对应行为的预测概率。X 还单独给互相关注用户的回复设置了加成；该加成不是对所有回复无条件生效。",
             "weight_names": [
               "FavoriteWeight",
               "ReplyWeight",
@@ -316,9 +316,9 @@
             ]
           },
           {
-            "title": "点击与观看行为",
-            "conclusion": "系统也预测用户是否打开、观看及停留；不只看点赞和转发。",
-            "detail": "这组包含图片展开、视频观看、点击链接与不同停留时间的模型输出，部分默认权重为 0。",
+            "title": "点击、看视频、停留",
+            "conclusion": "有人会不会点开帖子、看视频、打开链接，以及停留多久，也会影响模型打分。",
+            "detail": "「点开」「停留」「点开后继续停留」是不同的预测项目。有些项目的默认权重很小，但不能直接据此判断它们在真实推荐中有多重要。",
             "weight_names": [
               "PhotoExpandWeight",
               "VideoOpenWeight",
@@ -336,9 +336,9 @@
             ]
           },
           {
-            "title": "负反馈与不感兴趣",
-            "conclusion": "不感兴趣、屏蔽、静音与举报有独立的负向权重。",
-            "detail": "负值代表它们的预测概率对合成评分的方向，而不是发生一次后直接扣去相应分数；也不能仅凭数值大小比较真实发生频率。",
+            "title": "不感兴趣、屏蔽、静音、举报",
+            "conclusion": "这些项目的默认权重是负数。举报是 -234，但不是说举报一次就能抵掉几百次点赞。",
+            "detail": "模型要先估算不同用户采取这些动作的概率。负数影响的是预测后的分数，不能直接按实际互动次数相减。",
             "weight_names": [
               "NotInterestedWeight",
               "BlockAuthorWeight",
@@ -348,9 +348,9 @@
             ]
           },
           {
-            "title": "当前默认值为零的参数",
-            "conclusion": "默认值为 0 的项在这个公开配置下不直接贡献对应加权项。",
-            "detail": "它们不代表系统永远不会使用相关行为，线上实验或特性开关可能覆盖默认配置。",
+            "title": "为什么有的权重是 0",
+            "conclusion": "这里的 0 只代表公开代码给出的默认值，不等于 X 永远不用这些行为。",
+            "detail": "实际线上可能启用不同的实验或配置。想比较权重，先看它预测的是什么，不能只比两个数字的大小。",
             "weight_names": [
               "BidirectionalFollowDwellWeightBoost",
               "ReactWithVideoWeight",
@@ -401,33 +401,33 @@
         ]
       },
       "weights": {
-        "title": "权重该怎么看",
-        "conclusion": "数字表示预测信号的权重，不是一次真实互动直接增加或减少的分数。",
+        "title": "这些权重怎么看",
+        "conclusion": "数字乘的是模型预测值，不是一次真实互动直接加减多少分。",
         "sections": [
           {
-            "title": "互动信号",
-            "conclusion": "回复、复制链接分享与关注作者各有单独的预测权重。",
+            "title": "点赞、回复、复制链接",
+            "conclusion": "默认分别是 0.66、5、20。不能因为数字大，就认为实际效果是几十倍。",
             "weight_names": [
+              "FavoriteWeight",
               "ReplyWeight",
-              "ShareViaCopyLinkWeight",
+              "ShareViaCopyLinkWeight"
+            ]
+          },
+          {
+            "title": "转发、引用、关注作者",
+            "conclusion": "三个动作分别预测，默认权重是 1、5、4。",
+            "weight_names": [
+              "RetweetWeight",
+              "QuoteWeight",
               "FollowAuthorWeight"
             ]
           },
           {
-            "title": "常见互动比较",
-            "conclusion": "点赞、普通转发与引用各自对应不同的权重；不能当作实际互动次数。",
+            "title": "不感兴趣、静音、举报",
+            "conclusion": "对应负权重 -52.272、-58.8、-234。举报一次不等于扣掉几百个赞。",
             "weight_names": [
-              "FavoriteWeight",
-              "RetweetWeight",
-              "QuoteWeight"
-            ]
-          },
-          {
-            "title": "负反馈信号",
-            "conclusion": "静音、屏蔽和举报是负向预测信号，不能直接换算成点赞次数。",
-            "weight_names": [
+              "NotInterestedWeight",
               "MuteAuthorWeight",
-              "BlockAuthorWeight",
               "ReportWeight"
             ]
           }
