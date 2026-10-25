@@ -1,3 +1,0 @@
-ChatGPT scheduled GitHub write probe
-Repository: contsulia-real/x-algorithm-zh-pilot
-Purpose: verify scheduled-task GitHub write permissions
