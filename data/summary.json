@@ -1148,6 +1148,236 @@
         "VideoCarouselVideoOpenWeight": "開啟輪播影片",
         "VideoCarouselImmersiveVqvWeight": "沉浸式輪播合格觀看"
       }
+    },
+    "ja": {
+      "presentation": {
+        "full": {
+          "rules": {
+            "title": "「おすすめ」の仕組み",
+            "conclusion": "おすすめフィードには、フォロー中・フォロー外の投稿が集められ、フィルタリング、行動予測、スコア計算、再順位付けを経て表示されます。公開コードに基づく説明です。",
+            "sections": [
+              {
+                "title": "候補の取得元",
+                "conclusion": "Thunder はフォロー中の最近の投稿を取得し、Phoenix、SimClusters、トレンド系の取得元がその他の投稿を補います。",
+                "detail": "公開されたデフォルト設定では、Thunder は最大1,200件、Phoenix は最大1,000件などの候補数・時間制限があります。毎回この数だけ取得するわけではありません。"
+              },
+              {
+                "title": "順位付け前の除外",
+                "conclusion": "重複、表示済みや閲覧済みの投稿、ブロック・ミュートの条件で候補が除外されます。",
+                "detail": "古い投稿、自分の投稿、ミュートした語句、購読条件、地域制限も確認されます。候補として取得されても表示されるとは限りません。"
+              },
+              {
+                "title": "予測とスコア",
+                "conclusion": "Phoenix はいいね、返信、共有、投稿を開く操作、滞在などを予測し、RankingScorer が各項目に重みを掛けて合計します。",
+                "detail": "多くの重みは予測確率、一部は連続値の予測に掛けられます。既存のいいね数がそのままスコアになるわけではありません。"
+              },
+              {
+                "title": "並び順の調整",
+                "conclusion": "投稿者の多様性、フォロー外への減点、露出の少ない投稿者への加点などが順位を変えます。",
+                "detail": "VMRanker も再順位付けを行います。同じ投稿者が続く場合や類似する投稿が並ぶ場合、最初のスコアだけでは順位を説明できません。"
+              },
+              {
+                "title": "表示可否の判定",
+                "conclusion": "上位に入った投稿でも、表示可否の確認で除外されることがあります。",
+                "detail": "公開コードには ALLOW、NOTICE、INTERSTITIAL、DROP などの判定があります。DROP は投稿を除去し、親投稿や引用関係にも影響する場合があります。"
+              },
+              {
+                "title": "公開情報の範囲",
+                "conclusion": "記載しているのは公開されたコードとデフォルト設定であり、全アカウントの実際の設定ではありません。",
+                "detail": "一部の Grox プロンプトや botmaker のルールは非公開です。実験や機能フラグによって設定値が変わる可能性もあります。"
+              }
+            ]
+          },
+          "weights": {
+            "title": "デフォルトの重み",
+            "conclusion": "公開されたパラメーターファイルに30項目あります。モデルの予測に掛ける値であり、実際のいいね・返信・報告1回ごとの固定点数ではありません。",
+            "sections": [
+              {
+                "title": "反応とフォロー",
+                "conclusion": "いいね、返信、リポスト、引用、共有方法には別々の重みがあります。リンクをコピーして共有は20、いいねは0.66です。",
+                "detail": "異なる行動の予測確率に掛けるため、数値の比率から実際の効果を推定することはできません。相互フォロー時の返信加重には別の適用条件があります。",
+                "weight_names": [
+                  "FavoriteWeight",
+                  "ReplyWeight",
+                  "RetweetWeight",
+                  "QuoteWeight",
+                  "ShareWeight",
+                  "ShareViaDmWeight",
+                  "ShareViaCopyLinkWeight",
+                  "FollowAuthorWeight",
+                  "BidirectionalFollowReplyWeightBoost"
+                ]
+              },
+              {
+                "title": "クリックと滞在",
+                "conclusion": "投稿を開く、リンクを開く、動画を見る、滞在する行動は別々に扱われます。",
+                "detail": "投稿を開く0.3、リンクを開く0.2、クリック後の連続滞在0.4など、異なる予測結果に対応しています。",
+                "weight_names": [
+                  "PhotoExpandWeight",
+                  "VideoOpenWeight",
+                  "ClickWeight",
+                  "OpenLinkWeight",
+                  "DwellWeight",
+                  "QuotedClickWeight",
+                  "PostUnexploredWeight",
+                  "ContDwellTimeWeight",
+                  "ContClickDwellTimeWeight",
+                  "VideoCarouselVideoOpenWeight"
+                ]
+              },
+              {
+                "title": "否定的な反応",
+                "conclusion": "興味なし、ブロック、ミュート、報告、滞在なしは負の重みです。報告はデフォルトで -234 です。",
+                "detail": "この値は予測後の計算に使われます。実際の報告1件につき234点を引くという意味ではありません。",
+                "weight_names": [
+                  "NotInterestedWeight",
+                  "BlockAuthorWeight",
+                  "MuteAuthorWeight",
+                  "ReportWeight",
+                  "NotDwelledWeight"
+                ]
+              },
+              {
+                "title": "デフォルト値がゼロ",
+                "conclusion": "公開パラメーターの6項目は0です。動画視聴やプロフィール閲覧に関する項目も含まれます。",
+                "detail": "このデフォルト設定では該当項目の加重点がありませんが、実際の実験では別の値が使われる可能性があります。",
+                "weight_names": [
+                  "BidirectionalFollowDwellWeightBoost",
+                  "ProfileClickWeight",
+                  "VqvWeight",
+                  "QuotedVqvWeight",
+                  "ReactWithVideoWeight",
+                  "VideoCarouselImmersiveVqvWeight"
+                ]
+              }
+            ]
+          },
+          "updates": {
+            "title": "更新履歴",
+            "conclusion": "2026年10月24日に最初の比較基準を作成しました。現在の履歴ファイルには、その後のソース変更は登録されていません。",
+            "sections": [
+              {
+                "title": "初期基準",
+                "conclusion": "初回の記録は上流コミット 6258a154 に対応し、README、パラメーターファイル、スコア計算コードを参照しています。",
+                "detail": "この日付は基準をまとめた日であり、同日に新しいアルゴリズムが公開されたことを示しません。"
+              },
+              {
+                "title": "以前の公式説明",
+                "conclusion": "2026年8月、公式側は重みが予測値に掛かることを説明し、フィルタリングや設定の情報を追加しました。",
+                "detail": "2026年9月の Under the Hood 報告では、法的要請による表示制限について追記されました。いずれも以前の発表です。"
+              },
+              {
+                "title": "追跡する範囲",
+                "conclusion": "README、重みパラメーター、スコア計算コードの実際の変更を記録します。",
+                "detail": "値が変われば旧値・新値・差分を残します。他のディレクトリだけのコミットを自動的にアルゴリズム変更とは扱いません。"
+              }
+            ]
+          }
+        },
+        "compact": {
+          "rules": {
+            "title": "推薦の流れ",
+            "conclusion": "フォロー中・フォロー外の候補を取得し、表示条件を確認して行動を予測します。その後スコアを計算し、並び順を調整します。",
+            "sections": [
+              {
+                "title": "取得元",
+                "conclusion": "Thunder はフォロー中、Phoenix や SimClusters はフォロー外を補います。"
+              },
+              {
+                "title": "スコア",
+                "conclusion": "いいね、返信、共有、滞在、否定的な反応の予測に重みを掛けます。"
+              },
+              {
+                "title": "調整",
+                "conclusion": "投稿者の重複、フォロー外への減点、再順位付けが順位に影響します。"
+              },
+              {
+                "title": "除外",
+                "conclusion": "閲覧済み、ブロック・ミュート対象、表示制限対象の投稿は除外される場合があります。"
+              }
+            ]
+          },
+          "weights": {
+            "title": "主な重み",
+            "conclusion": "公開されたデフォルト値です。実際の操作1回ごとの加減点ではなく、予測値に掛けます。",
+            "sections": [
+              {
+                "title": "反応",
+                "conclusion": "いいね0.66、返信5、リンクをコピーして共有20。別々の予測確率を使います。",
+                "weight_names": [
+                  "FavoriteWeight",
+                  "ReplyWeight",
+                  "ShareViaCopyLinkWeight"
+                ]
+              },
+              {
+                "title": "拡散とフォロー",
+                "conclusion": "リポスト1、引用5、投稿者のフォロー4。それぞれ独立して計算します。",
+                "weight_names": [
+                  "RetweetWeight",
+                  "QuoteWeight",
+                  "FollowAuthorWeight"
+                ]
+              },
+              {
+                "title": "否定的な反応",
+                "conclusion": "興味なし -52.272、ミュート -58.8、報告 -234。負の加重項目です。",
+                "weight_names": [
+                  "NotInterestedWeight",
+                  "MuteAuthorWeight",
+                  "ReportWeight"
+                ]
+              }
+            ]
+          },
+          "updates": {
+            "title": "更新状況",
+            "conclusion": "現在の記録は2026年10月24日の初期基準だけです。その後の変更はまだ登録されていません。",
+            "sections": [
+              {
+                "title": "記録済み",
+                "conclusion": "初期基準は上流コミット6258a154を参照しています。"
+              },
+              {
+                "title": "次回以降",
+                "conclusion": "対象コードに変更があったときだけ追記し、重みの変更前後を記録します。"
+              }
+            ]
+          }
+        }
+      },
+      "weight_labels": {
+        "FavoriteWeight": "いいね",
+        "ReplyWeight": "返信",
+        "BidirectionalFollowReplyWeightBoost": "相互フォロー時の返信加重",
+        "BidirectionalFollowDwellWeightBoost": "相互フォロー時の滞在加重",
+        "RetweetWeight": "リポスト",
+        "PhotoExpandWeight": "写真の拡大",
+        "VideoOpenWeight": "動画を開く",
+        "ClickWeight": "投稿を開く",
+        "OpenLinkWeight": "リンクを開く",
+        "ProfileClickWeight": "プロフィールを開く",
+        "VqvWeight": "条件を満たす動画視聴",
+        "ShareWeight": "共有",
+        "ShareViaDmWeight": "DMで共有",
+        "ShareViaCopyLinkWeight": "リンクをコピーして共有",
+        "DwellWeight": "滞在時間",
+        "QuoteWeight": "引用ポスト",
+        "QuotedClickWeight": "引用元投稿を開く",
+        "QuotedVqvWeight": "引用元投稿の条件を満たす動画視聴",
+        "FollowAuthorWeight": "投稿者をフォロー",
+        "PostUnexploredWeight": "未閲覧投稿",
+        "ReactWithVideoWeight": "動画でリアクション",
+        "ContDwellTimeWeight": "連続滞在時間",
+        "ContClickDwellTimeWeight": "クリック後の連続滞在時間",
+        "NotInterestedWeight": "興味なし",
+        "BlockAuthorWeight": "投稿者をブロック",
+        "MuteAuthorWeight": "投稿者をミュート",
+        "ReportWeight": "報告",
+        "NotDwelledWeight": "滞在なし",
+        "VideoCarouselVideoOpenWeight": "カルーセル内の動画を開く",
+        "VideoCarouselImmersiveVqvWeight": "没入型カルーセルの条件を満たす視聴"
+      }
     }
   }
 }
