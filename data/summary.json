@@ -457,5 +457,237 @@
         ]
       }
     }
+  },
+  "localizations": {
+    "en": {
+      "presentation": {
+        "full": {
+          "rules": {
+            "title": "For You recommendations",
+            "conclusion": "The feed draws posts from followed and unfollowed accounts, filters candidates, predicts engagement, and adjusts the ranking. These stages are visible in the published code.",
+            "sections": [
+              {
+                "title": "Candidate sources",
+                "conclusion": "Thunder supplies recent posts from followed accounts; Phoenix, SimClusters and trending sources add other posts.",
+                "detail": "Public defaults set candidate limits and age limits: for example, up to 1,200 from Thunder and 1,000 from Phoenix. Actual counts can differ."
+              },
+              {
+                "title": "Filtering before ranking",
+                "conclusion": "Duplicates, already seen or served posts, blocked accounts and muted accounts can be excluded.",
+                "detail": "Other checks cover older posts, your own posts, muted words, subscriber-only content and geographic restrictions. Retrieval does not guarantee eligibility."
+              },
+              {
+                "title": "Prediction and scoring",
+                "conclusion": "Phoenix predicts actions such as likes, replies, shares, opens and dwell; RankingScorer combines these predictions using weights.",
+                "detail": "Most weights multiply predicted probabilities; some multiply continuous predictions. Existing engagement counts are not the direct scores."
+              },
+              {
+                "title": "Ranking adjustments",
+                "conclusion": "Author diversity, discounts for out-of-network posts and boosts for less-exposed authors can change ordering.",
+                "detail": "VMRanker performs additional reranking. Repeated authors and similar adjacent posts are not explained by the first score alone."
+              },
+              {
+                "title": "Visibility checks",
+                "conclusion": "Even highly ranked posts may fail the final visibility checks.",
+                "detail": "The published filtering code includes ALLOW, NOTICE, INTERSTITIAL and DROP outcomes. DROP removes the post; related parents or quotes may also be affected."
+              },
+              {
+                "title": "Scope",
+                "conclusion": "This describes published code and defaults, not the complete live configuration for every account.",
+                "detail": "Some Grox prompt files and botmaker rules are unpublished. Experiments and feature switches may override defaults."
+              }
+            ]
+          },
+          "weights": {
+            "title": "Default scoring weights",
+            "conclusion": "The 30 values come from the published parameters file. They weight model predictions and are not fixed points awarded for a real like, reply or report.",
+            "sections": [
+              {
+                "title": "Engagement and follows",
+                "conclusion": "Likes, replies, reposts, quotes and sharing methods have separate weights. Copy-link sharing defaults to 20; liking to 0.66.",
+                "detail": "They multiply different predicted probabilities. The ratio of these values is not a ratio of observed impact; a mutual-follow reply boost has additional conditions.",
+                "weight_names": [
+                  "FavoriteWeight",
+                  "ReplyWeight",
+                  "RetweetWeight",
+                  "QuoteWeight",
+                  "ShareWeight",
+                  "ShareViaDmWeight",
+                  "ShareViaCopyLinkWeight",
+                  "FollowAuthorWeight",
+                  "BidirectionalFollowReplyWeightBoost"
+                ]
+              },
+              {
+                "title": "Opens and dwell",
+                "conclusion": "Opening a post or link, watching video and dwelling each have separate parameters.",
+                "detail": "For example: post opens 0.3, link opens 0.2, and continuous post-click dwell 0.4. These represent different predictions, not interchangeable interaction counts.",
+                "weight_names": [
+                  "PhotoExpandWeight",
+                  "VideoOpenWeight",
+                  "ClickWeight",
+                  "OpenLinkWeight",
+                  "DwellWeight",
+                  "QuotedClickWeight",
+                  "PostUnexploredWeight",
+                  "ContDwellTimeWeight",
+                  "ContClickDwellTimeWeight",
+                  "VideoCarouselVideoOpenWeight"
+                ]
+              },
+              {
+                "title": "Negative feedback",
+                "conclusion": "Not interested, block, mute, report and not dwelling have negative weights. Reports default to -234.",
+                "detail": "A predicted probability contributes to the weighted score; a single actual report does not subtract 234 points.",
+                "weight_names": [
+                  "NotInterestedWeight",
+                  "BlockAuthorWeight",
+                  "MuteAuthorWeight",
+                  "ReportWeight",
+                  "NotDwelledWeight"
+                ]
+              },
+              {
+                "title": "Zero defaults",
+                "conclusion": "Six published parameters default to zero, including some video-view and profile-open predictions.",
+                "detail": "Zero contributes no weight under these defaults, but other live experiments may use different values.",
+                "weight_names": [
+                  "BidirectionalFollowDwellWeightBoost",
+                  "ProfileClickWeight",
+                  "VqvWeight",
+                  "QuotedVqvWeight",
+                  "ReactWithVideoWeight",
+                  "VideoCarouselImmersiveVqvWeight"
+                ]
+              }
+            ]
+          },
+          "updates": {
+            "title": "Version history",
+            "conclusion": "The first reference snapshot was recorded on October 24, 2026. The history file currently contains no later source-code change entries.",
+            "sections": [
+              {
+                "title": "Initial reference",
+                "conclusion": "The first record corresponds to upstream commit 6258a154 and covers the README, parameter file and scoring code.",
+                "detail": "The date is when the reference was compiled, not the date of a newly deployed algorithm."
+              },
+              {
+                "title": "Earlier official notes",
+                "conclusion": "In August 2026, the maintainers clarified that weights multiply predictions and published more details on filtering and parameters.",
+                "detail": "A September 2026 Under the Hood report added information about content limited by legal requirements. These were earlier announcements."
+              },
+              {
+                "title": "What is tracked",
+                "conclusion": "Changes to the README, weight parameters and scoring source are tracked.",
+                "detail": "Weight changes record old and new defaults and their difference. Commits only touching other directories are not automatically algorithm updates."
+              }
+            ]
+          }
+        },
+        "compact": {
+          "rules": {
+            "title": "Recommendation pipeline",
+            "conclusion": "Candidates come from followed and unfollowed accounts. Eligibility checks, predicted actions and reranking determine what appears.",
+            "sections": [
+              {
+                "title": "Sources",
+                "conclusion": "Thunder covers followed accounts; Phoenix and SimClusters add out-of-network posts."
+              },
+              {
+                "title": "Scores",
+                "conclusion": "Predicted likes, replies, shares, dwell and negative feedback are weighted."
+              },
+              {
+                "title": "Reranking",
+                "conclusion": "Repeated authors, out-of-network discounts and later reranking affect positions."
+              },
+              {
+                "title": "Filtering",
+                "conclusion": "Viewed, blocked, muted or visibility-restricted posts can be removed."
+              }
+            ]
+          },
+          "weights": {
+            "title": "Weights at a glance",
+            "conclusion": "These are public defaults multiplying model predictions, not points gained or lost per actual action.",
+            "sections": [
+              {
+                "title": "Engagement",
+                "conclusion": "Like 0.66, reply 5, copy-link share 20: separate predicted probabilities.",
+                "weight_names": [
+                  "FavoriteWeight",
+                  "ReplyWeight",
+                  "ShareViaCopyLinkWeight"
+                ]
+              },
+              {
+                "title": "Distribution and follows",
+                "conclusion": "Repost 1, quote 5, follow author 4: scored independently.",
+                "weight_names": [
+                  "RetweetWeight",
+                  "QuoteWeight",
+                  "FollowAuthorWeight"
+                ]
+              },
+              {
+                "title": "Negative feedback",
+                "conclusion": "Not interested -52.272, mute -58.8, report -234: negative weighted terms.",
+                "weight_names": [
+                  "NotInterestedWeight",
+                  "MuteAuthorWeight",
+                  "ReportWeight"
+                ]
+              }
+            ]
+          },
+          "updates": {
+            "title": "Update status",
+            "conclusion": "Only the October 24, 2026 baseline is recorded so far; there are no later changes in the history file.",
+            "sections": [
+              {
+                "title": "Recorded version",
+                "conclusion": "Initial reference comes from upstream commit 6258a154."
+              },
+              {
+                "title": "Future entries",
+                "conclusion": "Only actual changes to tracked sources produce new entries; changed weights retain old and new values."
+              }
+            ]
+          }
+        }
+      },
+      "weight_labels": {
+        "FavoriteWeight": "Like",
+        "ReplyWeight": "Reply",
+        "BidirectionalFollowReplyWeightBoost": "Mutual-follow reply boost",
+        "BidirectionalFollowDwellWeightBoost": "Mutual-follow dwell boost",
+        "RetweetWeight": "Repost",
+        "PhotoExpandWeight": "Expand photo",
+        "VideoOpenWeight": "Open video",
+        "ClickWeight": "Open post",
+        "OpenLinkWeight": "Open link",
+        "ProfileClickWeight": "Open profile",
+        "VqvWeight": "Qualified video view",
+        "ShareWeight": "Share",
+        "ShareViaDmWeight": "Share via DM",
+        "ShareViaCopyLinkWeight": "Share via copied link",
+        "DwellWeight": "Dwell time",
+        "QuoteWeight": "Quote post",
+        "QuotedClickWeight": "Open quoted post",
+        "QuotedVqvWeight": "Qualified view in quoted post",
+        "FollowAuthorWeight": "Follow author",
+        "PostUnexploredWeight": "Previously unexplored post",
+        "ReactWithVideoWeight": "Video reaction",
+        "ContDwellTimeWeight": "Continuous dwell time",
+        "ContClickDwellTimeWeight": "Dwell after opening",
+        "NotInterestedWeight": "Not interested",
+        "BlockAuthorWeight": "Block author",
+        "MuteAuthorWeight": "Mute author",
+        "ReportWeight": "Report",
+        "NotDwelledWeight": "No dwell",
+        "VideoCarouselVideoOpenWeight": "Open video in carousel",
+        "VideoCarouselImmersiveVqvWeight": "Immersive qualified carousel view"
+      }
+    }
   }
 }
