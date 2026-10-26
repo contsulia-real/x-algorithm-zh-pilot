@@ -24,14 +24,6 @@
       "upstream_url": "https://github.com/xai-org/x-algorithm/commit/6258a1549ef808be88fba83d3b2d58364b587ee0",
       "weight_changes": [],
       "changes_i18n": {
-        "zh-TW": [
-          "2026 年 10 月 24 日建立初始對照版本。資料包含上游 README、權重參數及評分程式碼；未來變更均與此版本比較。",
-          "初始預設權重包括按讚 0.66、回覆 5、轉發 1、檢舉 -234。數值乘上模型預測結果，並非每次實際互動的固定分數。"
-        ],
-        "zh-HK": [
-          "2026 年 10 月 24 日建立初始對照版本，涵蓋上游 README、權重參數及評分程式碼；其後改動會以此為基準。",
-          "初始預設權重包括讚好 0.66、回覆 5、轉發 1、檢舉 -234。數字乘模型預測結果，不是每次實際互動的固定分數。"
-        ],
         "ja": [
           "2026年10月24日に初期比較基準を作成しました。対象は上流の README、重みパラメーター、スコア計算コードです。以後の変更はこの版と比較します。",
           "初期のデフォルト値には、いいね0.66、返信5、リポスト1、報告 -234 が含まれます。これらは予測値に掛ける重みであり、実際の操作1回ごとの固定点数ではありません。"
@@ -47,6 +39,10 @@
         "fr": [
           "La première référence comparative a été établie le 24 octobre 2026 à partir du README, des paramètres de pondération et du code de calcul du score en amont. Les modifications futures sont comparées à cette version.",
           "Les valeurs initiales comprennent J’aime 0,66, réponse 5, repost 1 et signalement -234. Elles multiplient des prévisions du modèle et ne représentent pas des points fixes par interaction réelle."
+        ],
+        "zh-Hant": [
+          "2026 年 10 月 24 日建立初始對照版本。資料包含上游 README、權重參數及評分程式碼；未來變更均與此版本比較。",
+          "初始預設權重包括按讚 0.66、回覆 5、轉發 1、檢舉 -234。數值乘上模型預測結果，並非每次實際互動的固定分數。"
         ]
       }
     }
