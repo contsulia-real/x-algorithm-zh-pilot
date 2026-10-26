@@ -246,7 +246,7 @@
       }
     ]
   },
-  "updated_at": "2026-10-25T08:08:27.136Z",
+  "updated_at": "2026-10-26T12:11:07.554Z",
   "upstream_repo": "xai-org/x-algorithm",
   "source_files": {
     "README.md": {
@@ -306,8 +306,8 @@
         "sections": [
           {
             "title": "互动与关注",
-            "conclusion": "点赞、回复、转发、引用及不同分享方式分别计权。复制链接分享的默认权重是 20，点赞为 0.66。",
-            "detail": "二者对应不同的预测概率。数值相除不能得到真实互动效果的倍数；互相关注回复加成也有独立的适用条件。",
+            "conclusion": "点赞、回复、转发、引用及不同分享方式使用独立权重；互相关注的回复另有加成参数。",
+            "detail": "各项参数分别作用于对应行为的预测概率。不同预测项的权重比值不能换算成真实互动效果，互相关注加成还受关系条件约束。",
             "weight_names": [
               "FavoriteWeight",
               "ReplyWeight",
@@ -323,7 +323,7 @@
           {
             "title": "点击与停留",
             "conclusion": "点开帖子、打开链接、观看视频和停留时长使用不同参数。",
-            "detail": "例如打开帖子为 0.3，打开链接为 0.2，点击后连续停留时长为 0.4。它们针对不同预测结果，并非相同单位的互动计数。",
+            "detail": "帖子点击、链接打开和点击后连续停留对应不同预测项，不能按实际互动次数直接比较。",
             "weight_names": [
               "PhotoExpandWeight",
               "VideoOpenWeight",
@@ -339,8 +339,8 @@
           },
           {
             "title": "负面反馈",
-            "conclusion": "不感兴趣、屏蔽、静音、举报及未停留使用负权重。举报的默认值为 -234。",
-            "detail": "这些负值参与预测后的评分计算，不代表一条实际举报会直接扣除 234 分。",
+            "conclusion": "不感兴趣、屏蔽、静音、举报及未停留对应负向权重。",
+            "detail": "负值参与模型预测结果的加权计算，不能解释为实际举报或屏蔽一次的固定扣分。",
             "weight_names": [
               "NotInterestedWeight",
               "BlockAuthorWeight",
@@ -351,8 +351,8 @@
           },
           {
             "title": "默认值为零",
-            "conclusion": "公开参数中有 6 项默认权重为 0，包括部分视频观看及个人资料点击相关项目。",
-            "detail": "零值表示这些项目在本组默认参数下不贡献对应加权项，不足以证明线上所有实验都不使用它们。",
+            "conclusion": "部分视频观看和个人资料点击相关项目在公开参数中默认权重为零。",
+            "detail": "这些项目在本组默认参数下不贡献对应加权项；功能开关或线上实验可能采用不同配置。",
             "weight_names": [
               "BidirectionalFollowDwellWeightBoost",
               "ProfileClickWeight",
@@ -415,7 +415,7 @@
         "sections": [
           {
             "title": "互动",
-            "conclusion": "点赞 0.66、回复 5、复制链接分享 20，分别作用于对应行为的预测概率。",
+            "conclusion": "点赞、回复与复制链接分享分别对应独立的预测行为权重。",
             "weight_names": [
               "FavoriteWeight",
               "ReplyWeight",
@@ -424,7 +424,7 @@
           },
           {
             "title": "传播与关注",
-            "conclusion": "普通转发 1、引用 5、关注作者 4，分别独立计算。",
+            "conclusion": "转发、引用与关注作者分别计权，适用的预测项各不相同。",
             "weight_names": [
               "RetweetWeight",
               "QuoteWeight",
@@ -433,7 +433,7 @@
           },
           {
             "title": "负面反馈",
-            "conclusion": "不感兴趣 -52.272、静音 -58.8、举报 -234，为负向加权项。",
+            "conclusion": "不感兴趣、静音与举报对应负向预测权重。",
             "weight_names": [
               "NotInterestedWeight",
               "MuteAuthorWeight",
@@ -504,8 +504,8 @@
             "sections": [
               {
                 "title": "Engagement and follows",
-                "conclusion": "Likes, replies, reposts, quotes and sharing methods have separate weights. Copy-link sharing defaults to 20; liking to 0.66.",
-                "detail": "They multiply different predicted probabilities. The ratio of these values is not a ratio of observed impact; a mutual-follow reply boost has additional conditions.",
+                "conclusion": "Likes, replies, reposts, quotes and sharing methods use separate weights; mutual-follow replies have an additional boost.",
+                "detail": "Each parameter multiplies the corresponding predicted action probability. Ratios between weights do not establish relative effects on actual interactions, and the mutual-follow boost has relationship conditions.",
                 "weight_names": [
                   "FavoriteWeight",
                   "ReplyWeight",
@@ -520,8 +520,8 @@
               },
               {
                 "title": "Opens and dwell",
-                "conclusion": "Opening a post or link, watching video and dwelling each have separate parameters.",
-                "detail": "For example: post opens 0.3, link opens 0.2, and continuous post-click dwell 0.4. These represent different predictions, not interchangeable interaction counts.",
+                "conclusion": "Post opens, link opens, video engagement and dwell time use separate parameters.",
+                "detail": "Post clicks, link opens and continuous dwell after a click represent distinct prediction targets, not interchangeable counts of observed actions.",
                 "weight_names": [
                   "PhotoExpandWeight",
                   "VideoOpenWeight",
@@ -537,8 +537,8 @@
               },
               {
                 "title": "Negative feedback",
-                "conclusion": "Not interested, block, mute, report and not dwelling have negative weights. Reports default to -234.",
-                "detail": "A predicted probability contributes to the weighted score; a single actual report does not subtract 234 points.",
+                "conclusion": "Not interested, block, mute, report and lack of dwell contribute negative weighting terms.",
+                "detail": "Negative parameters multiply model predictions; they do not specify a fixed score penalty for a single actual report or block.",
                 "weight_names": [
                   "NotInterestedWeight",
                   "BlockAuthorWeight",
@@ -549,8 +549,8 @@
               },
               {
                 "title": "Zero defaults",
-                "conclusion": "Six published parameters default to zero, including some video-view and profile-open predictions.",
-                "detail": "Zero contributes no weight under these defaults, but other live experiments may use different values.",
+                "conclusion": "Some published defaults for video-view and profile-click signals have zero weights.",
+                "detail": "These terms contribute nothing under the published defaults. Feature switches or production experiments may use different settings.",
                 "weight_names": [
                   "BidirectionalFollowDwellWeightBoost",
                   "ProfileClickWeight",
@@ -613,7 +613,7 @@
             "sections": [
               {
                 "title": "Engagement",
-                "conclusion": "Like 0.66, reply 5, copy-link share 20: separate predicted probabilities.",
+                "conclusion": "Likes, replies and copy-link shares have separate predicted-action weights.",
                 "weight_names": [
                   "FavoriteWeight",
                   "ReplyWeight",
@@ -622,7 +622,7 @@
               },
               {
                 "title": "Distribution and follows",
-                "conclusion": "Repost 1, quote 5, follow author 4: scored independently.",
+                "conclusion": "Reposts, quotes and author follows are weighted through distinct prediction terms.",
                 "weight_names": [
                   "RetweetWeight",
                   "QuoteWeight",
@@ -631,7 +631,7 @@
               },
               {
                 "title": "Negative feedback",
-                "conclusion": "Not interested -52.272, mute -58.8, report -234: negative weighted terms.",
+                "conclusion": "Not interested, mute and report signals carry negative prediction weights.",
                 "weight_names": [
                   "NotInterestedWeight",
                   "MuteAuthorWeight",
@@ -734,8 +734,8 @@
             "sections": [
               {
                 "title": "反応とフォロー",
-                "conclusion": "いいね、返信、リポスト、引用、共有方法には別々の重みがあります。リンクをコピーして共有は20、いいねは0.66です。",
-                "detail": "異なる行動の予測確率に掛けるため、数値の比率から実際の効果を推定することはできません。相互フォロー時の返信加重には別の適用条件があります。",
+                "conclusion": "いいね、返信、リポスト、引用、共有方法には別々の重みがあり、相互フォローの返信には追加の加重項目があります。",
+                "detail": "各パラメーターは対応する行動の予測確率に適用されます。重みの比率から実際の反応への効果は算出できず、相互フォローの加重には関係性の条件があります。",
                 "weight_names": [
                   "FavoriteWeight",
                   "ReplyWeight",
@@ -750,8 +750,8 @@
               },
               {
                 "title": "クリックと滞在",
-                "conclusion": "投稿を開く、リンクを開く、動画を見る、滞在する行動は別々に扱われます。",
-                "detail": "投稿を開く0.3、リンクを開く0.2、クリック後の連続滞在0.4など、異なる予測結果に対応しています。",
+                "conclusion": "投稿やリンクを開く行動、動画の視聴、滞在時間には別々のパラメーターがあります。",
+                "detail": "投稿のクリック、リンクの閲覧、クリック後の連続滞在は異なる予測項目であり、同じ単位の操作回数として比較できません。",
                 "weight_names": [
                   "PhotoExpandWeight",
                   "VideoOpenWeight",
@@ -767,8 +767,8 @@
               },
               {
                 "title": "否定的な反応",
-                "conclusion": "興味なし、ブロック、ミュート、報告、滞在なしは負の重みです。報告はデフォルトで -234 です。",
-                "detail": "この値は予測後の計算に使われます。実際の報告1件につき234点を引くという意味ではありません。",
+                "conclusion": "興味なし、ブロック、ミュート、報告、滞在なしには負の重みが適用されます。",
+                "detail": "負の値はモデルの予測結果を加重するために使われ、実際の報告やブロック一件ごとの固定減点ではありません。",
                 "weight_names": [
                   "NotInterestedWeight",
                   "BlockAuthorWeight",
@@ -779,8 +779,8 @@
               },
               {
                 "title": "デフォルト値がゼロ",
-                "conclusion": "公開パラメーターの6項目は0です。動画視聴やプロフィール閲覧に関する項目も含まれます。",
-                "detail": "このデフォルト設定では該当項目の加重点がありませんが、実際の実験では別の値が使われる可能性があります。",
+                "conclusion": "動画視聴やプロフィールのクリックに関連する一部の公開デフォルト重みはゼロです。",
+                "detail": "このデフォルト設定では該当項目は加重スコアに寄与しません。機能スイッチや本番環境の実験では異なる設定が使われる可能性があります。",
                 "weight_names": [
                   "BidirectionalFollowDwellWeightBoost",
                   "ProfileClickWeight",
@@ -843,7 +843,7 @@
             "sections": [
               {
                 "title": "反応",
-                "conclusion": "いいね0.66、返信5、リンクをコピーして共有20。別々の予測確率を使います。",
+                "conclusion": "いいね、返信、リンクのコピーによる共有には、それぞれ異なる予測行動の重みがあります。",
                 "weight_names": [
                   "FavoriteWeight",
                   "ReplyWeight",
@@ -852,7 +852,7 @@
               },
               {
                 "title": "拡散とフォロー",
-                "conclusion": "リポスト1、引用5、投稿者のフォロー4。それぞれ独立して計算します。",
+                "conclusion": "リポスト、引用、投稿者のフォローは異なる予測項目として計算されます。",
                 "weight_names": [
                   "RetweetWeight",
                   "QuoteWeight",
@@ -861,7 +861,7 @@
               },
               {
                 "title": "否定的な反応",
-                "conclusion": "興味なし -52.272、ミュート -58.8、報告 -234。負の加重項目です。",
+                "conclusion": "興味なし、ミュート、報告には負の予測重みが設定されています。",
                 "weight_names": [
                   "NotInterestedWeight",
                   "MuteAuthorWeight",
@@ -964,8 +964,8 @@
             "sections": [
               {
                 "title": "상호작용 및 팔로우",
-                "conclusion": "좋아요, 답글, 재게시, 인용, 공유 방식은 각각 따로 가중치를 갖습니다. 링크 복사 공유는 20, 좋아요는 0.66입니다.",
-                "detail": "서로 다른 예측 확률에 적용되므로 숫자의 비율이 실제 효과의 배수를 나타내지 않습니다. 맞팔로우 답글 가중치에는 추가 조건이 있습니다.",
+                "conclusion": "좋아요, 답글, 재게시, 인용, 공유 방식에는 각각 별도의 가중치가 있으며 맞팔로우 답글에는 추가 가중치가 있습니다.",
+                "detail": "각 매개변수는 해당 행동의 예측 확률에 적용됩니다. 가중치의 비율만으로 실제 상호작용 효과를 환산할 수 없으며 맞팔로우 가중치에는 관계 조건이 적용됩니다.",
                 "weight_names": [
                   "FavoriteWeight",
                   "ReplyWeight",
@@ -981,7 +981,7 @@
               {
                 "title": "열기와 체류",
                 "conclusion": "게시물·링크 열기, 동영상 시청, 체류 시간에는 서로 다른 매개변수가 적용됩니다.",
-                "detail": "예를 들어 게시물 열기 0.3, 링크 열기 0.2, 클릭 후 연속 체류 0.4로 각각 다른 예측에 해당합니다.",
+                "detail": "게시물 클릭, 링크 열기, 클릭 후 연속 체류는 서로 다른 예측 항목이므로 동일한 단위의 실제 행동 횟수로 비교할 수 없습니다.",
                 "weight_names": [
                   "PhotoExpandWeight",
                   "VideoOpenWeight",
@@ -997,8 +997,8 @@
               },
               {
                 "title": "부정적 반응",
-                "conclusion": "관심 없음, 차단, 뮤트, 신고, 체류하지 않음에는 음수 가중치가 있습니다. 신고 기본값은 -234입니다.",
-                "detail": "예측 결과에 적용하는 음수 항목이지 실제 신고 1회에 234점을 차감한다는 뜻이 아닙니다.",
+                "conclusion": "관심 없음, 차단, 뮤트, 신고, 체류하지 않음에는 음수 가중치가 적용됩니다.",
+                "detail": "음수는 모델의 예측 결과에 적용되는 항목이며 실제 신고나 차단 한 번마다 고정 점수를 차감한다는 뜻은 아닙니다.",
                 "weight_names": [
                   "NotInterestedWeight",
                   "BlockAuthorWeight",
@@ -1009,8 +1009,8 @@
               },
               {
                 "title": "기본값이 0인 항목",
-                "conclusion": "공개 매개변수 중 6개의 기본값이 0이며 일부 동영상 시청과 프로필 열기 관련 항목이 포함됩니다.",
-                "detail": "이 기본 설정에서는 해당 항목이 점수에 기여하지 않지만 실제 실험에서는 다른 값이 사용될 수 있습니다.",
+                "conclusion": "동영상 시청과 프로필 클릭에 관련된 일부 공개 기본 가중치는 영입니다.",
+                "detail": "이 기본 설정에서는 해당 항목이 가중 점수에 기여하지 않습니다. 기능 스위치나 운영 환경의 실험에서는 다른 값이 사용될 수 있습니다.",
                 "weight_names": [
                   "BidirectionalFollowDwellWeightBoost",
                   "ProfileClickWeight",
@@ -1073,7 +1073,7 @@
             "sections": [
               {
                 "title": "상호작용",
-                "conclusion": "좋아요 0.66, 답글 5, 링크 복사 공유 20. 서로 다른 예측 확률에 적용됩니다.",
+                "conclusion": "좋아요, 답글, 링크 복사 공유에는 각각 별도의 예측 행동 가중치가 적용됩니다.",
                 "weight_names": [
                   "FavoriteWeight",
                   "ReplyWeight",
@@ -1082,7 +1082,7 @@
               },
               {
                 "title": "확산 및 팔로우",
-                "conclusion": "재게시 1, 인용 5, 작성자 팔로우 4. 각각 독립적으로 계산합니다.",
+                "conclusion": "재게시, 인용, 작성자 팔로우는 서로 다른 예측 항목으로 계산됩니다.",
                 "weight_names": [
                   "RetweetWeight",
                   "QuoteWeight",
@@ -1091,7 +1091,7 @@
               },
               {
                 "title": "부정적 반응",
-                "conclusion": "관심 없음 -52.272, 뮤트 -58.8, 신고 -234. 음수 가중치 항목입니다.",
+                "conclusion": "관심 없음, 뮤트, 신고에는 음수 예측 가중치가 적용됩니다.",
                 "weight_names": [
                   "NotInterestedWeight",
                   "MuteAuthorWeight",
@@ -1194,8 +1194,8 @@
             "sections": [
               {
                 "title": "Interactions et abonnements",
-                "conclusion": "J’aime, réponses, reposts, citations et modes de partage ont des pondérations distinctes. Le partage par copie du lien vaut 20 par défaut, le J’aime 0,66.",
-                "detail": "Les valeurs portent sur des probabilités différentes. Leur rapport ne mesure pas leur effet réel ; le bonus de réponse entre abonnés mutuels a des conditions supplémentaires.",
+                "conclusion": "Les J’aime, réponses, reposts, citations et modes de partage ont des pondérations distinctes ; les réponses entre abonnés mutuels ont un bonus supplémentaire.",
+                "detail": "Chaque paramètre multiplie la probabilité prédite de l’action correspondante. Le rapport des pondérations ne mesure pas l’effet réel des interactions, et le bonus entre abonnés mutuels dépend de conditions de relation.",
                 "weight_names": [
                   "FavoriteWeight",
                   "ReplyWeight",
@@ -1210,8 +1210,8 @@
               },
               {
                 "title": "Ouvertures et lecture",
-                "conclusion": "L’ouverture de posts ou de liens, les vidéos et la durée de lecture utilisent des paramètres différents.",
-                "detail": "Exemples : ouverture d’un post 0,3 ; ouverture d’un lien 0,2 ; durée continue après clic 0,4. Ce ne sont pas des comptes d’interactions comparables.",
+                "conclusion": "L’ouverture de posts ou de liens, les interactions vidéo et la durée de lecture utilisent des paramètres différents.",
+                "detail": "Les clics sur un post, l’ouverture d’un lien et la durée continue après clic correspondent à des prédictions distinctes, non à des nombres d’actions directement comparables.",
                 "weight_names": [
                   "PhotoExpandWeight",
                   "VideoOpenWeight",
@@ -1227,8 +1227,8 @@
               },
               {
                 "title": "Retours négatifs",
-                "conclusion": "Pas intéressé, blocage, masquage, signalement et absence de lecture reçoivent des valeurs négatives. Le signalement vaut -234 par défaut.",
-                "detail": "Ces valeurs interviennent après la prédiction ; un signalement effectivement envoyé ne retire pas automatiquement 234 points.",
+                "conclusion": "Pas intéressé, blocage, masquage, signalement et absence de lecture utilisent des pondérations négatives.",
+                "detail": "Les paramètres négatifs multiplient les prédictions du modèle ; ils ne fixent pas une pénalité par signalement ou blocage effectivement réalisé.",
                 "weight_names": [
                   "NotInterestedWeight",
                   "BlockAuthorWeight",
@@ -1239,8 +1239,8 @@
               },
               {
                 "title": "Valeurs nulles",
-                "conclusion": "Six paramètres ont une pondération par défaut égale à zéro, dont certains liés aux vidéos et aux ouvertures de profil.",
-                "detail": "La contribution correspondante est nulle dans cette configuration. Les expériences en production peuvent employer d’autres valeurs.",
+                "conclusion": "Certains paramètres publics liés aux vues de vidéos et aux ouvertures de profil ont une pondération nulle par défaut.",
+                "detail": "Ces termes ne contribuent pas au score avec les valeurs publiées. Les commutateurs de fonctions ou les expériences en production peuvent appliquer d’autres paramètres.",
                 "weight_names": [
                   "BidirectionalFollowDwellWeightBoost",
                   "ProfileClickWeight",
@@ -1303,7 +1303,7 @@
             "sections": [
               {
                 "title": "Interactions",
-                "conclusion": "J’aime 0,66 ; réponse 5 ; partage par copie du lien 20. Chaque valeur porte sur sa propre prédiction.",
+                "conclusion": "J’aime, réponses et partages par copie du lien ont des pondérations de prédiction distinctes.",
                 "weight_names": [
                   "FavoriteWeight",
                   "ReplyWeight",
@@ -1312,7 +1312,7 @@
               },
               {
                 "title": "Diffusion et abonnements",
-                "conclusion": "Repost 1 ; citation 5 ; suivi de l’auteur 4. Les calculs sont distincts.",
+                "conclusion": "Reposts, citations et abonnements à l’auteur correspondent à des prédictions pondérées séparément.",
                 "weight_names": [
                   "RetweetWeight",
                   "QuoteWeight",
@@ -1321,7 +1321,7 @@
               },
               {
                 "title": "Retours négatifs",
-                "conclusion": "Pas intéressé -52,272 ; masquage -58,8 ; signalement -234. Ce sont des pondérations négatives.",
+                "conclusion": "Pas intéressé, masquage et signalement utilisent des pondérations prédictives négatives.",
                 "weight_names": [
                   "NotInterestedWeight",
                   "MuteAuthorWeight",
@@ -1424,8 +1424,8 @@
             "sections": [
               {
                 "title": "互動與追蹤",
-                "conclusion": "按讚、回覆、轉發、引用及不同分享方式分別計權。複製連結分享預設為 20，按讚為 0.66。",
-                "detail": "這些數字乘的是不同的預測機率，不能用比值推算真實效果。互相關注回覆加成另有適用條件。",
+                "conclusion": "按讚、回覆、轉發、引用及不同分享方式各有權重；互相關注的回覆另有加成參數。",
+                "detail": "各項參數分別乘上對應行為的預測機率。不同項目的權重比值不能換算成實際互動效果，互相關注加成也受關係條件限制。",
                 "weight_names": [
                   "FavoriteWeight",
                   "ReplyWeight",
@@ -1441,7 +1441,7 @@
               {
                 "title": "點開與停留",
                 "conclusion": "點開貼文、開啟連結、觀看影片及停留時間，各有不同參數。",
-                "detail": "例如開啟貼文 0.3、開啟連結 0.2、點開後持續停留 0.4；它們衡量不同預測結果。",
+                "detail": "貼文點擊、連結開啟與點擊後持續停留對應不同預測項，不能直接當作相同單位的互動次數比較。",
                 "weight_names": [
                   "PhotoExpandWeight",
                   "VideoOpenWeight",
@@ -1457,8 +1457,8 @@
               },
               {
                 "title": "負面回饋",
-                "conclusion": "不感興趣、封鎖、靜音、檢舉及未停留使用負權重。檢舉預設為 -234。",
-                "detail": "負值參與預測後的評分，不代表一次實際檢舉直接扣 234 分。",
+                "conclusion": "不感興趣、封鎖、靜音、檢舉及未停留對應負向權重。",
+                "detail": "負值參與模型預測結果的加權計算，不代表實際檢舉或封鎖一次就會扣除固定分數。",
                 "weight_names": [
                   "NotInterestedWeight",
                   "BlockAuthorWeight",
@@ -1469,8 +1469,8 @@
               },
               {
                 "title": "預設為零",
-                "conclusion": "公開參數中有 6 項預設權重為 0，包括部分影片觀看及個人檔案點擊項目。",
-                "detail": "零值表示在這組預設值中不貢獻該項加權分數，但線上實驗可能使用其他設定。",
+                "conclusion": "部分影片觀看與個人檔案點擊相關項目，在公開參數中預設權重為零。",
+                "detail": "這些項目在此組預設參數下不貢獻對應加權項；功能開關或線上實驗可能採用不同設定。",
                 "weight_names": [
                   "BidirectionalFollowDwellWeightBoost",
                   "ProfileClickWeight",
@@ -1533,7 +1533,7 @@
             "sections": [
               {
                 "title": "互動",
-                "conclusion": "按讚 0.66、回覆 5、複製連結分享 20，分別作用於各自的預測機率。",
+                "conclusion": "按讚、回覆及複製連結分享分別對應不同的預測行為權重。",
                 "weight_names": [
                   "FavoriteWeight",
                   "ReplyWeight",
@@ -1542,7 +1542,7 @@
               },
               {
                 "title": "傳播與追蹤",
-                "conclusion": "轉發 1、引用 5、追蹤作者 4，分別計算。",
+                "conclusion": "轉發、引用與追蹤作者各自計權，對應不同的預測項。",
                 "weight_names": [
                   "RetweetWeight",
                   "QuoteWeight",
@@ -1551,7 +1551,7 @@
               },
               {
                 "title": "負面回饋",
-                "conclusion": "不感興趣 -52.272、靜音 -58.8、檢舉 -234，屬於負向加權項。",
+                "conclusion": "不感興趣、靜音及檢舉使用負向預測權重。",
                 "weight_names": [
                   "NotInterestedWeight",
                   "MuteAuthorWeight",
