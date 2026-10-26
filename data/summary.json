@@ -1378,6 +1378,236 @@
         "VideoCarouselVideoOpenWeight": "カルーセル内の動画を開く",
         "VideoCarouselImmersiveVqvWeight": "没入型カルーセルの条件を満たす視聴"
       }
+    },
+    "ko": {
+      "presentation": {
+        "full": {
+          "rules": {
+            "title": "추천 피드 작동 방식",
+            "conclusion": "추천 피드는 팔로우한 계정과 팔로우하지 않은 계정에서 게시물을 수집한 뒤 필터링, 행동 예측, 점수 계산 및 재정렬을 거쳐 표시합니다. 공개 코드를 기준으로 정리했습니다.",
+            "sections": [
+              {
+                "title": "후보 출처",
+                "conclusion": "Thunder는 팔로우한 계정의 최근 게시물을 제공하고 Phoenix, SimClusters 및 인기 콘텐츠 출처가 다른 게시물을 보충합니다.",
+                "detail": "공개 기본값에는 후보 수와 시간 제한이 있습니다. 예를 들어 Thunder는 최대 1,200개, Phoenix는 최대 1,000개입니다. 실제 수집 수량은 다를 수 있습니다."
+              },
+              {
+                "title": "정렬 전 필터링",
+                "conclusion": "중복 게시물, 이미 보거나 표시한 게시물, 차단·뮤트 조건이 적용된 게시물은 후보에서 제외될 수 있습니다.",
+                "detail": "오래된 게시물, 본인 게시물, 뮤트한 단어, 구독 자격 및 지역 제한도 검사합니다. 후보로 수집되어도 표시가 보장되지는 않습니다."
+              },
+              {
+                "title": "예측과 점수 계산",
+                "conclusion": "Phoenix는 좋아요, 답글, 공유, 게시물 열기, 체류 등의 행동을 예측하고 RankingScorer가 가중치를 적용해 점수를 합칩니다.",
+                "detail": "대부분의 가중치는 예측 확률에 곱하며 일부는 연속형 예측값에 곱합니다. 기존 좋아요 수가 곧 점수가 되는 것은 아닙니다."
+              },
+              {
+                "title": "순위 조정",
+                "conclusion": "작성자 다양성, 팔로우 외 콘텐츠에 대한 할인, 노출이 적은 작성자에 대한 가산 등이 순서를 바꿀 수 있습니다.",
+                "detail": "VMRanker도 순위를 다시 조정합니다. 같은 작성자가 연속되거나 유사한 게시물이 붙어 있는 경우 초기 점수만으로 순위를 설명할 수 없습니다."
+              },
+              {
+                "title": "표시 가능 여부 확인",
+                "conclusion": "높은 순위를 받은 게시물도 마지막 표시 가능 여부 검사에서 제외될 수 있습니다.",
+                "detail": "공개 코드에는 ALLOW, NOTICE, INTERSTITIAL, DROP 결과가 있습니다. DROP은 게시물을 제거하며 연결된 상위 게시물이나 인용 관계도 영향을 받을 수 있습니다."
+              },
+              {
+                "title": "적용 범위",
+                "conclusion": "이 설명은 공개 코드와 기본 설정을 기준으로 하며 모든 계정에 적용되는 실제 운영 설정 전체가 아닙니다.",
+                "detail": "일부 Grox 프롬프트와 botmaker 규칙은 공개되지 않았습니다. 실험이나 기능 스위치로 기본값이 달라질 수 있습니다."
+              }
+            ]
+          },
+          "weights": {
+            "title": "기본 가중치",
+            "conclusion": "공개 매개변수 파일에서 확인한 값은 30개입니다. 모델 예측값에 적용되는 가중치이며 실제 좋아요나 신고 1회당 고정 점수가 아닙니다.",
+            "sections": [
+              {
+                "title": "상호작용 및 팔로우",
+                "conclusion": "좋아요, 답글, 재게시, 인용, 공유 방식은 각각 따로 가중치를 갖습니다. 링크 복사 공유는 20, 좋아요는 0.66입니다.",
+                "detail": "서로 다른 예측 확률에 적용되므로 숫자의 비율이 실제 효과의 배수를 나타내지 않습니다. 맞팔로우 답글 가중치에는 추가 조건이 있습니다.",
+                "weight_names": [
+                  "FavoriteWeight",
+                  "ReplyWeight",
+                  "RetweetWeight",
+                  "QuoteWeight",
+                  "ShareWeight",
+                  "ShareViaDmWeight",
+                  "ShareViaCopyLinkWeight",
+                  "FollowAuthorWeight",
+                  "BidirectionalFollowReplyWeightBoost"
+                ]
+              },
+              {
+                "title": "열기와 체류",
+                "conclusion": "게시물·링크 열기, 동영상 시청, 체류 시간에는 서로 다른 매개변수가 적용됩니다.",
+                "detail": "예를 들어 게시물 열기 0.3, 링크 열기 0.2, 클릭 후 연속 체류 0.4로 각각 다른 예측에 해당합니다.",
+                "weight_names": [
+                  "PhotoExpandWeight",
+                  "VideoOpenWeight",
+                  "ClickWeight",
+                  "OpenLinkWeight",
+                  "DwellWeight",
+                  "QuotedClickWeight",
+                  "PostUnexploredWeight",
+                  "ContDwellTimeWeight",
+                  "ContClickDwellTimeWeight",
+                  "VideoCarouselVideoOpenWeight"
+                ]
+              },
+              {
+                "title": "부정적 반응",
+                "conclusion": "관심 없음, 차단, 뮤트, 신고, 체류하지 않음에는 음수 가중치가 있습니다. 신고 기본값은 -234입니다.",
+                "detail": "예측 결과에 적용하는 음수 항목이지 실제 신고 1회에 234점을 차감한다는 뜻이 아닙니다.",
+                "weight_names": [
+                  "NotInterestedWeight",
+                  "BlockAuthorWeight",
+                  "MuteAuthorWeight",
+                  "ReportWeight",
+                  "NotDwelledWeight"
+                ]
+              },
+              {
+                "title": "기본값이 0인 항목",
+                "conclusion": "공개 매개변수 중 6개의 기본값이 0이며 일부 동영상 시청과 프로필 열기 관련 항목이 포함됩니다.",
+                "detail": "이 기본 설정에서는 해당 항목이 점수에 기여하지 않지만 실제 실험에서는 다른 값이 사용될 수 있습니다.",
+                "weight_names": [
+                  "BidirectionalFollowDwellWeightBoost",
+                  "ProfileClickWeight",
+                  "VqvWeight",
+                  "QuotedVqvWeight",
+                  "ReactWithVideoWeight",
+                  "VideoCarouselImmersiveVqvWeight"
+                ]
+              }
+            ]
+          },
+          "updates": {
+            "title": "버전 기록",
+            "conclusion": "2026년 10월 24일 첫 비교 기준을 작성했습니다. 현재 기록 파일에는 이후의 소스 변경 항목이 없습니다.",
+            "sections": [
+              {
+                "title": "초기 기준",
+                "conclusion": "첫 기록은 상위 저장소 커밋 6258a154를 기준으로 README, 매개변수 파일, 점수 코드를 참조했습니다.",
+                "detail": "기준을 작성한 날짜이며 당일 새 알고리즘이 배포되었다는 의미는 아닙니다."
+              },
+              {
+                "title": "이전 공식 설명",
+                "conclusion": "2026년 8월 공식 설명에서 가중치가 예측값에 곱해진다는 점을 밝히고 필터링 및 매개변수 정보를 추가했습니다.",
+                "detail": "2026년 9월 Under the Hood 보고서에는 법률에 따른 콘텐츠 표시 제한 내용이 추가되었습니다. 모두 이전 공지입니다."
+              },
+              {
+                "title": "추적 범위",
+                "conclusion": "README, 가중치 매개변수, 점수 계산 코드의 실제 변경만 기록합니다.",
+                "detail": "가중치 변경 시 이전 값과 새 값 및 차이를 남깁니다. 다른 디렉터리만 수정한 커밋은 자동으로 알고리즘 변경으로 분류하지 않습니다."
+              }
+            ]
+          }
+        },
+        "compact": {
+          "rules": {
+            "title": "추천 처리 과정",
+            "conclusion": "팔로우한 계정과 팔로우하지 않은 계정의 후보를 수집하고 표시 조건을 확인한 뒤 행동 예측과 점수 계산, 재정렬을 거칩니다.",
+            "sections": [
+              {
+                "title": "출처",
+                "conclusion": "Thunder는 팔로우 계정의 글을, Phoenix와 SimClusters는 그 외 글을 보충합니다."
+              },
+              {
+                "title": "점수",
+                "conclusion": "좋아요, 답글, 공유, 체류, 부정적 반응의 예측에 가중치를 적용합니다."
+              },
+              {
+                "title": "조정",
+                "conclusion": "작성자 반복, 팔로우 외 콘텐츠 할인, 후속 재정렬이 순위에 영향을 줍니다."
+              },
+              {
+                "title": "제외",
+                "conclusion": "이미 본 글, 차단·뮤트 대상, 표시 제한 게시물은 제외될 수 있습니다."
+              }
+            ]
+          },
+          "weights": {
+            "title": "주요 가중치",
+            "conclusion": "공개된 기본값이며 실제 행동 1회마다 더하거나 빼는 점수가 아닌 예측값에 곱하는 값입니다.",
+            "sections": [
+              {
+                "title": "상호작용",
+                "conclusion": "좋아요 0.66, 답글 5, 링크 복사 공유 20. 서로 다른 예측 확률에 적용됩니다.",
+                "weight_names": [
+                  "FavoriteWeight",
+                  "ReplyWeight",
+                  "ShareViaCopyLinkWeight"
+                ]
+              },
+              {
+                "title": "확산 및 팔로우",
+                "conclusion": "재게시 1, 인용 5, 작성자 팔로우 4. 각각 독립적으로 계산합니다.",
+                "weight_names": [
+                  "RetweetWeight",
+                  "QuoteWeight",
+                  "FollowAuthorWeight"
+                ]
+              },
+              {
+                "title": "부정적 반응",
+                "conclusion": "관심 없음 -52.272, 뮤트 -58.8, 신고 -234. 음수 가중치 항목입니다.",
+                "weight_names": [
+                  "NotInterestedWeight",
+                  "MuteAuthorWeight",
+                  "ReportWeight"
+                ]
+              }
+            ]
+          },
+          "updates": {
+            "title": "업데이트 상태",
+            "conclusion": "현재는 2026년 10월 24일의 초기 기준만 기록되어 있으며 그 이후의 변경 항목은 없습니다.",
+            "sections": [
+              {
+                "title": "기록된 버전",
+                "conclusion": "초기 자료는 상위 저장소 커밋 6258a154를 기준으로 합니다."
+              },
+              {
+                "title": "이후 기록",
+                "conclusion": "추적하는 코드가 실제로 바뀔 때만 기록을 추가하며 가중치 변경 전후의 값을 남깁니다."
+              }
+            ]
+          }
+        }
+      },
+      "weight_labels": {
+        "FavoriteWeight": "좋아요",
+        "ReplyWeight": "답글",
+        "BidirectionalFollowReplyWeightBoost": "맞팔로우 답글 가중치 증가",
+        "BidirectionalFollowDwellWeightBoost": "맞팔로우 체류 가중치 증가",
+        "RetweetWeight": "재게시",
+        "PhotoExpandWeight": "사진 펼치기",
+        "VideoOpenWeight": "동영상 열기",
+        "ClickWeight": "게시물 열기",
+        "OpenLinkWeight": "링크 열기",
+        "ProfileClickWeight": "프로필 열기",
+        "VqvWeight": "유효 동영상 시청",
+        "ShareWeight": "공유",
+        "ShareViaDmWeight": "DM으로 공유",
+        "ShareViaCopyLinkWeight": "링크 복사로 공유",
+        "DwellWeight": "체류 시간",
+        "QuoteWeight": "인용 게시물",
+        "QuotedClickWeight": "인용된 게시물 열기",
+        "QuotedVqvWeight": "인용된 게시물의 유효 동영상 시청",
+        "FollowAuthorWeight": "작성자 팔로우",
+        "PostUnexploredWeight": "미탐색 게시물",
+        "ReactWithVideoWeight": "동영상 반응",
+        "ContDwellTimeWeight": "연속 체류 시간",
+        "ContClickDwellTimeWeight": "클릭 후 연속 체류 시간",
+        "NotInterestedWeight": "관심 없음",
+        "BlockAuthorWeight": "작성자 차단",
+        "MuteAuthorWeight": "작성자 뮤트",
+        "ReportWeight": "신고",
+        "NotDwelledWeight": "체류하지 않음",
+        "VideoCarouselVideoOpenWeight": "캐러셀 동영상 열기",
+        "VideoCarouselImmersiveVqvWeight": "몰입형 캐러셀 유효 시청"
+      }
     }
   }
 }
