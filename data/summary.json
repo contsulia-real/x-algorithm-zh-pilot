@@ -918,6 +918,236 @@
         "VideoCarouselVideoOpenWeight": "開啟輪播影片",
         "VideoCarouselImmersiveVqvWeight": "沉浸式輪播有效觀看"
       }
+    },
+    "zh-HK": {
+      "presentation": {
+        "full": {
+          "rules": {
+            "title": "為你推薦",
+            "conclusion": "動態消息會從已追蹤和未追蹤的帳戶取得帖文，經過篩選、預測評分和排序調整後顯示。以下根據公開程式碼整理。",
+            "sections": [
+              {
+                "title": "候選來源",
+                "conclusion": "Thunder 提供已追蹤帳戶的近期帖文；Phoenix、SimClusters 和熱門來源補充其他內容。",
+                "detail": "公開預設參數設有候選數量及時間限制，例如 Thunder 最多 1,200 則，Phoenix 最多 1,000 則。每次實際取得的數量未必相同。"
+              },
+              {
+                "title": "排序前篩選",
+                "conclusion": "重複、已看過或已顯示的帖文，以及封鎖和靜音條件，會影響哪些帖文能進入排序。",
+                "detail": "其他檢查包括舊帖文、自己的帖文、靜音關鍵字、訂閱資格和地區限制。被找到的帖文未必可以展示。"
+              },
+              {
+                "title": "預測及評分",
+                "conclusion": "Phoenix 預測讀者讚好、回覆、分享、點開或停留的可能性；RankingScorer 按權重合成分數。",
+                "detail": "大部分權重乘預測機率，部分乘連續數值的預測結果。帖文已有的互動次數並非直接得分。"
+              },
+              {
+                "title": "排序調整",
+                "conclusion": "作者多樣性、未追蹤內容的折扣及曝光較少作者的加成，都可能改變排序。",
+                "detail": "VMRanker 亦會再作排序；同一作者連續出現或相鄰帖文相似，不能單憑初次評分解釋。"
+              },
+              {
+                "title": "可見性檢查",
+                "conclusion": "即使帖文排名較高，也可能不通過最後的可見性檢查。",
+                "detail": "公開程式碼包含 ALLOW、NOTICE、INTERSTITIAL、DROP 等結果。DROP 會移除帖文，相關父帖文或引用亦可能受影響。"
+              },
+              {
+                "title": "適用範圍",
+                "conclusion": "這些是已公開的程式碼與預設參數，不代表所有帳戶實際使用的完整設定。",
+                "detail": "部分 Grox 提示檔和 botmaker 規則尚未公開；線上實驗和功能開關亦可能覆寫預設值。"
+              }
+            ]
+          },
+          "weights": {
+            "title": "預設權重",
+            "conclusion": "以下 30 個數值來自公開參數檔。權重作用於模型預測結果，不是每次讚好、回覆或檢舉直接加減的分數。",
+            "sections": [
+              {
+                "title": "互動及追蹤",
+                "conclusion": "讚好、回覆、轉發、引用和不同分享方式分開計權。複製連結分享預設為 20，讚好為 0.66。",
+                "detail": "兩者作用於不同的預測機率，不能直接以比例計算真實效果。互相追蹤回覆加權另有條件。",
+                "weight_names": [
+                  "FavoriteWeight",
+                  "ReplyWeight",
+                  "RetweetWeight",
+                  "QuoteWeight",
+                  "ShareWeight",
+                  "ShareViaDmWeight",
+                  "ShareViaCopyLinkWeight",
+                  "FollowAuthorWeight",
+                  "BidirectionalFollowReplyWeightBoost"
+                ]
+              },
+              {
+                "title": "點開及停留",
+                "conclusion": "點開帖文、開啟連結、觀看影片和停留時間各有參數。",
+                "detail": "例如開啟帖文 0.3、開啟連結 0.2、點開後持續停留 0.4，分別代表不同的預測結果。",
+                "weight_names": [
+                  "PhotoExpandWeight",
+                  "VideoOpenWeight",
+                  "ClickWeight",
+                  "OpenLinkWeight",
+                  "DwellWeight",
+                  "QuotedClickWeight",
+                  "PostUnexploredWeight",
+                  "ContDwellTimeWeight",
+                  "ContClickDwellTimeWeight",
+                  "VideoCarouselVideoOpenWeight"
+                ]
+              },
+              {
+                "title": "負面反應",
+                "conclusion": "不感興趣、封鎖、靜音、檢舉和未有停留使用負權重。檢舉預設為 -234。",
+                "detail": "負權重參與預測後的計分，不代表一次實際檢舉直接扣除 234 分。",
+                "weight_names": [
+                  "NotInterestedWeight",
+                  "BlockAuthorWeight",
+                  "MuteAuthorWeight",
+                  "ReportWeight",
+                  "NotDwelledWeight"
+                ]
+              },
+              {
+                "title": "預設為零",
+                "conclusion": "公開參數有 6 個預設權重為 0，包括部分影片觀看及點擊個人檔案的項目。",
+                "detail": "零值表示這組預設參數下不會帶來對應加權分數；線上實驗可能使用其他值。",
+                "weight_names": [
+                  "BidirectionalFollowDwellWeightBoost",
+                  "ProfileClickWeight",
+                  "VqvWeight",
+                  "QuotedVqvWeight",
+                  "ReactWithVideoWeight",
+                  "VideoCarouselImmersiveVqvWeight"
+                ]
+              }
+            ]
+          },
+          "updates": {
+            "title": "版本紀錄",
+            "conclusion": "2026 年 10 月 24 日建立了初始對照版本。目前歷史檔只有這筆紀錄，尚未登記後續原始碼改動。",
+            "sections": [
+              {
+                "title": "初始版本",
+                "conclusion": "第一筆紀錄對應上游提交 6258a154，包括 README、參數檔和評分程式碼。",
+                "detail": "這是建立對照版本的日期，並非當日推出了新演算法。"
+              },
+              {
+                "title": "過往官方說明",
+                "conclusion": "2026 年 8 月，官方說明權重乘的是預測值，並公開更多篩選和參數資料。",
+                "detail": "2026 年 9 月的 Under the Hood 報告補充依法限制內容展示的資料；這些並非本次改動。"
+              },
+              {
+                "title": "追蹤範圍",
+                "conclusion": "只記錄 README、權重參數和評分程式碼的實際改動。",
+                "detail": "權重有改動時會列出舊值、新值和差額；其他目錄的提交不會自動列為推薦演算法變更。"
+              }
+            ]
+          }
+        },
+        "compact": {
+          "rules": {
+            "title": "推薦流程",
+            "conclusion": "候選帖文來自已追蹤和未追蹤帳戶。系統篩選內容、預測行為並計分，然後調整排序。",
+            "sections": [
+              {
+                "title": "來源",
+                "conclusion": "Thunder 處理已追蹤帳戶；Phoenix、SimClusters 等提供未追蹤內容。"
+              },
+              {
+                "title": "評分",
+                "conclusion": "讚好、回覆、分享、停留和負面反應的預測結果會各自加權。"
+              },
+              {
+                "title": "調整",
+                "conclusion": "同一作者重複出現、未追蹤內容折扣及後續重排會影響位置。"
+              },
+              {
+                "title": "篩選",
+                "conclusion": "已看過、被封鎖、被靜音或不符合可見性要求的帖文可能被移除。"
+              }
+            ]
+          },
+          "weights": {
+            "title": "權重概覽",
+            "conclusion": "以下是公開預設值。權重乘模型預測結果，不代表一次實際互動可加減多少分。",
+            "sections": [
+              {
+                "title": "互動",
+                "conclusion": "讚好 0.66、回覆 5、複製連結分享 20，分別作用於各自的預測機率。",
+                "weight_names": [
+                  "FavoriteWeight",
+                  "ReplyWeight",
+                  "ShareViaCopyLinkWeight"
+                ]
+              },
+              {
+                "title": "傳播及追蹤",
+                "conclusion": "轉發 1、引用 5、追蹤作者 4，分別計算。",
+                "weight_names": [
+                  "RetweetWeight",
+                  "QuoteWeight",
+                  "FollowAuthorWeight"
+                ]
+              },
+              {
+                "title": "負面反應",
+                "conclusion": "不感興趣 -52.272、靜音 -58.8、檢舉 -234，屬負向加權項。",
+                "weight_names": [
+                  "NotInterestedWeight",
+                  "MuteAuthorWeight",
+                  "ReportWeight"
+                ]
+              }
+            ]
+          },
+          "updates": {
+            "title": "更新狀態",
+            "conclusion": "目前只有 2026 年 10 月 24 日的初始版本，尚無後續變更紀錄。",
+            "sections": [
+              {
+                "title": "已記錄版本",
+                "conclusion": "初始資料來自上游提交 6258a154。"
+              },
+              {
+                "title": "其後更新",
+                "conclusion": "所監察的程式碼確實改動才新增紀錄；權重改動會保留前後數值。"
+              }
+            ]
+          }
+        }
+      },
+      "weight_labels": {
+        "FavoriteWeight": "讚好",
+        "ReplyWeight": "回覆",
+        "BidirectionalFollowReplyWeightBoost": "互相追蹤回覆加權",
+        "BidirectionalFollowDwellWeightBoost": "互相追蹤停留加權",
+        "RetweetWeight": "轉發",
+        "PhotoExpandWeight": "展開相片",
+        "VideoOpenWeight": "開啟影片",
+        "ClickWeight": "開啟帖文",
+        "OpenLinkWeight": "開啟連結",
+        "ProfileClickWeight": "查看個人檔案",
+        "VqvWeight": "合格影片觀看",
+        "ShareWeight": "分享",
+        "ShareViaDmWeight": "透過私訊分享",
+        "ShareViaCopyLinkWeight": "複製連結分享",
+        "DwellWeight": "停留時間",
+        "QuoteWeight": "引用帖文",
+        "QuotedClickWeight": "開啟被引用帖文",
+        "QuotedVqvWeight": "被引用帖文的合格影片觀看",
+        "FollowAuthorWeight": "追蹤作者",
+        "PostUnexploredWeight": "尚未探索的帖文",
+        "ReactWithVideoWeight": "影片互動",
+        "ContDwellTimeWeight": "持續停留時間",
+        "ContClickDwellTimeWeight": "點開後持續停留",
+        "NotInterestedWeight": "不感興趣",
+        "BlockAuthorWeight": "封鎖作者",
+        "MuteAuthorWeight": "靜音作者",
+        "ReportWeight": "檢舉",
+        "NotDwelledWeight": "未有停留",
+        "VideoCarouselVideoOpenWeight": "開啟輪播影片",
+        "VideoCarouselImmersiveVqvWeight": "沉浸式輪播合格觀看"
+      }
     }
   }
 }
