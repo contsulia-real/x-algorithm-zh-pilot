@@ -1608,6 +1608,236 @@
         "VideoCarouselVideoOpenWeight": "캐러셀 동영상 열기",
         "VideoCarouselImmersiveVqvWeight": "몰입형 캐러셀 유효 시청"
       }
+    },
+    "fr": {
+      "presentation": {
+        "full": {
+          "rules": {
+            "title": "Recommandations « Pour vous »",
+            "conclusion": "Le fil réunit des posts provenant de comptes suivis ou non, puis applique des filtres, prédit des actions, calcule des scores et ajuste l’ordre. Cette description repose sur le code public.",
+            "sections": [
+              {
+                "title": "Sources des candidats",
+                "conclusion": "Thunder fournit les posts récents des comptes suivis ; Phoenix, SimClusters et les sources de tendances ajoutent d’autres contenus.",
+                "detail": "Les paramètres publics limitent les quantités et l’ancienneté : par exemple, jusqu’à 1 200 candidats pour Thunder et 1 000 pour Phoenix. Les volumes réels peuvent varier."
+              },
+              {
+                "title": "Filtres avant classement",
+                "conclusion": "Les doublons, les posts déjà vus ou présentés et les critères de blocage ou de masquage peuvent éliminer des candidats.",
+                "detail": "D’autres vérifications concernent l’ancienneté, les posts personnels, les mots masqués, les abonnements et certaines restrictions géographiques. Un post récupéré n’est pas forcément affichable."
+              },
+              {
+                "title": "Prédiction et score",
+                "conclusion": "Phoenix prédit les mentions J’aime, réponses, partages, ouvertures ou durées de lecture ; RankingScorer combine ces prévisions avec des pondérations.",
+                "detail": "La plupart des pondérations multiplient des probabilités estimées, certaines des valeurs continues. Les interactions déjà obtenues ne sont pas directement le score."
+              },
+              {
+                "title": "Ajustements du classement",
+                "conclusion": "La diversité des auteurs, la réduction de score hors abonnements et la mise en avant d’auteurs peu exposés peuvent modifier l’ordre.",
+                "detail": "VMRanker procède aussi à un reclassement. La répétition d’un auteur ou la similarité de posts voisins ne s’explique pas seulement par le score initial."
+              },
+              {
+                "title": "Contrôles de visibilité",
+                "conclusion": "Même un post bien classé peut être écarté par les contrôles de visibilité.",
+                "detail": "Le code public distingue notamment ALLOW, NOTICE, INTERSTITIAL et DROP. DROP supprime le post du fil et peut affecter les posts parents ou les citations associées."
+              },
+              {
+                "title": "Portée des informations",
+                "conclusion": "Ces règles décrivent le code et les paramètres par défaut publiés, pas la configuration réelle complète de chaque compte.",
+                "detail": "Certains fichiers de consignes Grox et certaines règles botmaker ne sont pas publics. Des expériences et options activables peuvent remplacer les valeurs par défaut."
+              }
+            ]
+          },
+          "weights": {
+            "title": "Pondérations par défaut",
+            "conclusion": "Les 30 valeurs proviennent du fichier de paramètres public. Elles multiplient les prédictions du modèle, sans attribuer un nombre fixe de points à chaque J’aime, réponse ou signalement réel.",
+            "sections": [
+              {
+                "title": "Interactions et abonnements",
+                "conclusion": "J’aime, réponses, reposts, citations et modes de partage ont des pondérations distinctes. Le partage par copie du lien vaut 20 par défaut, le J’aime 0,66.",
+                "detail": "Les valeurs portent sur des probabilités différentes. Leur rapport ne mesure pas leur effet réel ; le bonus de réponse entre abonnés mutuels a des conditions supplémentaires.",
+                "weight_names": [
+                  "FavoriteWeight",
+                  "ReplyWeight",
+                  "RetweetWeight",
+                  "QuoteWeight",
+                  "ShareWeight",
+                  "ShareViaDmWeight",
+                  "ShareViaCopyLinkWeight",
+                  "FollowAuthorWeight",
+                  "BidirectionalFollowReplyWeightBoost"
+                ]
+              },
+              {
+                "title": "Ouvertures et lecture",
+                "conclusion": "L’ouverture de posts ou de liens, les vidéos et la durée de lecture utilisent des paramètres différents.",
+                "detail": "Exemples : ouverture d’un post 0,3 ; ouverture d’un lien 0,2 ; durée continue après clic 0,4. Ce ne sont pas des comptes d’interactions comparables.",
+                "weight_names": [
+                  "PhotoExpandWeight",
+                  "VideoOpenWeight",
+                  "ClickWeight",
+                  "OpenLinkWeight",
+                  "DwellWeight",
+                  "QuotedClickWeight",
+                  "PostUnexploredWeight",
+                  "ContDwellTimeWeight",
+                  "ContClickDwellTimeWeight",
+                  "VideoCarouselVideoOpenWeight"
+                ]
+              },
+              {
+                "title": "Retours négatifs",
+                "conclusion": "Pas intéressé, blocage, masquage, signalement et absence de lecture reçoivent des valeurs négatives. Le signalement vaut -234 par défaut.",
+                "detail": "Ces valeurs interviennent après la prédiction ; un signalement effectivement envoyé ne retire pas automatiquement 234 points.",
+                "weight_names": [
+                  "NotInterestedWeight",
+                  "BlockAuthorWeight",
+                  "MuteAuthorWeight",
+                  "ReportWeight",
+                  "NotDwelledWeight"
+                ]
+              },
+              {
+                "title": "Valeurs nulles",
+                "conclusion": "Six paramètres ont une pondération par défaut égale à zéro, dont certains liés aux vidéos et aux ouvertures de profil.",
+                "detail": "La contribution correspondante est nulle dans cette configuration. Les expériences en production peuvent employer d’autres valeurs.",
+                "weight_names": [
+                  "BidirectionalFollowDwellWeightBoost",
+                  "ProfileClickWeight",
+                  "VqvWeight",
+                  "QuotedVqvWeight",
+                  "ReactWithVideoWeight",
+                  "VideoCarouselImmersiveVqvWeight"
+                ]
+              }
+            ]
+          },
+          "updates": {
+            "title": "Historique des versions",
+            "conclusion": "Une première version de référence a été créée le 24 octobre 2026. Le fichier d’historique ne contient pas encore de modifications ultérieures du code suivi.",
+            "sections": [
+              {
+                "title": "Référence initiale",
+                "conclusion": "La première entrée correspond au commit amont 6258a154 et couvre le README, les paramètres et le code de calcul du score.",
+                "detail": "Il s’agit de la date de constitution de la référence, pas du déploiement d’un nouvel algorithme."
+              },
+              {
+                "title": "Précisions officielles antérieures",
+                "conclusion": "En août 2026, les responsables ont précisé que les pondérations multiplient des prévisions et publié davantage de détails sur les filtres et paramètres.",
+                "detail": "En septembre 2026, le rapport Under the Hood a ajouté des informations sur les restrictions d’affichage imposées par la loi. Ce sont des annonces antérieures."
+              },
+              {
+                "title": "Périmètre du suivi",
+                "conclusion": "Seules les modifications réelles du README, des paramètres de pondération et du calcul du score sont consignées.",
+                "detail": "Pour chaque changement de valeur : ancienne valeur, nouvelle valeur et différence. Un commit touchant uniquement d’autres dossiers n’est pas automatiquement une modification de l’algorithme."
+              }
+            ]
+          }
+        },
+        "compact": {
+          "rules": {
+            "title": "Étapes de recommandation",
+            "conclusion": "Les candidats proviennent des comptes suivis ou non. Des filtres, des prédictions de comportement et un reclassement déterminent l’affichage.",
+            "sections": [
+              {
+                "title": "Sources",
+                "conclusion": "Thunder couvre les comptes suivis ; Phoenix et SimClusters ajoutent du contenu hors abonnements."
+              },
+              {
+                "title": "Score",
+                "conclusion": "Les prédictions de J’aime, réponses, partages, lecture et retours négatifs sont pondérées."
+              },
+              {
+                "title": "Ajustements",
+                "conclusion": "Les auteurs répétés, les réductions hors abonnements et le reclassement modifient l’ordre."
+              },
+              {
+                "title": "Filtres",
+                "conclusion": "Les posts déjà vus, bloqués, masqués ou non visibles peuvent être retirés."
+              }
+            ]
+          },
+          "weights": {
+            "title": "Pondérations : aperçu",
+            "conclusion": "Ce sont les valeurs publiques par défaut appliquées aux prévisions, pas des points fixes par action réelle.",
+            "sections": [
+              {
+                "title": "Interactions",
+                "conclusion": "J’aime 0,66 ; réponse 5 ; partage par copie du lien 20. Chaque valeur porte sur sa propre prédiction.",
+                "weight_names": [
+                  "FavoriteWeight",
+                  "ReplyWeight",
+                  "ShareViaCopyLinkWeight"
+                ]
+              },
+              {
+                "title": "Diffusion et abonnements",
+                "conclusion": "Repost 1 ; citation 5 ; suivi de l’auteur 4. Les calculs sont distincts.",
+                "weight_names": [
+                  "RetweetWeight",
+                  "QuoteWeight",
+                  "FollowAuthorWeight"
+                ]
+              },
+              {
+                "title": "Retours négatifs",
+                "conclusion": "Pas intéressé -52,272 ; masquage -58,8 ; signalement -234. Ce sont des pondérations négatives.",
+                "weight_names": [
+                  "NotInterestedWeight",
+                  "MuteAuthorWeight",
+                  "ReportWeight"
+                ]
+              }
+            ]
+          },
+          "updates": {
+            "title": "État des mises à jour",
+            "conclusion": "Seule la référence du 24 octobre 2026 est enregistrée. Aucune modification ultérieure n’apparaît dans l’historique.",
+            "sections": [
+              {
+                "title": "Version connue",
+                "conclusion": "La référence initiale provient du commit amont 6258a154."
+              },
+              {
+                "title": "Prochaines entrées",
+                "conclusion": "Une entrée est ajoutée seulement si le code suivi change ; les anciennes et nouvelles pondérations sont conservées."
+              }
+            ]
+          }
+        }
+      },
+      "weight_labels": {
+        "FavoriteWeight": "J’aime",
+        "ReplyWeight": "Réponse",
+        "BidirectionalFollowReplyWeightBoost": "Bonus de réponse entre abonnés mutuels",
+        "BidirectionalFollowDwellWeightBoost": "Bonus de lecture entre abonnés mutuels",
+        "RetweetWeight": "Repost",
+        "PhotoExpandWeight": "Agrandissement de photo",
+        "VideoOpenWeight": "Ouverture de vidéo",
+        "ClickWeight": "Ouverture de post",
+        "OpenLinkWeight": "Ouverture de lien",
+        "ProfileClickWeight": "Ouverture de profil",
+        "VqvWeight": "Vue vidéo qualifiée",
+        "ShareWeight": "Partage",
+        "ShareViaDmWeight": "Partage par message privé",
+        "ShareViaCopyLinkWeight": "Partage par copie du lien",
+        "DwellWeight": "Temps de lecture",
+        "QuoteWeight": "Citation",
+        "QuotedClickWeight": "Ouverture du post cité",
+        "QuotedVqvWeight": "Vue vidéo qualifiée du post cité",
+        "FollowAuthorWeight": "Suivi de l’auteur",
+        "PostUnexploredWeight": "Post non exploré",
+        "ReactWithVideoWeight": "Réaction avec vidéo",
+        "ContDwellTimeWeight": "Temps de lecture continu",
+        "ContClickDwellTimeWeight": "Temps de lecture après clic",
+        "NotInterestedWeight": "Pas intéressé",
+        "BlockAuthorWeight": "Blocage de l’auteur",
+        "MuteAuthorWeight": "Masquage de l’auteur",
+        "ReportWeight": "Signalement",
+        "NotDwelledWeight": "Aucune lecture",
+        "VideoCarouselVideoOpenWeight": "Ouverture de vidéo du carrousel",
+        "VideoCarouselImmersiveVqvWeight": "Vue immersive qualifiée du carrousel"
+      }
     }
   }
 }
