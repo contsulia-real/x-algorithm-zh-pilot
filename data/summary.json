@@ -1,6 +1,6 @@
 {
-  "last_processed_sha": "6258a1549ef808be88fba83d3b2d58364b587ee0",
-  "last_processed_url": "https://github.com/xai-org/x-algorithm/commit/6258a1549ef808be88fba83d3b2d58364b587ee0",
+  "last_processed_sha": "2f252142b9284e692ac72851768c8072d045f0d5",
+  "last_processed_url": "https://github.com/xai-org/x-algorithm/commit/2f252142b9284e692ac72851768c8072d045f0d5",
   "schema_version": 1,
   "summary": {
     "weights": [
@@ -9,7 +9,7 @@
         "label_zh": "点赞",
         "key": "rust_home_mixer_favorite_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0.66
       },
       {
@@ -17,7 +17,7 @@
         "label_zh": "回复",
         "key": "rust_home_mixer_reply_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 5
       },
       {
@@ -25,7 +25,7 @@
         "label_zh": "互相关注回复加成",
         "key": "rust_home_mixer_bidirectional_follow_reply_weight_boost",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 15
       },
       {
@@ -33,7 +33,7 @@
         "label_zh": "互相关注停留加成",
         "key": "rust_home_mixer_bidirectional_follow_dwell_weight_boost",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0
       },
       {
@@ -41,7 +41,7 @@
         "label_zh": "转发",
         "key": "rust_home_mixer_retweet_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 1
       },
       {
@@ -49,7 +49,7 @@
         "label_zh": "展开图片",
         "key": "rust_home_mixer_photo_expand_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0.05
       },
       {
@@ -57,7 +57,7 @@
         "label_zh": "打开视频",
         "key": "rust_home_mixer_video_open_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0.02
       },
       {
@@ -65,7 +65,7 @@
         "label_zh": "打开帖子",
         "key": "rust_home_mixer_click_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0.3
       },
       {
@@ -73,7 +73,7 @@
         "label_zh": "打开链接",
         "key": "rust_home_mixer_open_link_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0.2
       },
       {
@@ -81,7 +81,7 @@
         "label_zh": "点击个人资料",
         "key": "rust_home_mixer_profile_click_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0
       },
       {
@@ -89,7 +89,7 @@
         "label_zh": "合格视频观看",
         "key": "rust_home_mixer_vqv_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0
       },
       {
@@ -97,7 +97,7 @@
         "label_zh": "分享",
         "key": "rust_home_mixer_share_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 2
       },
       {
@@ -105,7 +105,7 @@
         "label_zh": "私信分享",
         "key": "rust_home_mixer_share_via_dm_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 5
       },
       {
@@ -113,7 +113,7 @@
         "label_zh": "复制链接分享",
         "key": "rust_home_mixer_share_via_copy_link_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 20
       },
       {
@@ -121,7 +121,7 @@
         "label_zh": "停留时长",
         "key": "rust_home_mixer_dwell_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0.05
       },
       {
@@ -129,7 +129,7 @@
         "label_zh": "引用",
         "key": "rust_home_mixer_quote_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 5
       },
       {
@@ -137,7 +137,7 @@
         "label_zh": "点击被引用帖子",
         "key": "rust_home_mixer_quoted_click_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0.05
       },
       {
@@ -145,7 +145,7 @@
         "label_zh": "被引用帖子的合格视频观看",
         "key": "rust_home_mixer_quoted_vqv_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0
       },
       {
@@ -153,7 +153,7 @@
         "label_zh": "关注作者",
         "key": "rust_home_mixer_follow_author_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 4
       },
       {
@@ -161,7 +161,7 @@
         "label_zh": "未探索帖子加权",
         "key": "rust_home_mixer_post_unexplored_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0.015
       },
       {
@@ -169,7 +169,7 @@
         "label_zh": "视频互动",
         "key": "rust_home_mixer_react_with_video_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0
       },
       {
@@ -177,7 +177,7 @@
         "label_zh": "连续停留时长",
         "key": "rust_home_mixer_cont_dwell_time_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0.006
       },
       {
@@ -185,7 +185,7 @@
         "label_zh": "点击后连续停留时长",
         "key": "rust_home_mixer_cont_click_dwell_time_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0.4
       },
       {
@@ -193,7 +193,7 @@
         "label_zh": "不感兴趣",
         "key": "rust_home_mixer_not_interested_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": -52.272
       },
       {
@@ -201,7 +201,7 @@
         "label_zh": "屏蔽作者",
         "key": "rust_home_mixer_block_author_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": -31.2
       },
       {
@@ -209,7 +209,7 @@
         "label_zh": "静音作者",
         "key": "rust_home_mixer_mute_author_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": -58.8
       },
       {
@@ -217,7 +217,7 @@
         "label_zh": "举报",
         "key": "rust_home_mixer_report_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": -234
       },
       {
@@ -225,7 +225,7 @@
         "label_zh": "未停留",
         "key": "rust_home_mixer_not_dwelled_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": -0.02
       },
       {
@@ -233,7 +233,7 @@
         "label_zh": "视频轮播打开视频",
         "key": "rust_home_mixer_video_carousel_video_open_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 1
       },
       {
@@ -241,25 +241,25 @@
         "label_zh": "沉浸式视频合格观看",
         "key": "rust_home_mixer_video_carousel_immersive_vqv_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
         "value": 0
       }
     ]
   },
-  "updated_at": "2026-10-26T12:11:07.554Z",
+  "updated_at": "2026-10-27T12:05:19.911Z",
   "upstream_repo": "xai-org/x-algorithm",
   "source_files": {
     "README.md": {
       "blob_sha": "e65e5430e1c48d4d160bdb58ddecd51e15f5df40",
-      "url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/README.md"
+      "url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/README.md"
     },
     "home-mixer/params/param.rs": {
-      "blob_sha": "227ac1cbfb651fd0ee384c4195975e215fee1100",
-      "url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/home-mixer/params/param.rs"
+      "blob_sha": "e683ac0c044109d15014eac3f1a5fae4dd0670e3",
+      "url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs"
     },
     "xai-value-model/scoring.rs": {
       "blob_sha": "c9ceaa79ca29b3bf5677a1f990155f897810c54d",
-      "url": "https://github.com/xai-org/x-algorithm/blob/6258a1549ef808be88fba83d3b2d58364b587ee0/xai-value-model/scoring.rs"
+      "url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/xai-value-model/scoring.rs"
     }
   },
   "presentation": {
@@ -287,6 +287,16 @@
             "title": "排序调整",
             "conclusion": "初次打分后，作者多样性、关注外内容折扣、新作者提升等规则还会影响位置。",
             "detail": "VMRanker 也会进一步重排。连续出现同一作者、内容过于相似等情况，不能只用初次打分解释。"
+          },
+          {
+            "title": "重排输入参数",
+            "conclusion": "VMRankerSendDebiasInputs 的公开默认值由 false 改为 true，用于控制是否向 VMRanker 发送去偏输入。",
+            "detail": "VMRankerSendPacingInputs 仍默认为 false。公开参数未说明所有线上请求是否采用这一配置。"
+          },
+          {
+            "title": "影子流量参数",
+            "conclusion": "ShadowTrafficPhoenixClusterRates 的默认列表新增 Experiment19Fou:0.3，原有 Experiment18Fou:0.3 保留。",
+            "detail": "两个条目均为影子流量集群比率配置字符串。仅凭默认值无法确认实际生产流量分配或实验效果。"
           },
           {
             "title": "可见性检查",
@@ -366,8 +376,13 @@
       },
       "updates": {
         "title": "版本记录",
-        "conclusion": "2026 年 10 月 24 日建立了首份中文基线。当前历史文件仍只有这一条记录，尚无后续登记的源码变更。",
+        "conclusion": "截至 2026 年 10 月 27 日，已记录一条参数文件变更：影子流量配置增加集群，VMRanker 去偏输入默认开启；30 项权重未变。",
         "sections": [
+          {
+            "title": "2026 年 10 月 27 日参数变更",
+            "conclusion": "影子流量集群比率列表增加 Experiment19Fou:0.3；VMRankerSendDebiasInputs 默认值由 false 改为 true。",
+            "detail": "变更来自 home-mixer/params/param.rs。30 项权重值、README 和评分代码均未变化。"
+          },
           {
             "title": "基线来源",
             "conclusion": "初始版本对应上游提交 6258a154，参考了 README、参数文件及评分代码。",
@@ -406,6 +421,10 @@
           {
             "title": "过滤",
             "conclusion": "已看过、屏蔽、静音或不符合展示条件的内容可能被移除。"
+          },
+          {
+            "title": "实验参数",
+            "conclusion": "影子流量默认列表增加 Experiment19Fou:0.3，VMRanker 去偏输入选项默认开启。"
           }
         ]
       },
@@ -444,8 +463,12 @@
       },
       "updates": {
         "title": "更新情况",
-        "conclusion": "当前只有 2026 年 10 月 24 日的初始基线，尚未记录后续改动。",
+        "conclusion": "2026 年 10 月 27 日记录了一次参数变更，涉及影子流量配置和 VMRanker 去偏输入；30 项权重未变。",
         "sections": [
+          {
+            "title": "本次参数变更",
+            "conclusion": "影子流量列表增加 Experiment19Fou:0.3；VMRankerSendDebiasInputs 从 false 调整为 true。"
+          },
           {
             "title": "已记录版本",
             "conclusion": "初始资料来自上游提交 6258a154。"
@@ -485,6 +508,16 @@
                 "title": "Ranking adjustments",
                 "conclusion": "Author diversity, discounts for out-of-network posts and boosts for less-exposed authors can change ordering.",
                 "detail": "VMRanker performs additional reranking. Repeated authors and similar adjacent posts are not explained by the first score alone."
+              },
+              {
+                "title": "Reranker input settings",
+                "conclusion": "The published default for VMRankerSendDebiasInputs changed from false to true; the flag controls whether debiasing inputs are sent to VMRanker.",
+                "detail": "VMRankerSendPacingInputs remains false by default. The published parameter does not establish whether every production request uses this setting."
+              },
+              {
+                "title": "Shadow-traffic parameters",
+                "conclusion": "ShadowTrafficPhoenixClusterRates now includes Experiment19Fou:0.3 alongside the existing Experiment18Fou:0.3 entry.",
+                "detail": "Both entries are configuration strings for shadow-traffic cluster rates. They do not establish actual production traffic allocation or experiment outcomes."
               },
               {
                 "title": "Visibility checks",
@@ -564,8 +597,13 @@
           },
           "updates": {
             "title": "Version history",
-            "conclusion": "The first reference snapshot was recorded on October 24, 2026. The history file currently contains no later source-code change entries.",
+            "conclusion": "As of October 27, 2026, one parameter-file update is recorded: a shadow-traffic cluster was added and VMRanker debiasing inputs became enabled by default. All 30 weights are unchanged.",
             "sections": [
+              {
+                "title": "October 27, 2026 parameter changes",
+                "conclusion": "Experiment19Fou:0.3 was added to the shadow-traffic cluster-rate list, and VMRankerSendDebiasInputs changed from false to true.",
+                "detail": "The changes are in home-mixer/params/param.rs. All 30 scoring weights, the README and the scoring source are unchanged."
+              },
               {
                 "title": "Initial reference",
                 "conclusion": "The first record corresponds to upstream commit 6258a154 and covers the README, parameter file and scoring code.",
@@ -604,6 +642,10 @@
               {
                 "title": "Filtering",
                 "conclusion": "Viewed, blocked, muted or visibility-restricted posts can be removed."
+              },
+              {
+                "title": "Experiment settings",
+                "conclusion": "The shadow-traffic defaults add Experiment19Fou:0.3, and VMRanker debiasing inputs are enabled by default."
               }
             ]
           },
@@ -642,8 +684,12 @@
           },
           "updates": {
             "title": "Update status",
-            "conclusion": "Only the October 24, 2026 baseline is recorded so far; there are no later changes in the history file.",
+            "conclusion": "An October 27, 2026 update changed shadow-traffic and VMRanker input defaults. All 30 scoring weights are unchanged.",
             "sections": [
+              {
+                "title": "Latest parameter changes",
+                "conclusion": "Shadow traffic gained Experiment19Fou:0.3, and VMRankerSendDebiasInputs changed from false to true."
+              },
               {
                 "title": "Recorded version",
                 "conclusion": "Initial reference comes from upstream commit 6258a154."
@@ -715,6 +761,16 @@
                 "title": "並び順の調整",
                 "conclusion": "投稿者の多様性、フォロー外への減点、露出の少ない投稿者への加点などが順位を変えます。",
                 "detail": "VMRanker も再順位付けを行います。同じ投稿者が続く場合や類似する投稿が並ぶ場合、最初のスコアだけでは順位を説明できません。"
+              },
+              {
+                "title": "再順位付けの入力設定",
+                "conclusion": "VMRankerSendDebiasInputs の公開デフォルト値が false から true に変わり、VMRanker へのバイアス補正用入力の送信を制御します。",
+                "detail": "VMRankerSendPacingInputs のデフォルト値は引き続き false です。この設定が本番環境の全リクエストで使用されるかは公開情報から確認できません。"
+              },
+              {
+                "title": "シャドウトラフィック設定",
+                "conclusion": "ShadowTrafficPhoenixClusterRates のデフォルト一覧に Experiment19Fou:0.3 が追加され、Experiment18Fou:0.3 は維持されました。",
+                "detail": "両項目はシャドウトラフィック用クラスター比率の設定文字列です。実際の配信トラフィック配分や実験結果を示すものではありません。"
               },
               {
                 "title": "表示可否の判定",
@@ -794,8 +850,13 @@
           },
           "updates": {
             "title": "更新履歴",
-            "conclusion": "2026年10月24日に最初の比較基準を作成しました。現在の履歴ファイルには、その後のソース変更は登録されていません。",
+            "conclusion": "2026年10月27日までにパラメーターファイルの変更が1件記録されました。シャドウトラフィック設定とVMRankerのバイアス補正用入力が変更され、30項目の重みは不変です。",
             "sections": [
+              {
+                "title": "2026年10月27日のパラメーター変更",
+                "conclusion": "シャドウトラフィックの一覧に Experiment19Fou:0.3 が追加され、VMRankerSendDebiasInputs が false から true に変更されました。",
+                "detail": "変更元は home-mixer/params/param.rs です。30項目の重み、README、スコア計算コードに変更はありません。"
+              },
               {
                 "title": "初期基準",
                 "conclusion": "初回の記録は上流コミット 6258a154 に対応し、README、パラメーターファイル、スコア計算コードを参照しています。",
@@ -834,6 +895,10 @@
               {
                 "title": "除外",
                 "conclusion": "閲覧済み、ブロック・ミュート対象、表示制限対象の投稿は除外される場合があります。"
+              },
+              {
+                "title": "実験用設定",
+                "conclusion": "シャドウトラフィックの一覧に Experiment19Fou:0.3 が追加され、VMRanker のバイアス補正用入力はデフォルトで有効になりました。"
               }
             ]
           },
@@ -872,8 +937,12 @@
           },
           "updates": {
             "title": "更新状況",
-            "conclusion": "現在の記録は2026年10月24日の初期基準だけです。その後の変更はまだ登録されていません。",
+            "conclusion": "2026年10月27日、シャドウトラフィックとVMRanker入力設定の変更を記録しました。30項目の重みは変わっていません。",
             "sections": [
+              {
+                "title": "今回のパラメーター変更",
+                "conclusion": "シャドウトラフィックに Experiment19Fou:0.3 が追加され、VMRankerSendDebiasInputs は false から true に変わりました。"
+              },
               {
                 "title": "記録済み",
                 "conclusion": "初期基準は上流コミット6258a154を参照しています。"
@@ -945,6 +1014,16 @@
                 "title": "순위 조정",
                 "conclusion": "작성자 다양성, 팔로우 외 콘텐츠에 대한 할인, 노출이 적은 작성자에 대한 가산 등이 순서를 바꿀 수 있습니다.",
                 "detail": "VMRanker도 순위를 다시 조정합니다. 같은 작성자가 연속되거나 유사한 게시물이 붙어 있는 경우 초기 점수만으로 순위를 설명할 수 없습니다."
+              },
+              {
+                "title": "재정렬 입력 설정",
+                "conclusion": "VMRankerSendDebiasInputs의 공개 기본값이 false에서 true로 변경되어 VMRanker에 편향 보정 입력을 전달할지 제어합니다.",
+                "detail": "VMRankerSendPacingInputs의 기본값은 계속 false입니다. 이 설정이 운영 환경의 모든 요청에 적용되는지는 공개 자료로 확인할 수 없습니다."
+              },
+              {
+                "title": "섀도 트래픽 설정",
+                "conclusion": "ShadowTrafficPhoenixClusterRates 기본 목록에 Experiment19Fou:0.3이 추가되고 기존 Experiment18Fou:0.3은 유지되었습니다.",
+                "detail": "두 항목은 섀도 트래픽 클러스터 비율을 지정하는 문자열입니다. 공개 기본값만으로 실제 서비스 트래픽 배분이나 실험 결과를 확인할 수 없습니다."
               },
               {
                 "title": "표시 가능 여부 확인",
@@ -1024,8 +1103,13 @@
           },
           "updates": {
             "title": "버전 기록",
-            "conclusion": "2026년 10월 24일 첫 비교 기준을 작성했습니다. 현재 기록 파일에는 이후의 소스 변경 항목이 없습니다.",
+            "conclusion": "2026년 10월 27일까지 매개변수 파일 변경 1건이 기록되었습니다. 섀도 트래픽 설정과 VMRanker 편향 보정 입력이 변경되었으며 가중치 30개는 그대로입니다.",
             "sections": [
+              {
+                "title": "2026년 10월 27일 매개변수 변경",
+                "conclusion": "섀도 트래픽 목록에 Experiment19Fou:0.3이 추가되고 VMRankerSendDebiasInputs 기본값이 false에서 true로 변경되었습니다.",
+                "detail": "변경 파일은 home-mixer/params/param.rs입니다. 가중치 30개, README 및 점수 계산 코드는 변경되지 않았습니다."
+              },
               {
                 "title": "초기 기준",
                 "conclusion": "첫 기록은 상위 저장소 커밋 6258a154를 기준으로 README, 매개변수 파일, 점수 코드를 참조했습니다.",
@@ -1064,6 +1148,10 @@
               {
                 "title": "제외",
                 "conclusion": "이미 본 글, 차단·뮤트 대상, 표시 제한 게시물은 제외될 수 있습니다."
+              },
+              {
+                "title": "실험 설정",
+                "conclusion": "섀도 트래픽 목록에 Experiment19Fou:0.3이 추가되고 VMRanker 편향 보정 입력이 기본으로 활성화되었습니다."
               }
             ]
           },
@@ -1102,8 +1190,12 @@
           },
           "updates": {
             "title": "업데이트 상태",
-            "conclusion": "현재는 2026년 10월 24일의 초기 기준만 기록되어 있으며 그 이후의 변경 항목은 없습니다.",
+            "conclusion": "2026년 10월 27일 섀도 트래픽 및 VMRanker 입력 설정 변경을 기록했습니다. 가중치 30개는 변경되지 않았습니다.",
             "sections": [
+              {
+                "title": "이번 매개변수 변경",
+                "conclusion": "섀도 트래픽에 Experiment19Fou:0.3이 추가되고 VMRankerSendDebiasInputs가 false에서 true로 변경되었습니다."
+              },
               {
                 "title": "기록된 버전",
                 "conclusion": "초기 자료는 상위 저장소 커밋 6258a154를 기준으로 합니다."
@@ -1175,6 +1267,16 @@
                 "title": "Ajustements du classement",
                 "conclusion": "La diversité des auteurs, la réduction de score hors abonnements et la mise en avant d’auteurs peu exposés peuvent modifier l’ordre.",
                 "detail": "VMRanker procède aussi à un reclassement. La répétition d’un auteur ou la similarité de posts voisins ne s’explique pas seulement par le score initial."
+              },
+              {
+                "title": "Paramètres d’entrée du reclassement",
+                "conclusion": "La valeur publique par défaut de VMRankerSendDebiasInputs est passée de false à true ; ce paramètre contrôle l’envoi d’entrées de correction des biais à VMRanker.",
+                "detail": "VMRankerSendPacingInputs reste défini sur false par défaut. Le paramètre public ne permet pas de confirmer son utilisation pour toutes les requêtes en production."
+              },
+              {
+                "title": "Paramètres du trafic fantôme",
+                "conclusion": "La liste par défaut ShadowTrafficPhoenixClusterRates comprend désormais Experiment19Fou:0.3 en plus de Experiment18Fou:0.3.",
+                "detail": "Ces deux éléments sont des chaînes de configuration des taux de clusters pour le trafic fantôme. Ils ne permettent pas de déduire la répartition réelle du trafic ou les résultats des expériences."
               },
               {
                 "title": "Contrôles de visibilité",
@@ -1254,8 +1356,13 @@
           },
           "updates": {
             "title": "Historique des versions",
-            "conclusion": "Une première version de référence a été créée le 24 octobre 2026. Le fichier d’historique ne contient pas encore de modifications ultérieures du code suivi.",
+            "conclusion": "Au 27 octobre 2026, une modification du fichier de paramètres est enregistrée : ajout d’un cluster de trafic fantôme et activation par défaut des entrées de correction des biais de VMRanker. Les 30 pondérations restent inchangées.",
             "sections": [
+              {
+                "title": "Modifications du 27 octobre 2026",
+                "conclusion": "Experiment19Fou:0.3 a été ajouté aux taux de clusters du trafic fantôme et VMRankerSendDebiasInputs est passé de false à true.",
+                "detail": "Ces changements figurent dans home-mixer/params/param.rs. Les 30 pondérations, le README et le code de calcul du score sont inchangés."
+              },
               {
                 "title": "Référence initiale",
                 "conclusion": "La première entrée correspond au commit amont 6258a154 et couvre le README, les paramètres et le code de calcul du score.",
@@ -1294,6 +1401,10 @@
               {
                 "title": "Filtres",
                 "conclusion": "Les posts déjà vus, bloqués, masqués ou non visibles peuvent être retirés."
+              },
+              {
+                "title": "Paramètres expérimentaux",
+                "conclusion": "La liste du trafic fantôme ajoute Experiment19Fou:0.3 et les entrées de correction des biais de VMRanker sont activées par défaut."
               }
             ]
           },
@@ -1332,8 +1443,12 @@
           },
           "updates": {
             "title": "État des mises à jour",
-            "conclusion": "Seule la référence du 24 octobre 2026 est enregistrée. Aucune modification ultérieure n’apparaît dans l’historique.",
+            "conclusion": "Le 27 octobre 2026, les paramètres du trafic fantôme et des entrées VMRanker ont changé. Les 30 pondérations restent inchangées.",
             "sections": [
+              {
+                "title": "Modifications des paramètres",
+                "conclusion": "Le trafic fantôme inclut désormais Experiment19Fou:0.3 et VMRankerSendDebiasInputs est passé de false à true."
+              },
               {
                 "title": "Version connue",
                 "conclusion": "La référence initiale provient du commit amont 6258a154."
@@ -1405,6 +1520,16 @@
                 "title": "排序調整",
                 "conclusion": "作者多樣性、未追蹤內容折扣及曝光較少作者的加成，都可能改變貼文的位置。",
                 "detail": "VMRanker 會再重新排序。同一作者連續出現或相鄰貼文太相似，不能只用初次評分解釋。"
+              },
+              {
+                "title": "重排輸入參數",
+                "conclusion": "VMRankerSendDebiasInputs 的公開預設值由 false 改為 true，用於控制是否向 VMRanker 傳送去偏輸入。",
+                "detail": "VMRankerSendPacingInputs 仍預設為 false。公開參數無法確認所有線上請求是否採用此設定。"
+              },
+              {
+                "title": "影子流量參數",
+                "conclusion": "ShadowTrafficPhoenixClusterRates 的預設清單新增 Experiment19Fou:0.3，並保留 Experiment18Fou:0.3。",
+                "detail": "兩個項目均為影子流量叢集比率設定字串。預設值無法證明實際流量分配或實驗成效。"
               },
               {
                 "title": "可見性檢查",
@@ -1484,8 +1609,13 @@
           },
           "updates": {
             "title": "版本紀錄",
-            "conclusion": "2026 年 10 月 24 日建立第一份對照基準。目前歷史檔只有這筆紀錄，尚未登記後續原始碼變動。",
+            "conclusion": "截至 2026 年 10 月 27 日，已記錄一筆參數檔變更：影子流量設定新增叢集，VMRanker 去偏輸入預設啟用；30 項權重未變。",
             "sections": [
+              {
+                "title": "2026 年 10 月 27 日參數變更",
+                "conclusion": "影子流量叢集比率清單新增 Experiment19Fou:0.3；VMRankerSendDebiasInputs 預設值由 false 改為 true。",
+                "detail": "變更來源為 home-mixer/params/param.rs。30 項權重、README 及評分程式碼均未變更。"
+              },
               {
                 "title": "初始基準",
                 "conclusion": "第一筆紀錄對應上游提交 6258a154，參考 README、參數檔及評分程式碼。",
@@ -1524,6 +1654,10 @@
               {
                 "title": "篩選",
                 "conclusion": "已看過、封鎖、靜音或不符合可見性規則的貼文可能被移除。"
+              },
+              {
+                "title": "實驗參數",
+                "conclusion": "影子流量預設清單新增 Experiment19Fou:0.3，VMRanker 去偏輸入選項預設啟用。"
               }
             ]
           },
@@ -1562,8 +1696,12 @@
           },
           "updates": {
             "title": "更新狀態",
-            "conclusion": "目前只有 2026 年 10 月 24 日的初始基準，尚無後續變動紀錄。",
+            "conclusion": "2026 年 10 月 27 日記錄了影子流量設定與 VMRanker 去偏輸入的參數變更；30 項權重未變。",
             "sections": [
+              {
+                "title": "本次參數變更",
+                "conclusion": "影子流量清單新增 Experiment19Fou:0.3；VMRankerSendDebiasInputs 由 false 調整為 true。"
+              },
               {
                 "title": "已記錄版本",
                 "conclusion": "初始資料來自上游提交 6258a154。"

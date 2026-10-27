@@ -45,6 +45,46 @@
           "初始預設權重包括按讚 0.66、回覆 5、轉發 1、檢舉 -234。數值乘上模型預測結果，並非每次實際互動的固定分數。"
         ]
       }
+    },
+    {
+      "date": "2026-10-27",
+      "entry_type": "upstream_change",
+      "upstream_sha": "2f252142b9284e692ac72851768c8072d045f0d5",
+      "upstream_url": "https://github.com/xai-org/x-algorithm/commit/2f252142b9284e692ac72851768c8072d045f0d5",
+      "files_changed": [
+        "home-mixer/params/param.rs"
+      ],
+      "summary_sections_touched": [
+        "rules",
+        "updates"
+      ],
+      "changes_zh": [
+        "ShadowTrafficPhoenixClusterRates 的默认列表由仅含 Experiment18Fou:0.3 改为同时包含 Experiment18Fou:0.3 和 Experiment19Fou:0.3。该参数为影子流量集群比率配置，不能据此推断实际线上流量分配。",
+        "VMRankerSendDebiasInputs 的公开默认值由 false 改为 true，表示向 VMRanker 发送去偏输入的选项默认开启；不能由此确认所有线上请求均采用该配置。"
+      ],
+      "weight_changes": [],
+      "changes_i18n": {
+        "zh-Hant": [
+          "ShadowTrafficPhoenixClusterRates 的預設清單由僅有 Experiment18Fou:0.3，改為同時包含 Experiment18Fou:0.3 與 Experiment19Fou:0.3。此設定無法證明實際線上流量分配。",
+          "VMRankerSendDebiasInputs 的公開預設值由 false 改為 true，表示去偏輸入傳送選項預設啟用；不代表所有線上請求都使用此設定。"
+        ],
+        "ja": [
+          "ShadowTrafficPhoenixClusterRates のデフォルト一覧が Experiment18Fou:0.3 のみから、Experiment18Fou:0.3 と Experiment19Fou:0.3 の2項目に変わりました。この設定は実際の本番トラフィック配分を示しません。",
+          "VMRankerSendDebiasInputs の公開デフォルト値が false から true に変わり、バイアス補正用入力の送信がデフォルトで有効になりました。全ての本番リクエストでの適用は確認できません。"
+        ],
+        "ko": [
+          "ShadowTrafficPhoenixClusterRates 기본 목록이 Experiment18Fou:0.3 한 항목에서 Experiment18Fou:0.3 및 Experiment19Fou:0.3 두 항목으로 변경되었습니다. 이 설정만으로 실제 운영 트래픽 배분을 확인할 수 없습니다.",
+          "VMRankerSendDebiasInputs 공개 기본값이 false에서 true로 변경되어 편향 보정 입력 전달이 기본으로 활성화되었습니다. 모든 운영 요청에 적용된다는 의미는 아닙니다."
+        ],
+        "en": [
+          "The ShadowTrafficPhoenixClusterRates default list changed from only Experiment18Fou:0.3 to both Experiment18Fou:0.3 and Experiment19Fou:0.3. This configuration does not establish actual production traffic allocation.",
+          "The published default for VMRankerSendDebiasInputs changed from false to true, enabling debiasing-input delivery by default. This does not confirm its use for every production request."
+        ],
+        "fr": [
+          "La liste par défaut ShadowTrafficPhoenixClusterRates est passée du seul élément Experiment18Fou:0.3 à deux éléments : Experiment18Fou:0.3 et Experiment19Fou:0.3. Cette configuration ne prouve pas la répartition réelle du trafic en production.",
+          "La valeur publique par défaut de VMRankerSendDebiasInputs est passée de false à true, activant par défaut l’envoi des entrées de correction des biais. Cela ne confirme pas son utilisation pour toutes les requêtes en production."
+        ]
+      }
     }
   ],
   "schema_version": 1
