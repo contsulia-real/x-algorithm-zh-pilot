@@ -13,12 +13,9 @@
         "xai-value-model/scoring.rs"
       ],
       "summary_sections_touched": [
-        "overview",
-        "retrieval",
-        "ranking",
-        "filtering",
+        "rules",
         "weights",
-        "notable_updates"
+        "updates"
       ],
       "upstream_sha": "6258a1549ef808be88fba83d3b2d58364b587ee0",
       "upstream_url": "https://github.com/xai-org/x-algorithm/commit/6258a1549ef808be88fba83d3b2d58364b587ee0",
@@ -85,6 +82,59 @@
           "La valeur publique par défaut de VMRankerSendDebiasInputs est passée de false à true, activant par défaut l’envoi des entrées de correction des biais. Cela ne confirme pas son utilisation pour toutes les requêtes en production."
         ]
       }
+    },
+    {
+      "date": "2026-10-28",
+      "entry_type": "upstream_change",
+      "upstream_sha": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "upstream_url": "https://github.com/xai-org/x-algorithm/commit/5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "files_changed": [
+        "README.md",
+        "home-mixer/params/param.rs"
+      ],
+      "summary_sections_touched": [
+        "rules",
+        "updates"
+      ],
+      "changes_zh": [
+        "README 记载，Phoenix 召回模型开始训练以找出观看者读完的帖子，排序模型改进停留时间预测；Brazil2026ElectionFilter 已于 2026 年 10 月 26 日移除。",
+        "param.rs 新增页面解码重排、页面强化学习探索和页面日志参数；EnablePageDecodeRerank、EnablePageRlExploration 与 EnablePageLogging 的默认值均为 false。",
+        "新账号软性 NSFW 过滤的账号年龄上限由 86400 秒（1 天）调整为 604800 秒（7 天），新增默认评分序列上限 100；EnableVideoCarouselHighRiskFilter 默认 false。",
+        "ThunderClusterId 参数已删除；本轮 30 项 Weight/WeightBoost 参数值及 scoring.rs 未变。公开默认值不能证明线上实际配置。"
+      ],
+      "changes_i18n": {
+        "zh-Hant": [
+          "README 記載，Phoenix 召回模型開始訓練以找出觀看者讀完的貼文，排序模型改進停留時間預測；Brazil2026ElectionFilter 於 2026 年 10 月 26 日移除。",
+          "param.rs 新增頁面解碼重排、頁面強化學習探索及頁面日誌參數；EnablePageDecodeRerank、EnablePageRlExploration 與 EnablePageLogging 的預設值均為 false。",
+          "新帳號軟性 NSFW 篩選的帳號年齡上限由 86400 秒（1 天）調整為 604800 秒（7 天），新增預設評分序列上限 100；EnableVideoCarouselHighRiskFilter 預設 false。",
+          "ThunderClusterId 參數已刪除；本輪 30 項 Weight/WeightBoost 參數值及 scoring.rs 未變。公開預設值不能證明線上實際設定。"
+        ],
+        "ja": [
+          "README には、Phoenix検索モデルが最後まで読まれる投稿を見つけるよう学習され、ランキングモデルの滞在時間予測が改善されたこと、Brazil2026ElectionFilter が2026年10月26日に削除されたことが記載されています。",
+          "param.rs にページデコード再ランキング、ページ強化学習探索、ページログのパラメータが追加されました。EnablePageDecodeRerank、EnablePageRlExploration、EnablePageLogging の既定値はいずれも false です。",
+          "新規アカウント向けソフトNSFWフィルターの年齢上限は86400秒（1日）から604800秒（7日）に変更され、スコアリング系列長の既定値100が追加されました。EnableVideoCarouselHighRiskFilter は既定で false です。",
+          "ThunderClusterId パラメータは削除されました。今回、30項目の Weight/WeightBoost 値と scoring.rs は変更されていません。公開既定値だけでは本番環境の実設定は分かりません。"
+        ],
+        "ko": [
+          "README에는 Phoenix 검색 모델이 끝까지 읽히는 게시물을 찾도록 학습됐고 랭킹 모델의 체류 시간 예측이 개선됐으며 Brazil2026ElectionFilter가 2026년 10월 26일 제거됐다고 기록돼 있습니다.",
+          "param.rs에 페이지 디코드 재랭킹, 페이지 강화학습 탐색, 페이지 로그 파라미터가 추가됐습니다. EnablePageDecodeRerank, EnablePageRlExploration, EnablePageLogging의 기본값은 모두 false입니다.",
+          "신규 계정용 소프트 NSFW 필터의 연령 상한은 86400초(1일)에서 604800초(7일)로 바뀌었고 점수 계산 시퀀스 기본 상한 100이 추가됐습니다. EnableVideoCarouselHighRiskFilter의 기본값은 false입니다.",
+          "ThunderClusterId 파라미터는 삭제됐습니다. 이번에 Weight/WeightBoost 가중치 30개와 scoring.rs는 바뀌지 않았습니다. 공개 기본값만으로 운영 환경의 실제 설정을 알 수는 없습니다."
+        ],
+        "en": [
+          "The README records that Phoenix retrieval was trained to surface posts people read through, the ranking model improved dwell-time prediction, and Brazil2026ElectionFilter was removed on October 26, 2026.",
+          "param.rs added page-decode reranking, page reinforcement-learning exploration and page-logging parameters. EnablePageDecodeRerank, EnablePageRlExploration and EnablePageLogging all default to false.",
+          "The new-user soft NSFW account-age limit changed from 86,400 seconds (1 day) to 604,800 seconds (7 days), and a scoring-sequence limit of 100 was added. EnableVideoCarouselHighRiskFilter defaults to false.",
+          "The ThunderClusterId parameter was removed. All 30 Weight/WeightBoost values and scoring.rs are unchanged in this update. Public defaults do not establish the actual live configuration."
+        ],
+        "fr": [
+          "Le README indique que la récupération Phoenix a été entraînée à trouver les posts lus jusqu’au bout, que le modèle de classement prédit mieux le temps de lecture et que Brazil2026ElectionFilter a été supprimé le 26 octobre 2026.",
+          "param.rs a ajouté des paramètres de reclassement par décodage de page, d’exploration par apprentissage par renforcement et de journalisation. EnablePageDecodeRerank, EnablePageRlExploration et EnablePageLogging valent tous false par défaut.",
+          "La limite d’âge du filtre NSFW souple des nouveaux comptes est passée de 86400 secondes (1 jour) à 604800 secondes (7 jours), et une limite de séquence de score de 100 a été ajoutée. EnableVideoCarouselHighRiskFilter vaut false par défaut.",
+          "Le paramètre ThunderClusterId a été supprimé. Les 30 valeurs Weight/WeightBoost et scoring.rs restent inchangés dans cette mise à jour. Les valeurs publiques par défaut ne déterminent pas la configuration réelle en production."
+        ]
+      },
+      "weight_changes": []
     }
   ],
   "schema_version": 1

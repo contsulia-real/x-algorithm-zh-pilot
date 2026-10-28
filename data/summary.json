@@ -1,6 +1,6 @@
 {
-  "last_processed_sha": "2f252142b9284e692ac72851768c8072d045f0d5",
-  "last_processed_url": "https://github.com/xai-org/x-algorithm/commit/2f252142b9284e692ac72851768c8072d045f0d5",
+  "last_processed_sha": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+  "last_processed_url": "https://github.com/xai-org/x-algorithm/commit/5ed796374ea48ee26058aab66ab10c266bea2bef",
   "schema_version": 1,
   "summary": {
     "weights": [
@@ -9,7 +9,7 @@
         "label_zh": "点赞",
         "key": "rust_home_mixer_favorite_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0.66
       },
       {
@@ -17,7 +17,7 @@
         "label_zh": "回复",
         "key": "rust_home_mixer_reply_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 5
       },
       {
@@ -25,7 +25,7 @@
         "label_zh": "互相关注回复加成",
         "key": "rust_home_mixer_bidirectional_follow_reply_weight_boost",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 15
       },
       {
@@ -33,7 +33,7 @@
         "label_zh": "互相关注停留加成",
         "key": "rust_home_mixer_bidirectional_follow_dwell_weight_boost",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0
       },
       {
@@ -41,7 +41,7 @@
         "label_zh": "转发",
         "key": "rust_home_mixer_retweet_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 1
       },
       {
@@ -49,7 +49,7 @@
         "label_zh": "展开图片",
         "key": "rust_home_mixer_photo_expand_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0.05
       },
       {
@@ -57,7 +57,7 @@
         "label_zh": "打开视频",
         "key": "rust_home_mixer_video_open_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0.02
       },
       {
@@ -65,7 +65,7 @@
         "label_zh": "打开帖子",
         "key": "rust_home_mixer_click_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0.3
       },
       {
@@ -73,7 +73,7 @@
         "label_zh": "打开链接",
         "key": "rust_home_mixer_open_link_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0.2
       },
       {
@@ -81,7 +81,7 @@
         "label_zh": "点击个人资料",
         "key": "rust_home_mixer_profile_click_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0
       },
       {
@@ -89,7 +89,7 @@
         "label_zh": "合格视频观看",
         "key": "rust_home_mixer_vqv_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0
       },
       {
@@ -97,7 +97,7 @@
         "label_zh": "分享",
         "key": "rust_home_mixer_share_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 2
       },
       {
@@ -105,7 +105,7 @@
         "label_zh": "私信分享",
         "key": "rust_home_mixer_share_via_dm_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 5
       },
       {
@@ -113,7 +113,7 @@
         "label_zh": "复制链接分享",
         "key": "rust_home_mixer_share_via_copy_link_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 20
       },
       {
@@ -121,7 +121,7 @@
         "label_zh": "停留时长",
         "key": "rust_home_mixer_dwell_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0.05
       },
       {
@@ -129,7 +129,7 @@
         "label_zh": "引用",
         "key": "rust_home_mixer_quote_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 5
       },
       {
@@ -137,7 +137,7 @@
         "label_zh": "点击被引用帖子",
         "key": "rust_home_mixer_quoted_click_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0.05
       },
       {
@@ -145,7 +145,7 @@
         "label_zh": "被引用帖子的合格视频观看",
         "key": "rust_home_mixer_quoted_vqv_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0
       },
       {
@@ -153,7 +153,7 @@
         "label_zh": "关注作者",
         "key": "rust_home_mixer_follow_author_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 4
       },
       {
@@ -161,7 +161,7 @@
         "label_zh": "未探索帖子加权",
         "key": "rust_home_mixer_post_unexplored_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0.015
       },
       {
@@ -169,7 +169,7 @@
         "label_zh": "视频互动",
         "key": "rust_home_mixer_react_with_video_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0
       },
       {
@@ -177,7 +177,7 @@
         "label_zh": "连续停留时长",
         "key": "rust_home_mixer_cont_dwell_time_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0.006
       },
       {
@@ -185,7 +185,7 @@
         "label_zh": "点击后连续停留时长",
         "key": "rust_home_mixer_cont_click_dwell_time_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0.4
       },
       {
@@ -193,7 +193,7 @@
         "label_zh": "不感兴趣",
         "key": "rust_home_mixer_not_interested_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": -52.272
       },
       {
@@ -201,7 +201,7 @@
         "label_zh": "屏蔽作者",
         "key": "rust_home_mixer_block_author_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": -31.2
       },
       {
@@ -209,7 +209,7 @@
         "label_zh": "静音作者",
         "key": "rust_home_mixer_mute_author_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": -58.8
       },
       {
@@ -217,7 +217,7 @@
         "label_zh": "举报",
         "key": "rust_home_mixer_report_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": -234
       },
       {
@@ -225,7 +225,7 @@
         "label_zh": "未停留",
         "key": "rust_home_mixer_not_dwelled_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": -0.02
       },
       {
@@ -233,7 +233,7 @@
         "label_zh": "视频轮播打开视频",
         "key": "rust_home_mixer_video_carousel_video_open_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 1
       },
       {
@@ -241,25 +241,25 @@
         "label_zh": "沉浸式视频合格观看",
         "key": "rust_home_mixer_video_carousel_immersive_vqv_weight",
         "source_file": "home-mixer/params/param.rs",
-        "source_url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs",
+        "source_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
         "value": 0
       }
     ]
   },
-  "updated_at": "2026-10-27T12:05:19.911Z",
+  "updated_at": "2026-10-28T11:57:30.000Z",
   "upstream_repo": "xai-org/x-algorithm",
   "source_files": {
     "README.md": {
-      "blob_sha": "e65e5430e1c48d4d160bdb58ddecd51e15f5df40",
-      "url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/README.md"
+      "blob_sha": "d03c0ded14ed4d26f9f294ba1dd2350f5fd2b6d3",
+      "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md"
     },
     "home-mixer/params/param.rs": {
-      "blob_sha": "e683ac0c044109d15014eac3f1a5fae4dd0670e3",
-      "url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/home-mixer/params/param.rs"
+      "blob_sha": "240123ecdaac4d0a33336835f99fe84b855a9a04",
+      "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs"
     },
     "xai-value-model/scoring.rs": {
       "blob_sha": "c9ceaa79ca29b3bf5677a1f990155f897810c54d",
-      "url": "https://github.com/xai-org/x-algorithm/blob/2f252142b9284e692ac72851768c8072d045f0d5/xai-value-model/scoring.rs"
+      "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs"
     }
   },
   "presentation": {
@@ -274,34 +274,34 @@
             "detail": "公开参数为各来源设置了候选数量和时间限制，例如 Thunder 最多 1200 条，Phoenix 最多 1000 条。这些是默认上限，不是每次实际取到的数量。"
           },
           {
-            "title": "排序前过滤",
-            "conclusion": "去重、已经看过或展示过的帖子、屏蔽与静音条件会影响哪些内容进入排序。",
-            "detail": "公开过滤规则还涉及旧帖、本人帖子、静音关键词、订阅资格及特定地区的限制。帖子被召回，并不等于有资格进入最终列表。"
+            "title": "排序前过滤与账号条件",
+            "conclusion": "候选帖子在进入排序前会经过多项过滤；README 记载 Brazil2026ElectionFilter 已于 2026 年 10 月 26 日移除。",
+            "detail": "公开参数还包括新账号软性 NSFW 过滤的账号年龄上限和评分序列长度：前者由 86400 秒（1 天）调整为 604800 秒（7 天），后者新增默认值 100。视频轮播高风险过滤开关默认 false。参数存在不代表对应功能在所有请求中启用。"
           },
           {
-            "title": "预测和打分",
-            "conclusion": "Phoenix 预测观看者点赞、回复、分享、点开或停留等行为的可能性；RankingScorer 按各项权重合成分数。",
-            "detail": "多数权重作用于预测概率，部分作用于预测的连续数值。已有互动次数不直接等于这一环节的得分。"
+            "title": "预测与打分",
+            "conclusion": "Phoenix 预测观看者可能采取的互动行为，RankingScorer 按各项权重合成分数。",
+            "detail": "README 记录，Phoenix 排序模型于 2026 年 10 月改进了停留时长预测，Phoenix 召回模型也开始训练以找出观看者读完的帖子。公开说明没有给出这些更新对单个账号曝光或排名的固定增幅。"
           },
           {
-            "title": "排序调整",
-            "conclusion": "初次打分后，作者多样性、关注外内容折扣、新作者提升等规则还会影响位置。",
-            "detail": "VMRanker 也会进一步重排。连续出现同一作者、内容过于相似等情况，不能只用初次打分解释。"
+            "title": "排序调整与影子流量",
+            "conclusion": "初次打分后，作者多样性、关注外内容折扣及 VMRanker 重排仍可能改变帖子位置。",
+            "detail": "VMRankerSendDebiasInputs 的公开默认值为 true；ShadowTrafficPhoenixClusterRates 包含 Experiment18Fou:0.3 和 Experiment19Fou:0.3。影子流量配置不能证明线上流量的实际分配。"
           },
           {
-            "title": "重排输入参数",
-            "conclusion": "VMRankerSendDebiasInputs 的公开默认值由 false 改为 true，用于控制是否向 VMRanker 发送去偏输入。",
-            "detail": "VMRankerSendPacingInputs 仍默认为 false。公开参数未说明所有线上请求是否采用这一配置。"
+            "title": "页面解码重排",
+            "conclusion": "参数文件新增页面解码重排设置，但 EnablePageDecodeRerank 默认关闭。",
+            "detail": "默认池大小为 200、解码步数为 64、温度为 0.0。默认开关关闭时，不能据此认定重排流程正在运行。"
           },
           {
-            "title": "影子流量参数",
-            "conclusion": "ShadowTrafficPhoenixClusterRates 的默认列表新增 Experiment19Fou:0.3，原有 Experiment18Fou:0.3 保留。",
-            "detail": "两个条目均为影子流量集群比率配置字符串。仅凭默认值无法确认实际生产流量分配或实验效果。"
+            "title": "页面强化学习探索",
+            "conclusion": "页面强化学习探索开关 EnablePageRlExploration 默认关闭。",
+            "detail": "对应默认参数包括温度 0.2 和 top-k 上限 64；仅凭参数值无法确认实际请求是否启用探索。"
           },
           {
-            "title": "可见性检查",
-            "conclusion": "排到前面的帖子仍可能因可见性检查而无法展示。",
-            "detail": "公开过滤代码包含 ALLOW、NOTICE、INTERSTITIAL、DROP 等结果。被标为 DROP 的帖子会被移除，相关父帖或引用关系也可能受到影响。"
+            "title": "页面日志",
+            "conclusion": "EnablePageLogging 默认关闭，PageLogTtlSeconds 的默认值为 3600 秒。",
+            "detail": "该 TTL 是公开参数的保留时长设置；日志开关默认关闭时，不能据此推断实际日志采集状态。"
           },
           {
             "title": "适用范围",
@@ -376,27 +376,27 @@
       },
       "updates": {
         "title": "版本记录",
-        "conclusion": "截至 2026 年 10 月 27 日，已记录一条参数文件变更：影子流量配置增加集群，VMRanker 去偏输入默认开启；30 项权重未变。",
+        "conclusion": "截至 2026 年 10 月 28 日，README 与参数文件发生变化；评分源码及 30 项权重未变。",
         "sections": [
           {
-            "title": "2026 年 10 月 27 日参数变更",
-            "conclusion": "影子流量集群比率列表增加 Experiment19Fou:0.3；VMRankerSendDebiasInputs 默认值由 false 改为 true。",
-            "detail": "变更来自 home-mixer/params/param.rs。30 项权重值、README 和评分代码均未变化。"
+            "title": "2026 年 10 月 28 日上游更新",
+            "conclusion": "README 新增 10 月 8 日和 13 日的模型更新说明，并记录 10 月 26 日移除巴西选举过滤器；参数文件也有新增与调整。",
+            "detail": "本轮实际变化涉及 README.md 和 home-mixer/params/param.rs；xai-value-model/scoring.rs 的 blob SHA 未变化。"
           },
           {
-            "title": "基线来源",
-            "conclusion": "初始版本对应上游提交 6258a154，参考了 README、参数文件及评分代码。",
-            "detail": "基线用于后续版本比较。首次整理日期不代表当天发布了新的推荐算法。"
+            "title": "召回与排序模型更新",
+            "conclusion": "README 记载，Phoenix 召回模型开始训练以找出观看者读完的帖子；排序模型则改进了对停留时长的预测。",
+            "detail": "召回更新指向 phoenix/xrex/models/recsys_two_tower_model.py；排序更新指向 phoenix/xrex/models/recsys_model.py 与 phoenix/xrex/models/loss_recsys.py。公开说明没有量化具体账号的曝光或排名变化。"
           },
           {
-            "title": "此前的官方说明",
-            "conclusion": "2026 年 8 月，官方明确权重乘的是预测值，并公开了更多过滤及参数信息。",
-            "detail": "2026 年 9 月，Under the Hood 报告增加了因法律要求而限制展示内容的相关信息。这些是已发生的公告，并非本次新变动。"
+            "title": "巴西选举过滤器移除",
+            "conclusion": "README 记载 Brazil2026ElectionFilter 已于 2026 年 10 月 26 日从 For You 移除。",
+            "detail": "该过滤器此前会排除被报告给巴西选举法院的 2026 年选举相关账号帖子，但观看者显式关注的账号除外；移除后不再由此过滤器排除。"
           },
           {
-            "title": "变更记录范围",
-            "conclusion": "只对 README、权重参数及评分文件的实际改动建立记录。",
-            "detail": "如有权重改动，记录修改前后的值和差额；上游其他目录的提交不会自动列为推荐算法变化。"
+            "title": "新增参数与未变项目",
+            "conclusion": "参数文件新增页面解码重排、强化学习探索和日志设置；新账号软性 NSFW 过滤的账号年龄上限从 1 天调整为 7 天。",
+            "detail": "PageDecodePoolN 默认 200、PageDecodeSteps 为 64、PageDecodeTemperature 为 0.0；PageRlExplorationTemperature 为 0.2、PageRlExplorationTopK 为 64；PageLogTtlSeconds 为 3600。EnablePageDecodeRerank、EnablePageRlExploration、EnablePageLogging 与 EnableVideoCarouselHighRiskFilter 默认 false；NewUserSoftNsfwFilterMaxScoringSeqLength 为 100。ThunderClusterId 参数已删除。30 项权重与 scoring.rs 未变；此前记录的 VMRankerSendDebiasInputs 仍为 true，影子流量列表仍含 Experiment18Fou:0.3 与 Experiment19Fou:0.3。"
           }
         ]
       }
@@ -411,20 +411,20 @@
             "conclusion": "Thunder 负责关注账号；Phoenix、SimClusters 等补充关注外内容。"
           },
           {
-            "title": "评分",
-            "conclusion": "点赞、回复、分享、停留及负面反馈分别产生预测值，再按权重合成分数。"
+            "title": "预测与打分",
+            "conclusion": "Phoenix 预测互动与停留行为；公开更新说明召回模型开始学习识别读完的帖子，排序模型改进了停留时长预测。"
           },
           {
-            "title": "调整",
-            "conclusion": "作者重复出现、关注外折扣和后续重排会影响位置。"
+            "title": "排序与实验参数",
+            "conclusion": "VMRanker 去偏输入默认开启；页面解码重排与页面强化学习探索默认关闭。影子流量列表包含两个 0.3 条目。"
           },
           {
-            "title": "过滤",
-            "conclusion": "已看过、屏蔽、静音或不符合展示条件的内容可能被移除。"
+            "title": "过滤条件",
+            "conclusion": "README 记载巴西选举过滤器已移除；新账号软性 NSFW 过滤的年龄上限为 7 天、评分序列上限为 100，视频轮播高风险过滤默认关闭。"
           },
           {
-            "title": "实验参数",
-            "conclusion": "影子流量默认列表增加 Experiment19Fou:0.3，VMRanker 去偏输入选项默认开启。"
+            "title": "日志与配置范围",
+            "conclusion": "页面日志默认关闭，TTL 参数为 3600 秒；这些公开默认值不代表线上完整配置。"
           }
         ]
       },
@@ -463,19 +463,19 @@
       },
       "updates": {
         "title": "更新情况",
-        "conclusion": "2026 年 10 月 27 日记录了一次参数变更，涉及影子流量配置和 VMRanker 去偏输入；30 项权重未变。",
+        "conclusion": "2026 年 10 月 28 日更新了召回与排序模型说明、巴西选举过滤器状态及页面处理参数；30 项权重未变。",
         "sections": [
           {
-            "title": "本次参数变更",
-            "conclusion": "影子流量列表增加 Experiment19Fou:0.3；VMRankerSendDebiasInputs 从 false 调整为 true。"
+            "title": "本轮上游更新",
+            "conclusion": "README 新增 Phoenix 召回与排序模型更新说明，并记录巴西选举过滤器已移除；参数文件新增页面处理设置。"
           },
           {
-            "title": "已记录版本",
-            "conclusion": "初始资料来自上游提交 6258a154。"
+            "title": "参数变化",
+            "conclusion": "新账号软性 NSFW 过滤的账号年龄上限由 1 天增至 7 天；页面解码重排、探索与日志开关默认关闭，30 项权重未变。"
           },
           {
-            "title": "后续记录",
-            "conclusion": "监测的源码有实际变化时再新增条目；权重变化会保留修改前后数值。"
+            "title": "跟踪范围",
+            "conclusion": "本轮 README 与参数文件变化，scoring.rs 未变；公开默认参数不等于生产环境实时配置。"
           }
         ]
       }
@@ -495,34 +495,34 @@
                 "detail": "Public defaults set candidate limits and age limits: for example, up to 1,200 from Thunder and 1,000 from Phoenix. Actual counts can differ."
               },
               {
-                "title": "Filtering before ranking",
-                "conclusion": "Duplicates, already seen or served posts, blocked accounts and muted accounts can be excluded.",
-                "detail": "Other checks cover older posts, your own posts, muted words, subscriber-only content and geographic restrictions. Retrieval does not guarantee eligibility."
+                "title": "Pre-ranking filters and account conditions",
+                "conclusion": "Candidates pass multiple filters before ranking; the README says Brazil2026ElectionFilter was removed on October 26, 2026.",
+                "detail": "Public parameters include an account-age limit and scoring-sequence length for the new-user soft NSFW filter: the age limit changed from 86,400 seconds (1 day) to 604,800 seconds (7 days), and the sequence limit is newly set to 100. The video-carousel high-risk filter flag defaults to false. A parameter's presence does not mean the feature is enabled for every request."
               },
               {
                 "title": "Prediction and scoring",
-                "conclusion": "Phoenix predicts actions such as likes, replies, shares, opens and dwell; RankingScorer combines these predictions using weights.",
-                "detail": "Most weights multiply predicted probabilities; some multiply continuous predictions. Existing engagement counts are not the direct scores."
+                "conclusion": "Phoenix predicts likely viewer actions, and RankingScorer combines the predictions using the configured weights.",
+                "detail": "The README says the Phoenix ranking model improved its dwell-time predictions in October 2026, while Phoenix retrieval was trained to find posts people read all the way through. The public notes do not quantify a fixed exposure or ranking increase for any individual account."
               },
               {
-                "title": "Ranking adjustments",
-                "conclusion": "Author diversity, discounts for out-of-network posts and boosts for less-exposed authors can change ordering.",
-                "detail": "VMRanker performs additional reranking. Repeated authors and similar adjacent posts are not explained by the first score alone."
+                "title": "Ranking adjustments and shadow traffic",
+                "conclusion": "Author diversity, out-of-network discounts and VMRanker reranking can still change positions after initial scoring.",
+                "detail": "VMRankerSendDebiasInputs defaults to true. ShadowTrafficPhoenixClusterRates contains Experiment18Fou:0.3 and Experiment19Fou:0.3. These shadow-traffic settings do not establish actual production traffic allocation."
               },
               {
-                "title": "Reranker input settings",
-                "conclusion": "The published default for VMRankerSendDebiasInputs changed from false to true; the flag controls whether debiasing inputs are sent to VMRanker.",
-                "detail": "VMRankerSendPacingInputs remains false by default. The published parameter does not establish whether every production request uses this setting."
+                "title": "Page-decode reranking",
+                "conclusion": "Page-decode reranking parameters were added, but EnablePageDecodeRerank defaults to false.",
+                "detail": "The default pool size is 200, the decode-step count is 64, and the temperature is 0.0. With the flag off by default, these values do not show that the reranking path is running."
               },
               {
-                "title": "Shadow-traffic parameters",
-                "conclusion": "ShadowTrafficPhoenixClusterRates now includes Experiment19Fou:0.3 alongside the existing Experiment18Fou:0.3 entry.",
-                "detail": "Both entries are configuration strings for shadow-traffic cluster rates. They do not establish actual production traffic allocation or experiment outcomes."
+                "title": "Page reinforcement-learning exploration",
+                "conclusion": "The EnablePageRlExploration flag defaults to false.",
+                "detail": "Its related defaults are temperature 0.2 and a top-k limit of 64. These values alone do not establish whether exploration is enabled for live requests."
               },
               {
-                "title": "Visibility checks",
-                "conclusion": "Even highly ranked posts may fail the final visibility checks.",
-                "detail": "The published filtering code includes ALLOW, NOTICE, INTERSTITIAL and DROP outcomes. DROP removes the post; related parents or quotes may also be affected."
+                "title": "Page logging",
+                "conclusion": "EnablePageLogging defaults to false, and PageLogTtlSeconds defaults to 3,600 seconds.",
+                "detail": "TTL is the retention duration configured by the public parameter. With logging disabled by default, the value alone does not establish actual log collection."
               },
               {
                 "title": "Scope",
@@ -597,27 +597,27 @@
           },
           "updates": {
             "title": "Version history",
-            "conclusion": "As of October 27, 2026, one parameter-file update is recorded: a shadow-traffic cluster was added and VMRanker debiasing inputs became enabled by default. All 30 weights are unchanged.",
+            "conclusion": "As of October 28, 2026, the README and parameter file changed; the scoring source and all 30 weights are unchanged.",
             "sections": [
               {
-                "title": "October 27, 2026 parameter changes",
-                "conclusion": "Experiment19Fou:0.3 was added to the shadow-traffic cluster-rate list, and VMRankerSendDebiasInputs changed from false to true.",
-                "detail": "The changes are in home-mixer/params/param.rs. All 30 scoring weights, the README and the scoring source are unchanged."
+                "title": "October 28, 2026 upstream update",
+                "conclusion": "The README adds model updates dated October 8 and 13 and records removal of the Brazil election filter on October 26. The parameter file also gained and changed settings.",
+                "detail": "The files that changed in this comparison are README.md and home-mixer/params/param.rs. The blob SHA for xai-value-model/scoring.rs is unchanged."
               },
               {
-                "title": "Initial reference",
-                "conclusion": "The first record corresponds to upstream commit 6258a154 and covers the README, parameter file and scoring code.",
-                "detail": "The date is when the reference was compiled, not the date of a newly deployed algorithm."
+                "title": "Retrieval and ranking model updates",
+                "conclusion": "The README says Phoenix retrieval was trained to surface posts people read all the way through, and the ranking model improved its time-spent predictions.",
+                "detail": "The retrieval note points to phoenix/xrex/models/recsys_two_tower_model.py. The ranking note points to phoenix/xrex/models/recsys_model.py and phoenix/xrex/models/loss_recsys.py. The notes do not quantify exposure or rank changes for individual accounts."
               },
               {
-                "title": "Earlier official notes",
-                "conclusion": "In August 2026, the maintainers clarified that weights multiply predictions and published more details on filtering and parameters.",
-                "detail": "A September 2026 Under the Hood report added information about content limited by legal requirements. These were earlier announcements."
+                "title": "Removal of the Brazil election filter",
+                "conclusion": "The README records that Brazil2026ElectionFilter was removed from For You on October 26, 2026.",
+                "detail": "The filter previously excluded posts from accounts reported to Brazil's Electoral Court for the 2026 election, unless the viewer explicitly followed the account. After removal, this filter no longer excludes those posts."
               },
               {
-                "title": "What is tracked",
-                "conclusion": "Changes to the README, weight parameters and scoring source are tracked.",
-                "detail": "Weight changes record old and new defaults and their difference. Commits only touching other directories are not automatically algorithm updates."
+                "title": "New parameters and unchanged items",
+                "conclusion": "Page-decode reranking, reinforcement-learning exploration and logging settings were added; the new-user soft NSFW account-age limit changed from 1 day to 7 days.",
+                "detail": "PageDecodePoolN defaults to 200, PageDecodeSteps to 64 and PageDecodeTemperature to 0.0; PageRlExplorationTemperature is 0.2, PageRlExplorationTopK is 64 and PageLogTtlSeconds is 3,600. EnablePageDecodeRerank, EnablePageRlExploration, EnablePageLogging and EnableVideoCarouselHighRiskFilter default to false. NewUserSoftNsfwFilterMaxScoringSeqLength defaults to 100. The ThunderClusterId parameter was removed. All 30 weights and scoring.rs are unchanged. VMRankerSendDebiasInputs remains true, and the shadow-traffic list still contains Experiment18Fou:0.3 and Experiment19Fou:0.3."
               }
             ]
           }
@@ -632,20 +632,20 @@
                 "conclusion": "Thunder covers followed accounts; Phoenix and SimClusters add out-of-network posts."
               },
               {
-                "title": "Scores",
-                "conclusion": "Predicted likes, replies, shares, dwell and negative feedback are weighted."
+                "title": "Prediction and scoring",
+                "conclusion": "Phoenix predicts actions and dwell time. Public updates describe retrieval training for posts read through and improved dwell-time prediction in ranking."
               },
               {
-                "title": "Reranking",
-                "conclusion": "Repeated authors, out-of-network discounts and later reranking affect positions."
+                "title": "Ranking and experiment settings",
+                "conclusion": "VMRanker debiasing inputs default to enabled, while page-decode reranking and page exploration default to disabled. The shadow-traffic list has two 0.3 entries."
               },
               {
-                "title": "Filtering",
-                "conclusion": "Viewed, blocked, muted or visibility-restricted posts can be removed."
+                "title": "Filter conditions",
+                "conclusion": "The README says the Brazil election filter was removed. The new-user soft NSFW age limit is 7 days, its sequence limit is 100, and the video-carousel high-risk filter defaults off."
               },
               {
-                "title": "Experiment settings",
-                "conclusion": "The shadow-traffic defaults add Experiment19Fou:0.3, and VMRanker debiasing inputs are enabled by default."
+                "title": "Logging and configuration scope",
+                "conclusion": "Page logging defaults off and its TTL parameter is 3,600 seconds; public defaults do not describe the full live configuration."
               }
             ]
           },
@@ -684,19 +684,19 @@
           },
           "updates": {
             "title": "Update status",
-            "conclusion": "An October 27, 2026 update changed shadow-traffic and VMRanker input defaults. All 30 scoring weights are unchanged.",
+            "conclusion": "The October 28, 2026 update covers retrieval and ranking notes, removal of the Brazil election filter and new page-processing parameters; all 30 weights are unchanged.",
             "sections": [
               {
-                "title": "Latest parameter changes",
-                "conclusion": "Shadow traffic gained Experiment19Fou:0.3, and VMRankerSendDebiasInputs changed from false to true."
+                "title": "Upstream changes",
+                "conclusion": "The README adds Phoenix retrieval and ranking updates and records removal of the Brazil election filter; page-processing parameters were added."
               },
               {
-                "title": "Recorded version",
-                "conclusion": "Initial reference comes from upstream commit 6258a154."
+                "title": "Parameter changes",
+                "conclusion": "The new-user soft NSFW age limit rose from 1 day to 7 days. Page reranking, exploration and logging flags default to off; all 30 weights are unchanged."
               },
               {
-                "title": "Future entries",
-                "conclusion": "Only actual changes to tracked sources produce new entries; changed weights retain old and new values."
+                "title": "Tracking scope",
+                "conclusion": "The README and parameter file changed, while scoring.rs did not. Public defaults are not the full live configuration."
               }
             ]
           }
@@ -748,34 +748,34 @@
                 "detail": "公開されたデフォルト設定では、Thunder は最大1,200件、Phoenix は最大1,000件などの候補数・時間制限があります。毎回この数だけ取得するわけではありません。"
               },
               {
-                "title": "順位付け前の除外",
-                "conclusion": "重複、表示済みや閲覧済みの投稿、ブロック・ミュートの条件で候補が除外されます。",
-                "detail": "古い投稿、自分の投稿、ミュートした語句、購読条件、地域制限も確認されます。候補として取得されても表示されるとは限りません。"
+                "title": "ランキング前のフィルタリングとアカウント条件",
+                "conclusion": "候補投稿はランキング前に複数のフィルターを通過します。README によると、Brazil2026ElectionFilter は2026年10月26日に削除されました。",
+                "detail": "公開パラメータには、新規アカウント向けソフトNSFWフィルターのアカウント年齢上限とスコアリング系列長が含まれます。年齢上限は86400秒（1日）から604800秒（7日）に変更され、系列長の既定値は100です。動画カルーセルの高リスクフィルターは既定でfalseです。パラメータの存在だけでは、すべてのリクエストで機能が有効とは限りません。"
               },
               {
-                "title": "予測とスコア",
-                "conclusion": "Phoenix はいいね、返信、共有、投稿を開く操作、滞在などを予測し、RankingScorer が各項目に重みを掛けて合計します。",
-                "detail": "多くの重みは予測確率、一部は連続値の予測に掛けられます。既存のいいね数がそのままスコアになるわけではありません。"
+                "title": "予測とスコアリング",
+                "conclusion": "Phoenix が閲覧者の行動を予測し、RankingScorer が各重みを使ってスコアを合成します。",
+                "detail": "README には、2026年10月にPhoenixランキングモデルの滞在時間予測が改善され、Phoenix検索モデルが最後まで読まれる投稿を見つけるよう学習されたと記載されています。個別アカウントの露出や順位が一定量増えるとは示されていません。"
               },
               {
-                "title": "並び順の調整",
-                "conclusion": "投稿者の多様性、フォロー外への減点、露出の少ない投稿者への加点などが順位を変えます。",
-                "detail": "VMRanker も再順位付けを行います。同じ投稿者が続く場合や類似する投稿が並ぶ場合、最初のスコアだけでは順位を説明できません。"
+                "title": "順位調整とシャドートラフィック",
+                "conclusion": "初回スコア計算後も、作者の多様性、フォロー外投稿への割引、VMRankerによる再ランキングで位置が変わる場合があります。",
+                "detail": "VMRankerSendDebiasInputs の公開既定値はtrueです。ShadowTrafficPhoenixClusterRates には Experiment18Fou:0.3 と Experiment19Fou:0.3 が含まれます。シャドートラフィックの設定だけでは、本番トラフィックの実際の配分は確認できません。"
               },
               {
-                "title": "再順位付けの入力設定",
-                "conclusion": "VMRankerSendDebiasInputs の公開デフォルト値が false から true に変わり、VMRanker へのバイアス補正用入力の送信を制御します。",
-                "detail": "VMRankerSendPacingInputs のデフォルト値は引き続き false です。この設定が本番環境の全リクエストで使用されるかは公開情報から確認できません。"
+                "title": "ページデコード再ランキング",
+                "conclusion": "ページデコード再ランキングのパラメータが追加されましたが、EnablePageDecodeRerank は既定で無効です。",
+                "detail": "既定のプールサイズは200、デコード手順数は64、温度は0.0です。フラグが無効であるため、この値だけでは再ランキング処理が実行中とは判断できません。"
               },
               {
-                "title": "シャドウトラフィック設定",
-                "conclusion": "ShadowTrafficPhoenixClusterRates のデフォルト一覧に Experiment19Fou:0.3 が追加され、Experiment18Fou:0.3 は維持されました。",
-                "detail": "両項目はシャドウトラフィック用クラスター比率の設定文字列です。実際の配信トラフィック配分や実験結果を示すものではありません。"
+                "title": "ページ強化学習による探索",
+                "conclusion": "ページ強化学習による探索フラグ EnablePageRlExploration は既定で無効です。",
+                "detail": "関連する既定値は温度0.2、top-k上限64です。これらの値だけでは、実際のリクエストで探索が有効かどうかは分かりません。"
               },
               {
-                "title": "表示可否の判定",
-                "conclusion": "上位に入った投稿でも、表示可否の確認で除外されることがあります。",
-                "detail": "公開コードには ALLOW、NOTICE、INTERSTITIAL、DROP などの判定があります。DROP は投稿を除去し、親投稿や引用関係にも影響する場合があります。"
+                "title": "ページログ",
+                "conclusion": "EnablePageLogging は既定で無効で、PageLogTtlSeconds の既定値は3600秒です。",
+                "detail": "TTLは公開パラメータ上の保持時間です。ログ機能のフラグが無効なため、実際のログ収集状態をこの値だけから推定することはできません。"
               },
               {
                 "title": "公開情報の範囲",
@@ -850,27 +850,27 @@
           },
           "updates": {
             "title": "更新履歴",
-            "conclusion": "2026年10月27日までにパラメーターファイルの変更が1件記録されました。シャドウトラフィック設定とVMRankerのバイアス補正用入力が変更され、30項目の重みは不変です。",
+            "conclusion": "2026年10月28日時点でREADMEとパラメータファイルが変更され、スコアリングコードと30項目の重みは変更されていません。",
             "sections": [
               {
-                "title": "2026年10月27日のパラメーター変更",
-                "conclusion": "シャドウトラフィックの一覧に Experiment19Fou:0.3 が追加され、VMRankerSendDebiasInputs が false から true に変更されました。",
-                "detail": "変更元は home-mixer/params/param.rs です。30項目の重み、README、スコア計算コードに変更はありません。"
+                "title": "2026年10月28日の上流更新",
+                "conclusion": "README に10月8日と13日のモデル更新が追加され、10月26日のブラジル選挙フィルター削除も記録されました。パラメータファイルにも追加と変更があります。",
+                "detail": "今回変更されたのは README.md と home-mixer/params/param.rs です。xai-value-model/scoring.rs の blob SHA は変わっていません。"
               },
               {
-                "title": "初期基準",
-                "conclusion": "初回の記録は上流コミット 6258a154 に対応し、README、パラメーターファイル、スコア計算コードを参照しています。",
-                "detail": "この日付は基準をまとめた日であり、同日に新しいアルゴリズムが公開されたことを示しません。"
+                "title": "検索とランキングモデルの更新",
+                "conclusion": "README は、Phoenix 検索モデルが最後まで読まれる投稿を見つけるよう学習され、ランキングモデルの滞在時間予測も改善されたと説明しています。",
+                "detail": "検索の更新先は phoenix/xrex/models/recsys_two_tower_model.py、ランキングの更新先は phoenix/xrex/models/recsys_model.py と phoenix/xrex/models/loss_recsys.py です。個別アカウントの露出や順位の変化量は公表されていません。"
               },
               {
-                "title": "以前の公式説明",
-                "conclusion": "2026年8月、公式側は重みが予測値に掛かることを説明し、フィルタリングや設定の情報を追加しました。",
-                "detail": "2026年9月の Under the Hood 報告では、法的要請による表示制限について追記されました。いずれも以前の発表です。"
+                "title": "ブラジル選挙フィルターの削除",
+                "conclusion": "README によると Brazil2026ElectionFilter は2026年10月26日に For You から削除されました。",
+                "detail": "このフィルターは、ブラジル選挙裁判所に報告された2026年選挙関連アカウントの投稿を、閲覧者が明示的にフォローしている場合を除いて除外していました。削除後は、このフィルターによる除外は行われません。"
               },
               {
-                "title": "追跡する範囲",
-                "conclusion": "README、重みパラメーター、スコア計算コードの実際の変更を記録します。",
-                "detail": "値が変われば旧値・新値・差分を残します。他のディレクトリだけのコミットを自動的にアルゴリズム変更とは扱いません。"
+                "title": "追加パラメータと変更のない項目",
+                "conclusion": "ページデコード再ランキング、強化学習探索、ログの設定が追加され、新規アカウント向けソフトNSFWフィルターの年齢上限は1日から7日に変更されました。",
+                "detail": "PageDecodePoolN は200、PageDecodeSteps は64、PageDecodeTemperature は0.0です。PageRlExplorationTemperature は0.2、PageRlExplorationTopK は64、PageLogTtlSeconds は3600です。EnablePageDecodeRerank、EnablePageRlExploration、EnablePageLogging、EnableVideoCarouselHighRiskFilter は既定でfalseです。NewUserSoftNsfwFilterMaxScoringSeqLength は100です。ThunderClusterId パラメータは削除されました。30項目の重みと scoring.rs は変更されていません。VMRankerSendDebiasInputs はtrueのままで、シャドートラフィックには Experiment18Fou:0.3 と Experiment19Fou:0.3 が残っています。"
               }
             ]
           }
@@ -885,20 +885,20 @@
                 "conclusion": "Thunder はフォロー中、Phoenix や SimClusters はフォロー外を補います。"
               },
               {
-                "title": "スコア",
-                "conclusion": "いいね、返信、共有、滞在、否定的な反応の予測に重みを掛けます。"
+                "title": "予測とスコアリング",
+                "conclusion": "Phoenix は行動と滞在時間を予測します。公開更新では、最後まで読まれる投稿の検索学習と滞在時間予測の改善が記されています。"
               },
               {
-                "title": "調整",
-                "conclusion": "投稿者の重複、フォロー外への減点、再順位付けが順位に影響します。"
+                "title": "順位調整と実験パラメータ",
+                "conclusion": "VMRanker のデバイアス入力は既定で有効ですが、ページデコード再ランキングとページ探索は既定で無効です。シャドートラフィックのリストには0.3の項目が2つあります。"
               },
               {
-                "title": "除外",
-                "conclusion": "閲覧済み、ブロック・ミュート対象、表示制限対象の投稿は除外される場合があります。"
+                "title": "フィルター条件",
+                "conclusion": "README によるとブラジル選挙フィルターは削除済みです。新規アカウント向けソフトNSFWフィルターの年齢上限は7日、系列長は100で、動画カルーセル高リスクフィルターは既定で無効です。"
               },
               {
-                "title": "実験用設定",
-                "conclusion": "シャドウトラフィックの一覧に Experiment19Fou:0.3 が追加され、VMRanker のバイアス補正用入力はデフォルトで有効になりました。"
+                "title": "ログと設定範囲",
+                "conclusion": "ページログは既定で無効で、TTLは3600秒です。公開既定値は本番環境の完全な設定を示すものではありません。"
               }
             ]
           },
@@ -937,19 +937,19 @@
           },
           "updates": {
             "title": "更新状況",
-            "conclusion": "2026年10月27日、シャドウトラフィックとVMRanker入力設定の変更を記録しました。30項目の重みは変わっていません。",
+            "conclusion": "2026年10月28日に検索・ランキングモデルの説明、ブラジル選挙フィルターの状態、ページ処理パラメータが更新されました。30項目の重みは不変です。",
             "sections": [
               {
-                "title": "今回のパラメーター変更",
-                "conclusion": "シャドウトラフィックに Experiment19Fou:0.3 が追加され、VMRankerSendDebiasInputs は false から true に変わりました。"
+                "title": "今回の上流更新",
+                "conclusion": "README にPhoenixの検索・ランキング更新とブラジル選挙フィルターの削除が記録され、ページ処理パラメータが追加されました。"
               },
               {
-                "title": "記録済み",
-                "conclusion": "初期基準は上流コミット6258a154を参照しています。"
+                "title": "パラメータ変更",
+                "conclusion": "新規アカウント向けソフトNSFWフィルターの年齢上限は1日から7日に変更され、ページ再ランキング・探索・ログの各フラグは既定で無効です。30項目の重みは不変です。"
               },
               {
-                "title": "次回以降",
-                "conclusion": "対象コードに変更があったときだけ追記し、重みの変更前後を記録します。"
+                "title": "追跡範囲",
+                "conclusion": "README とパラメータファイルが変更され、scoring.rs は不変です。公開既定値は本番環境の実設定と同一とは限りません。"
               }
             ]
           }
@@ -1001,34 +1001,34 @@
                 "detail": "공개 기본값에는 후보 수와 시간 제한이 있습니다. 예를 들어 Thunder는 최대 1,200개, Phoenix는 최대 1,000개입니다. 실제 수집 수량은 다를 수 있습니다."
               },
               {
-                "title": "정렬 전 필터링",
-                "conclusion": "중복 게시물, 이미 보거나 표시한 게시물, 차단·뮤트 조건이 적용된 게시물은 후보에서 제외될 수 있습니다.",
-                "detail": "오래된 게시물, 본인 게시물, 뮤트한 단어, 구독 자격 및 지역 제한도 검사합니다. 후보로 수집되어도 표시가 보장되지는 않습니다."
+                "title": "랭킹 전 필터링 및 계정 조건",
+                "conclusion": "후보 게시물은 랭킹 전에 여러 필터를 거칩니다. README에 따르면 Brazil2026ElectionFilter는 2026년 10월 26일 제거됐습니다.",
+                "detail": "공개 파라미터에는 신규 계정용 소프트 NSFW 필터의 계정 연령 상한과 점수 계산 시퀀스 길이가 포함됩니다. 연령 상한은 86400초(1일)에서 604800초(7일)로 바뀌었고 시퀀스 길이 기본값 100이 추가됐습니다. 동영상 캐러셀 고위험 필터 플래그의 기본값은 false입니다. 파라미터가 있다는 사실만으로 모든 요청에서 기능이 활성화된다고 볼 수는 없습니다."
               },
               {
-                "title": "예측과 점수 계산",
-                "conclusion": "Phoenix는 좋아요, 답글, 공유, 게시물 열기, 체류 등의 행동을 예측하고 RankingScorer가 가중치를 적용해 점수를 합칩니다.",
-                "detail": "대부분의 가중치는 예측 확률에 곱하며 일부는 연속형 예측값에 곱합니다. 기존 좋아요 수가 곧 점수가 되는 것은 아닙니다."
+                "title": "예측 및 점수 계산",
+                "conclusion": "Phoenix가 이용자 행동을 예측하고 RankingScorer가 각 가중치를 사용해 점수를 합산합니다.",
+                "detail": "README는 2026년 10월 Phoenix 랭킹 모델의 체류 시간 예측이 개선됐고, Phoenix 검색 모델이 끝까지 읽히는 게시물을 찾도록 학습됐다고 설명합니다. 특정 계정의 노출이나 순위가 일정량 증가한다고 밝히지는 않습니다."
               },
               {
-                "title": "순위 조정",
-                "conclusion": "작성자 다양성, 팔로우 외 콘텐츠에 대한 할인, 노출이 적은 작성자에 대한 가산 등이 순서를 바꿀 수 있습니다.",
-                "detail": "VMRanker도 순위를 다시 조정합니다. 같은 작성자가 연속되거나 유사한 게시물이 붙어 있는 경우 초기 점수만으로 순위를 설명할 수 없습니다."
+                "title": "순위 조정 및 섀도 트래픽",
+                "conclusion": "초기 점수 계산 이후에도 작성자 다양성, 비팔로우 게시물 할인, VMRanker 재랭킹이 위치를 바꿀 수 있습니다.",
+                "detail": "VMRankerSendDebiasInputs의 공개 기본값은 true입니다. ShadowTrafficPhoenixClusterRates에는 Experiment18Fou:0.3과 Experiment19Fou:0.3이 포함됩니다. 섀도 트래픽 설정만으로 실제 운영 트래픽 배분을 확인할 수는 없습니다."
               },
               {
-                "title": "재정렬 입력 설정",
-                "conclusion": "VMRankerSendDebiasInputs의 공개 기본값이 false에서 true로 변경되어 VMRanker에 편향 보정 입력을 전달할지 제어합니다.",
-                "detail": "VMRankerSendPacingInputs의 기본값은 계속 false입니다. 이 설정이 운영 환경의 모든 요청에 적용되는지는 공개 자료로 확인할 수 없습니다."
+                "title": "페이지 디코드 재랭킹",
+                "conclusion": "페이지 디코드 재랭킹 파라미터가 추가됐지만 EnablePageDecodeRerank는 기본적으로 꺼져 있습니다.",
+                "detail": "기본 풀 크기는 200, 디코드 단계는 64, 온도는 0.0입니다. 플래그가 꺼져 있으므로 이 값만으로 재랭킹이 실제 실행 중이라고 판단할 수 없습니다."
               },
               {
-                "title": "섀도 트래픽 설정",
-                "conclusion": "ShadowTrafficPhoenixClusterRates 기본 목록에 Experiment19Fou:0.3이 추가되고 기존 Experiment18Fou:0.3은 유지되었습니다.",
-                "detail": "두 항목은 섀도 트래픽 클러스터 비율을 지정하는 문자열입니다. 공개 기본값만으로 실제 서비스 트래픽 배분이나 실험 결과를 확인할 수 없습니다."
+                "title": "페이지 강화학습 탐색",
+                "conclusion": "페이지 강화학습 탐색 플래그 EnablePageRlExploration은 기본적으로 꺼져 있습니다.",
+                "detail": "관련 기본값은 온도 0.2와 top-k 상한 64입니다. 이 값만으로 실제 요청에서 탐색이 활성화됐는지 확인할 수는 없습니다."
               },
               {
-                "title": "표시 가능 여부 확인",
-                "conclusion": "높은 순위를 받은 게시물도 마지막 표시 가능 여부 검사에서 제외될 수 있습니다.",
-                "detail": "공개 코드에는 ALLOW, NOTICE, INTERSTITIAL, DROP 결과가 있습니다. DROP은 게시물을 제거하며 연결된 상위 게시물이나 인용 관계도 영향을 받을 수 있습니다."
+                "title": "페이지 로그",
+                "conclusion": "EnablePageLogging은 기본적으로 꺼져 있고 PageLogTtlSeconds의 기본값은 3600초입니다.",
+                "detail": "TTL은 공개 파라미터에 설정된 보존 시간입니다. 로그 기능이 기본적으로 꺼져 있으므로 이 값만으로 실제 로그 수집 상태를 추정할 수 없습니다."
               },
               {
                 "title": "적용 범위",
@@ -1103,27 +1103,27 @@
           },
           "updates": {
             "title": "버전 기록",
-            "conclusion": "2026년 10월 27일까지 매개변수 파일 변경 1건이 기록되었습니다. 섀도 트래픽 설정과 VMRanker 편향 보정 입력이 변경되었으며 가중치 30개는 그대로입니다.",
+            "conclusion": "2026년 10월 28일 기준 README와 파라미터 파일이 변경됐으며 점수 계산 코드와 가중치 30개는 바뀌지 않았습니다.",
             "sections": [
               {
-                "title": "2026년 10월 27일 매개변수 변경",
-                "conclusion": "섀도 트래픽 목록에 Experiment19Fou:0.3이 추가되고 VMRankerSendDebiasInputs 기본값이 false에서 true로 변경되었습니다.",
-                "detail": "변경 파일은 home-mixer/params/param.rs입니다. 가중치 30개, README 및 점수 계산 코드는 변경되지 않았습니다."
+                "title": "2026년 10월 28일 상류 업데이트",
+                "conclusion": "README에 10월 8일과 13일의 모델 업데이트가 추가됐고, 10월 26일 브라질 선거 필터 제거도 기록됐습니다. 파라미터 파일에도 추가 및 변경이 있습니다.",
+                "detail": "이번 변경 파일은 README.md와 home-mixer/params/param.rs입니다. xai-value-model/scoring.rs의 blob SHA는 바뀌지 않았습니다."
               },
               {
-                "title": "초기 기준",
-                "conclusion": "첫 기록은 상위 저장소 커밋 6258a154를 기준으로 README, 매개변수 파일, 점수 코드를 참조했습니다.",
-                "detail": "기준을 작성한 날짜이며 당일 새 알고리즘이 배포되었다는 의미는 아닙니다."
+                "title": "검색 및 랭킹 모델 업데이트",
+                "conclusion": "README는 Phoenix 검색 모델이 끝까지 읽히는 게시물을 찾도록 학습됐고 랭킹 모델의 체류 시간 예측도 개선됐다고 설명합니다.",
+                "detail": "검색 업데이트 경로는 phoenix/xrex/models/recsys_two_tower_model.py이며 랭킹 업데이트 경로는 phoenix/xrex/models/recsys_model.py와 phoenix/xrex/models/loss_recsys.py입니다. 개별 계정의 노출이나 순위 변화량은 공개되지 않았습니다."
               },
               {
-                "title": "이전 공식 설명",
-                "conclusion": "2026년 8월 공식 설명에서 가중치가 예측값에 곱해진다는 점을 밝히고 필터링 및 매개변수 정보를 추가했습니다.",
-                "detail": "2026년 9월 Under the Hood 보고서에는 법률에 따른 콘텐츠 표시 제한 내용이 추가되었습니다. 모두 이전 공지입니다."
+                "title": "브라질 선거 필터 제거",
+                "conclusion": "README에 따르면 Brazil2026ElectionFilter는 2026년 10월 26일 For You에서 제거됐습니다.",
+                "detail": "이 필터는 브라질 선거법원에 신고된 2026년 선거 관련 계정의 게시물을 이용자가 명시적으로 팔로우한 경우를 제외하고 걸러냈습니다. 제거 후에는 이 필터로 해당 게시물을 제외하지 않습니다."
               },
               {
-                "title": "추적 범위",
-                "conclusion": "README, 가중치 매개변수, 점수 계산 코드의 실제 변경만 기록합니다.",
-                "detail": "가중치 변경 시 이전 값과 새 값 및 차이를 남깁니다. 다른 디렉터리만 수정한 커밋은 자동으로 알고리즘 변경으로 분류하지 않습니다."
+                "title": "추가 파라미터와 유지된 항목",
+                "conclusion": "페이지 디코드 재랭킹, 강화학습 탐색, 로그 설정이 추가됐고 신규 계정용 소프트 NSFW 필터의 연령 상한은 1일에서 7일로 바뀌었습니다.",
+                "detail": "PageDecodePoolN은 200, PageDecodeSteps는 64, PageDecodeTemperature는 0.0입니다. PageRlExplorationTemperature는 0.2, PageRlExplorationTopK는 64, PageLogTtlSeconds는 3600입니다. EnablePageDecodeRerank, EnablePageRlExploration, EnablePageLogging, EnableVideoCarouselHighRiskFilter는 기본값이 false입니다. NewUserSoftNsfwFilterMaxScoringSeqLength는 100입니다. ThunderClusterId 파라미터는 삭제됐습니다. 가중치 30개와 scoring.rs는 바뀌지 않았습니다. VMRankerSendDebiasInputs는 true로 유지되며 섀도 트래픽 목록에는 Experiment18Fou:0.3과 Experiment19Fou:0.3이 남아 있습니다."
               }
             ]
           }
@@ -1138,20 +1138,20 @@
                 "conclusion": "Thunder는 팔로우 계정의 글을, Phoenix와 SimClusters는 그 외 글을 보충합니다."
               },
               {
-                "title": "점수",
-                "conclusion": "좋아요, 답글, 공유, 체류, 부정적 반응의 예측에 가중치를 적용합니다."
+                "title": "예측 및 점수 계산",
+                "conclusion": "Phoenix는 행동과 체류 시간을 예측합니다. 공개 업데이트에는 끝까지 읽히는 게시물 검색 학습과 체류 시간 예측 개선이 기록돼 있습니다."
               },
               {
-                "title": "조정",
-                "conclusion": "작성자 반복, 팔로우 외 콘텐츠 할인, 후속 재정렬이 순위에 영향을 줍니다."
+                "title": "순위 조정 및 실험 파라미터",
+                "conclusion": "VMRanker 편향 보정 입력은 기본 활성화되지만 페이지 디코드 재랭킹과 페이지 탐색은 기본 비활성화입니다. 섀도 트래픽 목록에는 0.3 항목이 두 개 있습니다."
               },
               {
-                "title": "제외",
-                "conclusion": "이미 본 글, 차단·뮤트 대상, 표시 제한 게시물은 제외될 수 있습니다."
+                "title": "필터 조건",
+                "conclusion": "README에 따르면 브라질 선거 필터는 제거됐습니다. 신규 계정용 소프트 NSFW 필터의 연령 상한은 7일, 시퀀스 상한은 100이며 동영상 캐러셀 고위험 필터는 기본 비활성화입니다."
               },
               {
-                "title": "실험 설정",
-                "conclusion": "섀도 트래픽 목록에 Experiment19Fou:0.3이 추가되고 VMRanker 편향 보정 입력이 기본으로 활성화되었습니다."
+                "title": "로그 및 설정 범위",
+                "conclusion": "페이지 로그는 기본 비활성화이고 TTL 파라미터는 3600초입니다. 공개 기본값이 운영 환경의 전체 설정을 뜻하지는 않습니다."
               }
             ]
           },
@@ -1190,19 +1190,19 @@
           },
           "updates": {
             "title": "업데이트 상태",
-            "conclusion": "2026년 10월 27일 섀도 트래픽 및 VMRanker 입력 설정 변경을 기록했습니다. 가중치 30개는 변경되지 않았습니다.",
+            "conclusion": "2026년 10월 28일 검색·랭킹 모델 설명, 브라질 선거 필터 상태, 페이지 처리 파라미터가 갱신됐습니다. 가중치 30개는 그대로입니다.",
             "sections": [
               {
-                "title": "이번 매개변수 변경",
-                "conclusion": "섀도 트래픽에 Experiment19Fou:0.3이 추가되고 VMRankerSendDebiasInputs가 false에서 true로 변경되었습니다."
+                "title": "이번 상류 업데이트",
+                "conclusion": "README에 Phoenix 검색·랭킹 업데이트와 브라질 선거 필터 제거가 기록됐고 페이지 처리 파라미터가 추가됐습니다."
               },
               {
-                "title": "기록된 버전",
-                "conclusion": "초기 자료는 상위 저장소 커밋 6258a154를 기준으로 합니다."
+                "title": "파라미터 변경",
+                "conclusion": "신규 계정용 소프트 NSFW 필터의 연령 상한은 1일에서 7일로 바뀌었고 페이지 재랭킹·탐색·로그 플래그는 기본 비활성화입니다. 가중치 30개는 그대로입니다."
               },
               {
-                "title": "이후 기록",
-                "conclusion": "추적하는 코드가 실제로 바뀔 때만 기록을 추가하며 가중치 변경 전후의 값을 남깁니다."
+                "title": "추적 범위",
+                "conclusion": "README와 파라미터 파일은 바뀌었지만 scoring.rs는 그대로입니다. 공개 기본값이 운영 환경의 실제 설정과 같다고 볼 수는 없습니다."
               }
             ]
           }
@@ -1254,34 +1254,34 @@
                 "detail": "Les paramètres publics limitent les quantités et l’ancienneté : par exemple, jusqu’à 1 200 candidats pour Thunder et 1 000 pour Phoenix. Les volumes réels peuvent varier."
               },
               {
-                "title": "Filtres avant classement",
-                "conclusion": "Les doublons, les posts déjà vus ou présentés et les critères de blocage ou de masquage peuvent éliminer des candidats.",
-                "detail": "D’autres vérifications concernent l’ancienneté, les posts personnels, les mots masqués, les abonnements et certaines restrictions géographiques. Un post récupéré n’est pas forcément affichable."
+                "title": "Filtres avant classement et conditions du compte",
+                "conclusion": "Les candidats passent plusieurs filtres avant le classement ; le README indique que Brazil2026ElectionFilter a été supprimé le 26 octobre 2026.",
+                "detail": "Les paramètres publics comprennent une limite d’âge du compte et une longueur de séquence de score pour le filtre NSFW souple des nouveaux comptes : la limite d’âge est passée de 86400 secondes (1 jour) à 604800 secondes (7 jours), et la longueur de séquence a une nouvelle valeur par défaut de 100. Le filtre de risque élevé du carrousel vidéo est désactivé par défaut. La présence d’un paramètre ne prouve pas que la fonction est activée pour chaque requête."
               },
               {
                 "title": "Prédiction et score",
-                "conclusion": "Phoenix prédit les mentions J’aime, réponses, partages, ouvertures ou durées de lecture ; RankingScorer combine ces prévisions avec des pondérations.",
-                "detail": "La plupart des pondérations multiplient des probabilités estimées, certaines des valeurs continues. Les interactions déjà obtenues ne sont pas directement le score."
+                "conclusion": "Phoenix prédit les actions probables des personnes qui consultent les posts, puis RankingScorer combine les prédictions avec les pondérations.",
+                "detail": "Le README indique que le modèle de classement Phoenix prédit mieux le temps de lecture depuis octobre 2026 et que la récupération Phoenix a été entraînée à trouver les posts lus jusqu’au bout. Les notes publiques ne quantifient pas une hausse fixe d’exposition ou de classement pour un compte donné."
               },
               {
-                "title": "Ajustements du classement",
-                "conclusion": "La diversité des auteurs, la réduction de score hors abonnements et la mise en avant d’auteurs peu exposés peuvent modifier l’ordre.",
-                "detail": "VMRanker procède aussi à un reclassement. La répétition d’un auteur ou la similarité de posts voisins ne s’explique pas seulement par le score initial."
+                "title": "Ajustements du classement et trafic fantôme",
+                "conclusion": "La diversité des auteurs, les réductions appliquées aux posts hors réseau et le reclassement par VMRanker peuvent encore modifier les positions après le premier score.",
+                "detail": "VMRankerSendDebiasInputs vaut true par défaut. ShadowTrafficPhoenixClusterRates contient Experiment18Fou:0.3 et Experiment19Fou:0.3. Ces paramètres de trafic fantôme ne déterminent pas la répartition réelle du trafic en production."
               },
               {
-                "title": "Paramètres d’entrée du reclassement",
-                "conclusion": "La valeur publique par défaut de VMRankerSendDebiasInputs est passée de false à true ; ce paramètre contrôle l’envoi d’entrées de correction des biais à VMRanker.",
-                "detail": "VMRankerSendPacingInputs reste défini sur false par défaut. Le paramètre public ne permet pas de confirmer son utilisation pour toutes les requêtes en production."
+                "title": "Reclassement par décodage de page",
+                "conclusion": "Des paramètres de reclassement par décodage de page ont été ajoutés, mais EnablePageDecodeRerank vaut false par défaut.",
+                "detail": "La taille du pool par défaut est 200, le nombre d’étapes de décodage est 64 et la température est 0.0. Le drapeau étant désactivé par défaut, ces valeurs ne prouvent pas que ce chemin de reclassement s’exécute."
               },
               {
-                "title": "Paramètres du trafic fantôme",
-                "conclusion": "La liste par défaut ShadowTrafficPhoenixClusterRates comprend désormais Experiment19Fou:0.3 en plus de Experiment18Fou:0.3.",
-                "detail": "Ces deux éléments sont des chaînes de configuration des taux de clusters pour le trafic fantôme. Ils ne permettent pas de déduire la répartition réelle du trafic ou les résultats des expériences."
+                "title": "Exploration par apprentissage par renforcement",
+                "conclusion": "Le drapeau EnablePageRlExploration est désactivé par défaut.",
+                "detail": "Les paramètres associés indiquent une température de 0.2 et une limite top-k de 64. Ces valeurs seules ne permettent pas de savoir si l’exploration est activée pour les requêtes en production."
               },
               {
-                "title": "Contrôles de visibilité",
-                "conclusion": "Même un post bien classé peut être écarté par les contrôles de visibilité.",
-                "detail": "Le code public distingue notamment ALLOW, NOTICE, INTERSTITIAL et DROP. DROP supprime le post du fil et peut affecter les posts parents ou les citations associées."
+                "title": "Journalisation des pages",
+                "conclusion": "EnablePageLogging vaut false par défaut et PageLogTtlSeconds vaut 3600 secondes.",
+                "detail": "Le TTL correspond à la durée de conservation configurée dans le paramètre public. La journalisation étant désactivée par défaut, cette valeur ne prouve pas qu’une collecte de journaux est active."
               },
               {
                 "title": "Portée des informations",
@@ -1356,27 +1356,27 @@
           },
           "updates": {
             "title": "Historique des versions",
-            "conclusion": "Au 27 octobre 2026, une modification du fichier de paramètres est enregistrée : ajout d’un cluster de trafic fantôme et activation par défaut des entrées de correction des biais de VMRanker. Les 30 pondérations restent inchangées.",
+            "conclusion": "Au 28 octobre 2026, le README et le fichier de paramètres ont changé ; le code de scoring et les 30 pondérations restent inchangés.",
             "sections": [
               {
-                "title": "Modifications du 27 octobre 2026",
-                "conclusion": "Experiment19Fou:0.3 a été ajouté aux taux de clusters du trafic fantôme et VMRankerSendDebiasInputs est passé de false à true.",
-                "detail": "Ces changements figurent dans home-mixer/params/param.rs. Les 30 pondérations, le README et le code de calcul du score sont inchangés."
+                "title": "Mise à jour amont du 28 octobre 2026",
+                "conclusion": "Le README ajoute les mises à jour de modèle des 8 et 13 octobre et signale la suppression du filtre électoral brésilien le 26 octobre. Le fichier de paramètres a également reçu des ajouts et modifications.",
+                "detail": "Les fichiers modifiés dans cette comparaison sont README.md et home-mixer/params/param.rs. Le blob SHA de xai-value-model/scoring.rs est inchangé."
               },
               {
-                "title": "Référence initiale",
-                "conclusion": "La première entrée correspond au commit amont 6258a154 et couvre le README, les paramètres et le code de calcul du score.",
-                "detail": "Il s’agit de la date de constitution de la référence, pas du déploiement d’un nouvel algorithme."
+                "title": "Mises à jour des modèles de récupération et de classement",
+                "conclusion": "Le README indique que la récupération Phoenix a été entraînée à trouver les posts lus jusqu’au bout et que le modèle de classement prédit mieux le temps de lecture.",
+                "detail": "La note sur la récupération renvoie à phoenix/xrex/models/recsys_two_tower_model.py. La note sur le classement renvoie à phoenix/xrex/models/recsys_model.py et phoenix/xrex/models/loss_recsys.py. Les notes ne quantifient pas les changements d’exposition ou de rang pour un compte particulier."
               },
               {
-                "title": "Précisions officielles antérieures",
-                "conclusion": "En août 2026, les responsables ont précisé que les pondérations multiplient des prévisions et publié davantage de détails sur les filtres et paramètres.",
-                "detail": "En septembre 2026, le rapport Under the Hood a ajouté des informations sur les restrictions d’affichage imposées par la loi. Ce sont des annonces antérieures."
+                "title": "Suppression du filtre électoral brésilien",
+                "conclusion": "Le README indique que Brazil2026ElectionFilter a été retiré de For You le 26 octobre 2026.",
+                "detail": "Le filtre excluait auparavant les posts des comptes signalés au Tribunal électoral du Brésil pour les élections de 2026, sauf si la personne qui consulte suivait explicitement le compte. Après son retrait, ce filtre n’exclut plus ces posts."
               },
               {
-                "title": "Périmètre du suivi",
-                "conclusion": "Seules les modifications réelles du README, des paramètres de pondération et du calcul du score sont consignées.",
-                "detail": "Pour chaque changement de valeur : ancienne valeur, nouvelle valeur et différence. Un commit touchant uniquement d’autres dossiers n’est pas automatiquement une modification de l’algorithme."
+                "title": "Nouveaux paramètres et éléments inchangés",
+                "conclusion": "Des paramètres de reclassement par décodage, d’exploration par apprentissage par renforcement et de journalisation ont été ajoutés ; la limite d’âge du filtre NSFW souple des nouveaux comptes est passée de 1 jour à 7 jours.",
+                "detail": "PageDecodePoolN vaut 200 par défaut, PageDecodeSteps 64 et PageDecodeTemperature 0.0 ; PageRlExplorationTemperature vaut 0.2, PageRlExplorationTopK 64 et PageLogTtlSeconds 3600. EnablePageDecodeRerank, EnablePageRlExploration, EnablePageLogging et EnableVideoCarouselHighRiskFilter valent false par défaut. NewUserSoftNsfwFilterMaxScoringSeqLength vaut 100. Le paramètre ThunderClusterId a été supprimé. Les 30 pondérations et scoring.rs sont inchangés. VMRankerSendDebiasInputs reste à true et la liste de trafic fantôme contient toujours Experiment18Fou:0.3 et Experiment19Fou:0.3."
               }
             ]
           }
@@ -1391,20 +1391,20 @@
                 "conclusion": "Thunder couvre les comptes suivis ; Phoenix et SimClusters ajoutent du contenu hors abonnements."
               },
               {
-                "title": "Score",
-                "conclusion": "Les prédictions de J’aime, réponses, partages, lecture et retours négatifs sont pondérées."
+                "title": "Prédiction et score",
+                "conclusion": "Phoenix prédit les actions et le temps de lecture. Les mises à jour publiques décrivent l’apprentissage pour trouver les posts lus jusqu’au bout et une meilleure prédiction du temps de lecture."
               },
               {
-                "title": "Ajustements",
-                "conclusion": "Les auteurs répétés, les réductions hors abonnements et le reclassement modifient l’ordre."
+                "title": "Classement et paramètres expérimentaux",
+                "conclusion": "Les entrées de correction des biais de VMRanker sont activées par défaut, mais le reclassement par décodage et l’exploration de page sont désactivés. La liste de trafic fantôme contient deux entrées à 0.3."
               },
               {
-                "title": "Filtres",
-                "conclusion": "Les posts déjà vus, bloqués, masqués ou non visibles peuvent être retirés."
+                "title": "Conditions de filtrage",
+                "conclusion": "Le README indique que le filtre électoral brésilien a été supprimé. La limite d’âge du filtre NSFW souple des nouveaux comptes est de 7 jours, sa longueur de séquence de 100, et le filtre de risque élevé du carrousel vidéo est désactivé par défaut."
               },
               {
-                "title": "Paramètres expérimentaux",
-                "conclusion": "La liste du trafic fantôme ajoute Experiment19Fou:0.3 et les entrées de correction des biais de VMRanker sont activées par défaut."
+                "title": "Journalisation et portée",
+                "conclusion": "La journalisation des pages est désactivée par défaut et son TTL vaut 3600 secondes ; les paramètres publics ne décrivent pas toute la configuration en production."
               }
             ]
           },
@@ -1443,19 +1443,19 @@
           },
           "updates": {
             "title": "État des mises à jour",
-            "conclusion": "Le 27 octobre 2026, les paramètres du trafic fantôme et des entrées VMRanker ont changé. Les 30 pondérations restent inchangées.",
+            "conclusion": "La mise à jour du 28 octobre 2026 couvre les notes sur la récupération et le classement, le retrait du filtre électoral brésilien et les nouveaux paramètres de traitement des pages ; les 30 pondérations restent inchangées.",
             "sections": [
               {
-                "title": "Modifications des paramètres",
-                "conclusion": "Le trafic fantôme inclut désormais Experiment19Fou:0.3 et VMRankerSendDebiasInputs est passé de false à true."
+                "title": "Mises à jour amont",
+                "conclusion": "Le README ajoute les mises à jour de récupération et de classement Phoenix et signale le retrait du filtre électoral brésilien ; des paramètres de traitement des pages ont été ajoutés."
               },
               {
-                "title": "Version connue",
-                "conclusion": "La référence initiale provient du commit amont 6258a154."
+                "title": "Changements de paramètres",
+                "conclusion": "La limite d’âge du filtre NSFW souple des nouveaux comptes passe de 1 jour à 7 jours. Les drapeaux de reclassement, d’exploration et de journalisation sont désactivés par défaut ; les 30 pondérations restent inchangées."
               },
               {
-                "title": "Prochaines entrées",
-                "conclusion": "Une entrée est ajoutée seulement si le code suivi change ; les anciennes et nouvelles pondérations sont conservées."
+                "title": "Périmètre du suivi",
+                "conclusion": "Le README et le fichier de paramètres ont changé, contrairement à scoring.rs. Les valeurs par défaut publiques ne représentent pas toute la configuration en production."
               }
             ]
           }
@@ -1507,34 +1507,34 @@
                 "detail": "公開預設值設有候選數量與時間限制，例如 Thunder 最多 1,200 則，Phoenix 最多 1,000 則；實際取得數量可能不同。"
               },
               {
-                "title": "排序前篩選",
-                "conclusion": "重複、已看過或已顯示的貼文，以及封鎖和靜音條件，都會影響哪些內容進入排序。",
-                "detail": "其他檢查包括舊貼文、自己的貼文、靜音關鍵字、訂閱權限及特定地區限制。找到候選貼文不代表一定會顯示。"
+                "title": "排序前篩選與帳號條件",
+                "conclusion": "候選貼文在進入排序前會經過多項篩選；README 記載 Brazil2026ElectionFilter 已於 2026 年 10 月 26 日移除。",
+                "detail": "公開參數還包括新帳號軟性 NSFW 篩選的帳號年齡上限和評分序列長度：前者由 86400 秒（1 天）調整為 604800 秒（7 天），後者新增預設值 100。影片輪播高風險篩選開關預設為 false。參數存在不代表相關功能會在所有請求中啟用。"
               },
               {
                 "title": "預測與評分",
-                "conclusion": "Phoenix 預測讀者按讚、回覆、分享、點開或停留等行為；RankingScorer 以權重合成分數。",
-                "detail": "多數權重乘上預測機率，部分乘上連續數值的預測結果。既有互動次數不是直接得分。"
+                "conclusion": "Phoenix 預測觀看者可能採取的互動行為，RankingScorer 依各項權重合成分數。",
+                "detail": "README 記載，Phoenix 排序模型於 2026 年 10 月改進停留時間預測，Phoenix 召回模型也開始訓練以找出觀看者讀完的貼文。公開說明沒有提供這些更新對個別帳號曝光或排名的固定增幅。"
               },
               {
-                "title": "排序調整",
-                "conclusion": "作者多樣性、未追蹤內容折扣及曝光較少作者的加成，都可能改變貼文的位置。",
-                "detail": "VMRanker 會再重新排序。同一作者連續出現或相鄰貼文太相似，不能只用初次評分解釋。"
+                "title": "排序調整與影子流量",
+                "conclusion": "初次評分後，作者多樣性、未追蹤內容折扣及 VMRanker 重排仍可能改變貼文位置。",
+                "detail": "VMRankerSendDebiasInputs 的公開預設值為 true；ShadowTrafficPhoenixClusterRates 包含 Experiment18Fou:0.3 和 Experiment19Fou:0.3。影子流量設定不能證明線上流量的實際分配。"
               },
               {
-                "title": "重排輸入參數",
-                "conclusion": "VMRankerSendDebiasInputs 的公開預設值由 false 改為 true，用於控制是否向 VMRanker 傳送去偏輸入。",
-                "detail": "VMRankerSendPacingInputs 仍預設為 false。公開參數無法確認所有線上請求是否採用此設定。"
+                "title": "頁面解碼重排",
+                "conclusion": "參數檔新增頁面解碼重排設定，但 EnablePageDecodeRerank 預設關閉。",
+                "detail": "預設池大小為 200、解碼步數為 64、溫度為 0.0。預設開關關閉時，不能據此認定重排流程正在執行。"
               },
               {
-                "title": "影子流量參數",
-                "conclusion": "ShadowTrafficPhoenixClusterRates 的預設清單新增 Experiment19Fou:0.3，並保留 Experiment18Fou:0.3。",
-                "detail": "兩個項目均為影子流量叢集比率設定字串。預設值無法證明實際流量分配或實驗成效。"
+                "title": "頁面強化學習探索",
+                "conclusion": "頁面強化學習探索開關 EnablePageRlExploration 預設關閉。",
+                "detail": "相關預設參數包括溫度 0.2 和 top-k 上限 64；僅憑參數值無法確認實際請求是否啟用探索。"
               },
               {
-                "title": "可見性檢查",
-                "conclusion": "評分較高的貼文仍可能無法通過最後的可見性檢查。",
-                "detail": "公開程式碼包含 ALLOW、NOTICE、INTERSTITIAL、DROP 等結果。DROP 會移除貼文，相關上層貼文或引用關係也可能受影響。"
+                "title": "頁面日誌",
+                "conclusion": "EnablePageLogging 預設關閉，PageLogTtlSeconds 的預設值為 3600 秒。",
+                "detail": "此 TTL 是公開參數的保留時間設定；日誌開關預設關閉時，不能據此推斷實際日誌收集狀態。"
               },
               {
                 "title": "適用範圍",
@@ -1609,27 +1609,27 @@
           },
           "updates": {
             "title": "版本紀錄",
-            "conclusion": "截至 2026 年 10 月 27 日，已記錄一筆參數檔變更：影子流量設定新增叢集，VMRanker 去偏輸入預設啟用；30 項權重未變。",
+            "conclusion": "截至 2026 年 10 月 28 日，README 與參數檔發生變化；評分程式碼及 30 項權重未變。",
             "sections": [
               {
-                "title": "2026 年 10 月 27 日參數變更",
-                "conclusion": "影子流量叢集比率清單新增 Experiment19Fou:0.3；VMRankerSendDebiasInputs 預設值由 false 改為 true。",
-                "detail": "變更來源為 home-mixer/params/param.rs。30 項權重、README 及評分程式碼均未變更。"
+                "title": "2026 年 10 月 28 日上游更新",
+                "conclusion": "README 新增 10 月 8 日與 13 日的模型更新說明，並記錄 10 月 26 日移除巴西選舉篩選器；參數檔也有新增與調整。",
+                "detail": "本輪實際變動涉及 README.md 與 home-mixer/params/param.rs；xai-value-model/scoring.rs 的 blob SHA 未變。"
               },
               {
-                "title": "初始基準",
-                "conclusion": "第一筆紀錄對應上游提交 6258a154，參考 README、參數檔及評分程式碼。",
-                "detail": "該日期是整理基準的時間，不代表當天部署新演算法。"
+                "title": "召回與排序模型更新",
+                "conclusion": "README 記載，Phoenix 召回模型開始訓練以找出觀看者讀完的貼文；排序模型則改進停留時間預測。",
+                "detail": "召回更新指向 phoenix/xrex/models/recsys_two_tower_model.py；排序更新指向 phoenix/xrex/models/recsys_model.py 與 phoenix/xrex/models/loss_recsys.py。公開說明沒有量化個別帳號的曝光或排名變化。"
               },
               {
-                "title": "先前官方說明",
-                "conclusion": "2026 年 8 月，官方說明權重乘的是預測值，並公開更多篩選及參數資訊。",
-                "detail": "2026 年 9 月的 Under the Hood 報告補充了依法限制內容展示的資訊。這些都是之前的公告。"
+                "title": "巴西選舉篩選器移除",
+                "conclusion": "README 記載 Brazil2026ElectionFilter 已於 2026 年 10 月 26 日從 For You 移除。",
+                "detail": "該篩選器先前會排除被通報至巴西選舉法院的 2026 年選舉相關帳號貼文，但觀看者明確追蹤的帳號除外；移除後不再由此篩選器排除。"
               },
               {
-                "title": "追蹤範圍",
-                "conclusion": "只記錄 README、權重參數及評分程式碼的實際變動。",
-                "detail": "權重變動會列出修改前、修改後及差額；其他目錄的提交不會自動視為推薦演算法更新。"
+                "title": "新增參數與未變項目",
+                "conclusion": "參數檔新增頁面解碼重排、強化學習探索及日誌設定；新帳號軟性 NSFW 篩選的帳號年齡上限由 1 天調整為 7 天。",
+                "detail": "PageDecodePoolN 預設 200、PageDecodeSteps 為 64、PageDecodeTemperature 為 0.0；PageRlExplorationTemperature 為 0.2、PageRlExplorationTopK 為 64；PageLogTtlSeconds 為 3600。EnablePageDecodeRerank、EnablePageRlExploration、EnablePageLogging 與 EnableVideoCarouselHighRiskFilter 預設 false；NewUserSoftNsfwFilterMaxScoringSeqLength 為 100。ThunderClusterId 參數已刪除。30 項權重與 scoring.rs 未變；先前記錄的 VMRankerSendDebiasInputs 仍為 true，影子流量清單仍含 Experiment18Fou:0.3 與 Experiment19Fou:0.3。"
               }
             ]
           }
@@ -1644,20 +1644,20 @@
                 "conclusion": "Thunder 處理已追蹤帳號；Phoenix、SimClusters 等提供未追蹤內容。"
               },
               {
-                "title": "評分",
-                "conclusion": "按讚、回覆、分享、停留與負面回饋的預測結果各自加權。"
+                "title": "預測與評分",
+                "conclusion": "Phoenix 預測互動與停留行為；公開更新說明召回模型開始學習識別讀完的貼文，排序模型則改進停留時間預測。"
               },
               {
-                "title": "調整",
-                "conclusion": "相同作者重複出現、未追蹤內容折扣及後續重排會影響位置。"
+                "title": "排序與實驗參數",
+                "conclusion": "VMRanker 去偏輸入預設啟用；頁面解碼重排與頁面強化學習探索預設關閉。影子流量清單包含兩個 0.3 項目。"
               },
               {
-                "title": "篩選",
-                "conclusion": "已看過、封鎖、靜音或不符合可見性規則的貼文可能被移除。"
+                "title": "篩選條件",
+                "conclusion": "README 記載巴西選舉篩選器已移除；新帳號軟性 NSFW 篩選的年齡上限為 7 天、評分序列上限為 100，影片輪播高風險篩選預設關閉。"
               },
               {
-                "title": "實驗參數",
-                "conclusion": "影子流量預設清單新增 Experiment19Fou:0.3，VMRanker 去偏輸入選項預設啟用。"
+                "title": "日誌與設定範圍",
+                "conclusion": "頁面日誌預設關閉，TTL 參數為 3600 秒；這些公開預設值不代表線上完整設定。"
               }
             ]
           },
@@ -1696,19 +1696,19 @@
           },
           "updates": {
             "title": "更新狀態",
-            "conclusion": "2026 年 10 月 27 日記錄了影子流量設定與 VMRanker 去偏輸入的參數變更；30 項權重未變。",
+            "conclusion": "2026 年 10 月 28 日更新了召回與排序模型說明、巴西選舉篩選器狀態及頁面處理參數；30 項權重未變。",
             "sections": [
               {
-                "title": "本次參數變更",
-                "conclusion": "影子流量清單新增 Experiment19Fou:0.3；VMRankerSendDebiasInputs 由 false 調整為 true。"
+                "title": "本輪上游更新",
+                "conclusion": "README 新增 Phoenix 召回與排序模型更新說明，並記錄巴西選舉篩選器已移除；參數檔新增頁面處理設定。"
               },
               {
-                "title": "已記錄版本",
-                "conclusion": "初始資料來自上游提交 6258a154。"
+                "title": "參數變化",
+                "conclusion": "新帳號軟性 NSFW 篩選的帳號年齡上限由 1 天增至 7 天；頁面解碼重排、探索與日誌開關預設關閉，30 項權重未變。"
               },
               {
-                "title": "後續紀錄",
-                "conclusion": "監測的程式碼實際變動才新增紀錄；權重變動保留前後數值。"
+                "title": "追蹤範圍",
+                "conclusion": "本輪 README 與參數檔變動，scoring.rs 未變；公開預設參數不等於生產環境即時設定。"
               }
             ]
           }
